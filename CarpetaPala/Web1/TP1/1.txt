@@ -31,3 +31,7 @@ Errores
 
 CSS
 8-font-style italic; no se utilizan los dos puntos para aplicar el valor a la propiedad, genera un error, no se aplica el estilo.
+
+14_
+Al periodico le recomendaria buscarse un nuevo diseñador porque no le pienso reimplementar la pagina entera.
+Ademas de eso, le recomendaria colocar en cada etiqueta HTML una clase y encapsular distintas etiquetas en estructuras mas generales, asi la remodelacion entera de la pagina no seria tan engorrosa de realizar.
