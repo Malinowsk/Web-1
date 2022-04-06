@@ -1,4 +1,52 @@
 h1{
-    color: darkorange;
-    font-size: 50px;
+    color: #FF7600;
+    font-style: italic;
+    text-align: center;
 }
+
+h2{
+    color: #FF8A26;
+    font-style: italic;
+}
+
+h3{
+    color: #FFB776;
+    font-style: italic;
+}
+
+h4{
+    color: #FF8A26;
+    font-style: italic;
+    text-align: right;
+}
+
+p{
+    color: #8792FD;
+    font-style: italic;
+}
+
+a{
+    color: #FF8A26;
+}
+
+li{
+    color: #8792FD;
+    font-style: italic;
+}
+
+img{
+    color: #8792FD;
+    font-style: italic;
+}
+
+body{
+    background-color: #01535B;
+}
+
+.ParrafoEspecial{
+    color: #966D00;
+    font-style: oblique;
+    text-align: left;
+    background-color: #964700;
+}
+
