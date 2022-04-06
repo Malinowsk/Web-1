@@ -1,0 +1,31 @@
+h1{
+    color: #2f0CAD;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+h2{
+    color: #2f0CAD;
+    font-size: 26px;
+    font-weight: bold;
+}    
+
+h3{
+    color: #9D88EB;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+p{
+    color: #FF0000;
+    font-size: 16px;
+    font-weight: justify;
+}
+
+.parrafo{
+    color: greenyellow;
+}
+
+body{
+    background-color: darkolivegreen;
+}

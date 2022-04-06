@@ -1,0 +1,20 @@
+body{
+    background: #C184B2;
+}
+
+h1{
+    color: #460235;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.parrafoEspecial{
+    color: darkred;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.pie{
+    font-size: 14px;
+    font-style: italic;
+    text-align: right;
+}
