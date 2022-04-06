@@ -16,3 +16,18 @@ Existen 3 tipos de selectores:
 	*Los selectores de Tipo: conviene usarlos cuando se desea aplicar un estilo general a todas las etiquetas de un tipo determiando dentro de un documento HTML
 	*Los selectores de Clase: para estos selectores hay que definir una clase dentro de las etiquetas HTML, se utilizan para poder personalizar una clase de elemento, por ejemplo un buscador o un carrucel de imagenes.
 	*Los selectores por ID: estos selectores no son recomendados, para utilizarlos hay que aplciar un ID a una etiqueta especifica del documento HTML.
+	
+7_
+malas practicas:
+HTML
+1-<bOdy> : mayusculas mal aplicadas
+2-<H1></H1> : mayusculas innecesarias
+3-<br> : mal indentado y sin cerrar la etiqueta
+4- mala indemtacion en general
+5- <h3> : no cerrada
+Errores
+6-<h4></h5> : me sorprende que no tire error
+7-<p></P> : igual que en el 6
+
+CSS
+8-font-style italic; no se utilizan los dos puntos para aplicar el valor a la propiedad, genera un error, no se aplica el estilo.
