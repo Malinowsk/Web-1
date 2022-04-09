@@ -1,6 +1,7 @@
 p{
     background-color: #A90D18;
     color: #D0AC28;
+    font-style: italic;
 }
 
 .realizado{
@@ -11,7 +12,7 @@ p{
 
 body{
     background-color: #221878;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: #AD550D;
 }
 

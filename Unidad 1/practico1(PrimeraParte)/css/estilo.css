@@ -1,3 +1,12 @@
+canvas{
+    height: 100px;
+    width: 1335px;
+    padding: 0px;
+    margin-right: 10px;
+    margin-left: 0px;
+    border: 0px;
+}
+
 h1{
     color: #FF7600;
     font-style: italic;
