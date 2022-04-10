@@ -2,7 +2,6 @@ canvas{
     height: 100px;
     width: 100%;
     padding: 0px;
-    
     margin-left: 8px;
     margin-right: 8px;
     border: 0px;
@@ -36,6 +35,8 @@ h4{
     color: #FF8A26;
     font-style: italic;
     text-align: right;
+    margin-right: 8px;
+
 }
 
 p{
@@ -45,6 +46,7 @@ p{
 
 a{
     color: #FF8A26;
+    text-decoration: none;
 }
 
 li{
@@ -119,7 +121,7 @@ ul.noticias_especificas li{
 div.barra_de_navegacion{
     margin: 8px;
     border: 4px solid black;
-    background-color: #4E4F4F;
+    background-color: #01535B;
     padding: 0px;
 }
 
@@ -128,6 +130,7 @@ ul.barra_de_navegacion{
     padding: 0px;
     display: flex;
     list-style: none;
+    justify-content: space-around;
     
     
 }
@@ -135,7 +138,7 @@ ul.barra_de_navegacion li{
     margin: 0px 1px;
     border: 4px solid black;
     padding: 10px;
-    background-color: gray;
+    background-color: #003F45;
     color: white;
     text-align: center;
     font-style: normal;
@@ -144,3 +147,36 @@ ul.barra_de_navegacion li{
 
 }
 
+ul.barra_de_navegacion li:hover{
+    background-color: #01535B;
+    color: #FF8A26;
+}
+
+div.boton_contacto{
+    margin: 10px;   
+}
+
+div.contacto_encabezado{
+    display: flex;
+    justify-content: space-between;
+}
+
+button.boton_contacto{
+    font-size: 20px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 0px;
+}
+
+body.negro{
+    background-color: black;
+}
+
+body.rojo{
+    background-color: #511309;
+}
+
+.li_red{
+    color: white;
+    font-style: italic;
+}
