@@ -1,7 +1,7 @@
 const canvas = document.getElementById("canvas1");
 const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.height = 100;
 
 let gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
 gradient.addColorStop(0, 'red');
@@ -82,6 +82,6 @@ function animate(timeStamp){
 animate(0);
 window.addEventListener('resize', ()=>{
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.height = 100;
     effect.resize(canvas.width, canvas.height);
 })
