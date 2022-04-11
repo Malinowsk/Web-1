@@ -1,3 +1,5 @@
+
+
 canvas{
     height: 100px;
     width: 100%;
@@ -179,4 +181,10 @@ body.rojo{
 .li_red{
     color: white;
     font-style: italic;
+}
+
+div p.ParrafoEspecial::first-letter, div p.noti_pub::first-letter, div p.noti_priv::first-letter{
+    color: #FF7600;
+    font-size: 50px;
+    padding-right: 5px;
 }

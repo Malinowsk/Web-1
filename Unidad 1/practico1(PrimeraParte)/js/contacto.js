@@ -24,7 +24,7 @@ function sombreroRojo(){
     document.getElementById("tel").innerHTML = "Tel: Desconocido"; 
     document.getElementById("tel").classList.add("li_red");
 
-    document.getElementById("contacto").classList.add("rojo"); 
+    document.getElementById("contacto").classList.add("rojo");         // cambio de color de fondo
     document.getElementById("contacto").classList.remove("negro"); 
 };
 
