@@ -1,0 +1,8 @@
+button{
+    padding: 20px 5px 10px 15px;
+    background-color: red;
+}
+
+button:hover{
+    color : red;
+}
