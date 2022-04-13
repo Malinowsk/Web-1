@@ -1,0 +1,80 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #fff;
+}
+
+
+.encabezado{
+    background-color: rgba(31, 61, 79, 1);
+    color: #fff;
+    font-style: normal;
+    text-transform: capitalize;
+    padding-bottom: 50px;
+}
+
+h1{
+    padding: 10px;
+    margin-left: 20px;
+    font-size: 32px;  
+    
+}
+
+
+/* contiene botonera y titulo principal h1*/
+.delimitador{
+    border-bottom: 2px solid #f8ac18;
+    display: flex; /* los bloques pasan hacer inline*/ 
+    justify-content: space-between; /* las cajas contenidas se separan a la punta de los extremos*/  
+    padding: 20px;
+    flex-flow: row wrap; /* a medida que se achica la pantalla los componentes se acomodan en a la parte inferior */
+    align-items: flex-end; /* acomoda en el mismo renglon la botonera con el titulo h1*/
+}
+
+div.botonera{
+    margin: 8px;
+    padding: 0px 10px;
+}
+
+ul.botonera{                      
+    margin: 1px;
+    list-style: none; /*saca el puntito de cada li*/
+    display: flex; /* los bloques pasan hacer inline*/ 
+    justify-content: space-around; /* los separa a los extremos pero no tanto*/  
+    
+}
+
+ul.botonera li{
+    font-size: 18px;
+    margin: 0 5px;
+    
+}
+
+
+ul.botonera li a{
+    color: #fff;
+    text-decoration: none; /* saca la linea de abajo de los link que se ponen por defecto*/
+    padding: 10px;
+    display: block; /* esto lo hago para que los textos de la botonera no suban para top*/
+       
+}
+
+
+ul.botonera li a:hover{
+    color: #f8ac18;
+    /*background-color: #325062;
+    border-radius: 10px;*/
+}
+
+div.imagen-bot-cabecera img{
+    width: 100%; /*ajusta la imagen al 100% de la pantalla*/    
+}
+
+.pie{
+    height: 20%;
+    width: 90%;
+}
+
