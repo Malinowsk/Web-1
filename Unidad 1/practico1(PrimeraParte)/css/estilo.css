@@ -189,3 +189,14 @@ div p.ParrafoEspecial::first-letter, div p.noti_pub::first-letter, div p.noti_pr
     padding-right: 5px;
 }
 
+div.redes-sociales{
+    width: 50%;
+    margin: 17px;
+    opacity: 0.8;
+}
+
+
+.logo2{
+	background-image: url(../images/logo.jpg);
+}
+
