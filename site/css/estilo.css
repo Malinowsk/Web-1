@@ -51,7 +51,7 @@ div.encabezado-de-top input{
     border: 1px solid #d8e1e4;
     color: #69747f;
     place-items: start;
-    text-indent: 23px;
+    text-indent: 10px;
 }
 div.encabezado-de-top input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #76959Fcc;
