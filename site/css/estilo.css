@@ -1,0 +1,253 @@
+@font-face {
+    font-family: 'HKGrotesk-Medium';
+    src: url(font/HKGrotesk-Medium.otf);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #fff;
+    font-family: 'HKGrotesk-Medium', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    
+
+}
+
+/*///////ENCABEZADO///////////*/
+
+/*///////ENCABEZADO top///////////*/
+
+div.encabezado-de-top ul{
+    margin: 0px 0px 0px 90px;
+    text-align: center;
+}
+
+div.encabezado-de-top ul li{
+    text-transform: lowercase;
+    padding: 1px;
+    
+}
+
+div.encabezado-de-top form{
+    
+    padding: 0px 10px;
+}
+
+div.encabezado-de-top form label{
+    font-size: 14px;
+}
+
+div.encabezado-de-top input{
+    height: 32px;
+    width: 140px;
+    text-align: start;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 0px 2px;
+    margin: 0px 2px;
+    border: 1px solid #d8e1e4;
+    color: #69747f;
+    place-items: start;
+    text-indent: 23px;
+}
+div.encabezado-de-top input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #76959Fcc;
+    letter-spacing: 1px;
+    
+    
+  }
+  
+
+div.encabezado-de-top input.checkbox{
+    height: auto;
+    width: auto;
+    padding: 0px 1px;
+    margin: 0px 1px;
+
+}
+
+div.encabezado-de-top button{
+    height: 35px;
+    width: auto;
+    text-align: center;
+    
+    padding: 0px 5px;
+    margin: 0px 5px;
+    background-color: rgba(31, 61, 79, 1);
+    border: 0px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+
+}
+
+div.encabezado-de-top button.sesion{
+    background-color: #2b424f;
+}
+
+div.encabezado-de-top button:hover{
+    color: #f8ac18;
+}
+
+div.encabezado-de-top button:hover.sesion{
+    background-color: #01111A;
+    
+}
+
+/*///////ENCABEZADO bot///////////*/
+
+div.encabezado-de-top , div.encabezado-de-bot , div.pie-de-pag{
+    background-color: rgba(31, 61, 79, 1);
+    color: #fff;
+    font-style: normal;
+    text-transform: capitalize;
+
+}
+
+div.encabezado-de-top{
+    
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 7px 100px;
+    
+}
+
+
+/* contiene botonera y titulo principal h1*/
+div.encabezado-de-bot{
+    
+    border-top: 2px solid #f8ac18;
+    display: flex; /* los bloques pasan hacer inline*/ 
+    justify-content: space-between; /* las cajas contenidas se separan a la punta de los extremos*/  
+    padding: 7px 80px;
+    flex-flow: row wrap; /* a medida que se achica la pantalla los componentes se acomodan en a la parte inferior */
+    align-items: center; /* acomoda en el mismo renglon la botonera con el titulo h1*/
+    position: sticky;
+    top: 0;
+}
+
+
+/*////////TITULO H1 Y LOGO/////////////*/
+
+div.logo{
+    
+    display: flex;
+    
+}
+
+div.logo img.logo{
+    width: 55px;
+    height: 55px;
+    
+    padding-top: 12px;
+}
+
+div.logo h1{
+    padding: 10px;
+    font-size: 22px;
+    
+    letter-spacing: 2px;
+}
+/*//////////termina titulo y logo//////////////*/
+
+/*////////BOTONERA/////////////*/
+
+div.botonera{
+    
+    margin: 8px;
+    padding: 0px 10px;
+}
+
+ul.botonera{ 
+    margin: 1px;
+    list-style: none; /*saca el puntito de cada li*/
+    display: flex; /* los bloques pasan hacer inline*/ 
+    justify-content: space-around; /* los separa a los extremos pero no tanto*/  
+    
+}
+
+ul.botonera li{
+    
+    margin: 0 5px;
+    
+}
+
+
+ul.botonera li a{
+    color: #ffffffcc;
+    font-weight: 700;
+    text-decoration: none; /* saca la linea de abajo de los link que se ponen por defecto*/
+    padding: 10px;
+    display: block; /* esto lo hago para que los textos de la botonera no suban para top*/
+       
+}
+
+
+ul.botonera li a:hover{
+    color: #f8ac18;
+    /*background-color: #325062;
+    border-radius: 10px;*/
+}
+
+/*////////////////termina botonera//////////////////////////*/
+
+/*////////////////termina encabezado////////////////////////*/
+
+div.imagen-bot-cabecera{
+    background-color: black;
+    
+    display: flex;
+    justify-content: center;
+
+}
+
+div.imagen-bot-cabecera img{
+    
+    width: 90%; /*ajusta la imagen al 100% de la pantalla*/  
+    
+}
+
+/*////////////////comienza pie de pag//////////////////////////*/
+
+
+div.pie-de-pag{
+    padding: 20px 40px;
+    display: flex;
+    
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+div.pie-de-pag div.redes-sociales{
+    
+    padding: 10px;  
+}
+
+div.pie-de-pag div.redes-sociales ul.redes-sociales{
+    display:flex;
+    list-style:none;
+    justify-content: flex-end;
+    padding: 10px 50px;
+}
+
+
+img.redes{
+    width: 20px;
+    padding: 7px;
+}
+
+img.redes:hover{
+    background-color: red;
+}
+
+p.fin{
+    text-align: center;
+    width: 100%;
+}
+
+/*////////////////termina pie de pag//////////////////////////*/

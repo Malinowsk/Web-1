@@ -1,0 +1,163 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #fff;
+}
+
+/*///////ENCABEZADO///////////*/
+
+.encabezado{
+    background-color: rgba(31, 61, 79, 1);
+    color: #fff;
+    font-style: normal;
+    text-transform: capitalize;
+    padding-top: 64px;
+    position: sticky;
+    top: 0;
+}
+
+
+/* contiene botonera y titulo principal h1*/
+
+.delimitador{
+
+    border-top: 2px solid #f8ac18;
+    display: flex; /* los bloques pasan hacer inline*/ 
+    justify-content: space-between; /* las cajas contenidas se separan a la punta de los extremos*/  
+    padding: 7px 40px;
+    flex-flow: row wrap; /* a medida que se achica la pantalla los componentes se acomodan en a la parte inferior */
+    align-items: center; /* acomoda en el mismo renglon la botonera con el titulo h1*/
+    
+} 
+
+
+/*////////TITULO H1 Y LOGO/////////////*/
+
+.encabezado div.logo{
+    
+    display: flex;
+    
+}
+
+.encabezado div.logo img.logo{
+    width: 70px;
+    height: 70px;
+}
+
+.encabezado div.logo h1{
+    padding: 10px;
+    font-size: 25px;
+}
+/*//////////termina titulo y logo//////////////*/
+
+/*////////BOTONERA/////////////*/
+
+div.botonera{
+    
+    margin: 8px;
+    padding: 0px 10px 0px 10px;
+}
+
+ul.botonera{ 
+    margin: 1px;
+    list-style: none; /*saca el puntito de cada li*/
+    display: flex; /* los bloques pasan hacer inline*/ 
+    justify-content: space-around; /* los separa a los extremos pero no tanto*/  
+    
+}
+
+ul.botonera li{
+    font-size: 18px;
+    margin: 0 5px;
+    
+}
+
+
+ul.botonera li a{
+    color: #fff;
+    text-decoration: none; /* saca la linea de abajo de los link que se ponen por defecto*/
+    padding: 10px;
+    display: block; /* esto lo hago para que los textos de la botonera no suban para top*/
+       
+}
+
+
+ul.botonera li a:hover{
+    color: #f8ac18;
+    /*background-color: #325062;
+    border-radius: 10px;*/
+}
+
+/*////////////////termina botonera//////////////////////////*/
+
+/*////////////////termina encabezado////////////////////////*/
+
+
+div.imagen-bot-cabecera img{
+    width: 100%; /*ajusta la imagen al 100% de la pantalla*/    
+}
+
+/*////////////////comienza pie de pag//////////////////////////*/
+
+
+div.pie-de-pag{
+    height: 435px;
+    background-color: rgba(31, 61, 79, 1);    
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+div.pie-de-pag div.contenido{
+    display: flex;
+    justify-content: center;
+    background-color: red;
+}
+
+div.pie-de-pag div.contenido div.acerca-de{
+    width: 40%;
+    background-color: aqua;
+}
+
+div.pie-de-pag div.contenido div.redes-sociales{
+
+    display: flex;
+    padding: 10px;
+    width: 400px;
+    background-color: violet;
+    justify-content: center;
+}
+
+img.redes{
+    
+    background-color: green;
+    padding: 10px;
+    width: 50%;
+    opacity: 0.5;
+    
+}
+
+img.redes:hover{
+    opacity: 1;
+}
+
+h4{
+    width: 100%;
+    text-align: right;
+    padding: 10px;
+}
+
+p.fin{
+    text-align: center;
+    width: 100%;
+}
+
+/*////////////////termina pie de pag//////////////////////////*/

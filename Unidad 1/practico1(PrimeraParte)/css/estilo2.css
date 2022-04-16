@@ -9,44 +9,46 @@ body{
 
 /*///////ENCABEZADO///////////*/
 
-.encabezado{
+div.encabezado , div.delimitador{
     background-color: rgba(31, 61, 79, 1);
     color: #fff;
     font-style: normal;
     text-transform: capitalize;
-    padding-bottom: 50px;
+}
+
+div.encabezado{
+    height: 64px;
+}
+
+
+/* contiene botonera y titulo principal h1*/
+div.delimitador{
+    
+    border-top: 2px solid #f8ac18;
+    display: flex; /* los bloques pasan hacer inline*/ 
+    justify-content: space-between; /* las cajas contenidas se separan a la punta de los extremos*/  
+    padding: 7px 40px;
+    flex-flow: row wrap; /* a medida que se achica la pantalla los componentes se acomodan en a la parte inferior */
+    align-items: center; /* acomoda en el mismo renglon la botonera con el titulo h1*/
     position: sticky;
     top: 0;
 }
 
 
-/* contiene botonera y titulo principal h1*/
-.delimitador{
-    
-    border-bottom: 2px solid #f8ac18;
-    display: flex; /* los bloques pasan hacer inline*/ 
-    justify-content: space-between; /* las cajas contenidas se separan a la punta de los extremos*/  
-    padding: 20px;
-    flex-flow: row wrap; /* a medida que se achica la pantalla los componentes se acomodan en a la parte inferior */
-    align-items: center; /* acomoda en el mismo renglon la botonera con el titulo h1*/
-    
-}
-
-
 /*////////TITULO H1 Y LOGO/////////////*/
 
-.encabezado div.logo{
+.delimitador div.logo{
     
     display: flex;
     
 }
 
-.encabezado div.logo img.logo{
+.delimitador div.logo img.logo{
     width: 70px;
     height: 70px;
 }
 
-.encabezado div.logo h1{
+.delimitador div.logo h1{
     padding: 10px;
     font-size: 25px;
 }
@@ -99,7 +101,28 @@ div.imagen-bot-cabecera img{
     width: 100%; /*ajusta la imagen al 100% de la pantalla*/    
 }
 
-.pie{
-    height: 20%;
-    width: 90%;
+/*////////////////comienza pie de pag//////////////////////////*/
+
+
+div.pie-de-pag{
+    background-color: rgba(31, 61, 79, 1);    
+    padding: 20px;
+    color: #fff;
 }
+
+div.redes-sociales{
+    padding: 10px;
+    width: 600px;  
+}
+
+img.redes{
+    width: 200px;
+    opacity: 0.5;
+}
+
+img.redes:hover{
+    opacity: 1;
+}
+
+
+/*////////////////termina pie de pag//////////////////////////*/
