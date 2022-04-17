@@ -9,6 +9,8 @@ btn_red.addEventListener("click", sombreroRojo); //agregamos un evento al elemen
 
 document.getElementById("black_hat").addEventListener("click", sombreroNegro);
 
+
+
 sombreroNegro()
 
 function sombreroRojo(){

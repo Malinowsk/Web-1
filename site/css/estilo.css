@@ -1,4 +1,4 @@
-@font-face {
+@font-face {    /* importar el tipo de letra que se va usar en el sitio web*/
     font-family: 'HKGrotesk-Medium';
     src: url(font/HKGrotesk-Medium.otf);
 }
@@ -12,16 +12,30 @@ body{
     background-color: #fff;
     font-family: 'HKGrotesk-Medium', Arial, Helvetica, sans-serif;
     font-size: 16px;
-    
-
 }
 
 /*///////ENCABEZADO///////////*/
 
-/*///////ENCABEZADO top///////////*/
+/*///////encabezado parte top///////////*/
+
+div.encabezado-de-top , div.encabezado-de-bot , div.pie-de-pag{
+    background-color: rgba(31, 61, 79, 1);
+    color: #fff;
+    font-style: normal;
+    text-transform: capitalize;
+}
+
+div.encabezado-de-top{
+    height: 50px;
+    display: flex;
+    justify-content: space-between; /* se alinean los bloques bien ensanchados con respecto al eje horizontal*/
+    align-items: flex-end; /*se alinea los bloques en la parte de abajo con respeto al eje vertical*/
+    padding: 7px 100px;
+    
+}
 
 div.encabezado-de-top ul{
-    margin: 0px 0px 0px 90px;
+    margin-left: 90px;
     text-align: center;
 }
 
@@ -40,7 +54,9 @@ div.encabezado-de-top form label{
     font-size: 14px;
 }
 
-div.encabezado-de-top input{
+
+
+div.encabezado-de-top form input{
     height: 32px;
     width: 140px;
     text-align: start;
@@ -51,29 +67,31 @@ div.encabezado-de-top input{
     border: 1px solid #d8e1e4;
     color: #69747f;
     place-items: start;
-    text-indent: 10px;
+    
 }
-div.encabezado-de-top input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #76959Fcc;
-    letter-spacing: 1px;
-    
-    
+div.encabezado-de-top form input::placeholder { 
+    color: #76959Fcc;   /*color de letra*/
+    letter-spacing: 1px; /*sepacion enre letras*/
+    text-align: center;  /*alineamos el texto en el centro*/
+    text-indent: 0px;    /*cero identacion*/
   }
   
+div.encabezado-de-top form input:focus { 
+    text-indent: 8px; /* identamos el cursor donde se comienza a escribir*/
+    outline: none; /*funciona para sacar borde interno de color negro cuando hacemos focus al input text*/
+ }
 
-div.encabezado-de-top input.checkbox{
+div.encabezado-de-top form input.checkbox{ /* boton para seleccionar */
     height: auto;
     width: auto;
     padding: 0px 1px;
     margin: 0px 1px;
-
 }
 
-div.encabezado-de-top button{
+div.encabezado-de-top form button{
     height: 35px;
     width: auto;
     text-align: center;
-    
     padding: 0px 5px;
     margin: 0px 5px;
     background-color: rgba(31, 61, 79, 1);
@@ -81,44 +99,25 @@ div.encabezado-de-top button{
     color: #fff;
     font-size: 13px;
     font-weight: bold;
-
 }
 
-div.encabezado-de-top button.sesion{
+div.encabezado-de-top form button.sesion{
     background-color: #2b424f;
 }
 
-div.encabezado-de-top button:hover{
+div.encabezado-de-top form button:hover{
     color: #f8ac18;
 }
 
-div.encabezado-de-top button:hover.sesion{
+div.encabezado-de-top form button:hover.sesion{
     background-color: #01111A;
     
 }
 
-/*///////ENCABEZADO bot///////////*/
-
-div.encabezado-de-top , div.encabezado-de-bot , div.pie-de-pag{
-    background-color: rgba(31, 61, 79, 1);
-    color: #fff;
-    font-style: normal;
-    text-transform: capitalize;
-
-}
-
-div.encabezado-de-top{
-    
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 7px 100px;
-    
-}
+/*///////encabezado parte bot///////////*/
 
 
-/* contiene botonera y titulo principal h1*/
+/* contiene logo , titulo principal h1 y nav */
 div.encabezado-de-bot{
     
     border-top: 2px solid #f8ac18;
@@ -126,34 +125,29 @@ div.encabezado-de-bot{
     justify-content: space-between; /* las cajas contenidas se separan a la punta de los extremos*/  
     padding: 7px 80px;
     flex-flow: row wrap; /* a medida que se achica la pantalla los componentes se acomodan en a la parte inferior */
-    align-items: center; /* acomoda en el mismo renglon la botonera con el titulo h1*/
-    position: sticky;
-    top: 0;
+    align-items: center; /* acomoda en el mismo renglon de forma centrada la botonera con el titulo h1*/
+    position: sticky; /* sirve para cuando el usuario hace scroll hacia abajo, todo el div siga mostrandose en la pantalla*/ 
+    top: 0; /* en que posicion queda el div cuando es afectado por position sticky*/
 }
 
 
 /*////////TITULO H1 Y LOGO/////////////*/
 
 div.logo{
-    
     display: flex;
-    
 }
 
 div.logo img.logo{
     width: 55px;
     height: 55px;
-    
     padding-top: 12px;
 }
 
 div.logo h1{
     padding: 10px;
     font-size: 22px;
-    
     letter-spacing: 2px;
 }
-/*//////////termina titulo y logo//////////////*/
 
 /*////////BOTONERA/////////////*/
 
@@ -179,23 +173,24 @@ ul.botonera li{
 
 
 ul.botonera li a{
-    color: #ffffffcc;
+    color: #ffffffcc; 
     font-weight: 700;
     text-decoration: none; /* saca la linea de abajo de los link que se ponen por defecto*/
-    padding: 10px;
+    padding: 10px 0px;
     display: block; /* esto lo hago para que los textos de la botonera no suban para top*/
-       
+    margin: 0px 10px;
+    text-align: center;
+    
+    
 }
 
-
-ul.botonera li a:hover{
+/* apariencia cuando se pasa el puntero del mouse por encima*/
+ul.botonera li a:hover, ul.botonera li a.pag-actual { 
     color: #f8ac18;
-    /*background-color: #325062;
-    border-radius: 10px;*/
+    
 }
 
 /*////////////////termina botonera//////////////////////////*/
-
 /*////////////////termina encabezado////////////////////////*/
 
 div.imagen-bot-cabecera{
