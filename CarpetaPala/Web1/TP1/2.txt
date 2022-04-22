@@ -1,5 +1,0 @@
-3_
-El concepto de Box Model se utiliza para encapsular distintas etiquetas HTML en Boxes(cajas), 
-a las cuales mediante CSS se les puede aplicar un estilo y una posicion determinada mas manipulable.
-Box Model debe ser utilizado siempre, en todas las paginas de un sitio web.
-4_
