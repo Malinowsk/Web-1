@@ -1,0 +1,54 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+}
+
+.contenedor-card{
+    height: 500px;
+    display: flex;
+    margin: 0px 100px;
+    justify-content: space-between;
+}
+
+.card{
+    width: 350px;
+    height: 500px;
+    border: 1px solid #D8E1E4;
+    border-radius: 10px ;
+    overflow: hidden;
+}
+
+.card-texto h1{
+    font-size: 1.5em;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.card-texto p{
+    font-size: 1em;
+    text-align: center;
+}
+
+.imagen{
+    width: 350px;
+    height: 120px;
+    display: flex;
+}
+
+img{
+}
+
