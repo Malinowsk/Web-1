@@ -141,6 +141,7 @@ div.encabezado-de-bot{
 
 div.logo{
     display: flex;
+    padding-right: 40px;
 }
 
 div.logo img.logo{
@@ -224,6 +225,11 @@ div.pie-de-pag{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
+}
+
+div a.politicas{
+    color: #fff;
 }
 
 div.pie-de-pag div.redes-sociales{
