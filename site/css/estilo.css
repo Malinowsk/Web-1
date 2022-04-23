@@ -220,9 +220,8 @@ div.imagen-bot-cabecera img{
 
 
 div.pie-de-pag{
-    padding: 20px 40px;
+    padding: 20px 80px;
     display: flex;
-    
     flex-wrap: wrap;
     justify-content: space-between;
 }
@@ -236,7 +235,7 @@ div.pie-de-pag div.redes-sociales ul.redes-sociales{
     display:flex;
     list-style:none;
     justify-content: flex-end;
-    padding: 10px 50px;
+    padding: 8px 18px;
 }
 
 
@@ -254,6 +253,7 @@ img.redes:hover{
 p.fin{
     text-align: center;
     width: 100%;
+    margin: 5px;
 }
 
 /*////////////////termina pie de pag//////////////////////////*/
