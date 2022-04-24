@@ -231,6 +231,7 @@ div.main .sesion{
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 8px 0px;
+    width: 100%;
 }
 
 .sesion div.tarjeta{
@@ -238,21 +239,24 @@ div.main .sesion{
     width: 32%;
 }
 
+.sesion div.tarjeta:hover{
+    border: 1px solid #f8ac18;
+    background-color: #D8E1E4;
+}
+
 .sesion div.imagen{
-    background-color: yellow;
-    width: 387px;
+    width: 100%;
     height: 120px;
     overflow: hidden;  
 }
 
-
+div.imagen img{
+    width: 100%;
+    height: 100%;
+}
 
 .sesion div.texto{
     color: #01111A;
-}
-
-.sesion .texto:hover{
-    background-color: #D8E1E4;
 }
 
 .sesion .texto h3{
