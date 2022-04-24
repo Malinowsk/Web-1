@@ -31,7 +31,10 @@ body{
     justify-content: space-between; /* se alinean los bloques bien ensanchados con respecto al eje horizontal*/
     align-items: flex-end; /*se alinea los bloques en la parte de abajo con respeto al eje vertical*/
     padding: 7px 100px;
-    
+}
+
+.encabezado-superior i{
+    margin-right: 5px;
 }
 
 .encabezado-superior ul{
