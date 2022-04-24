@@ -202,7 +202,9 @@ ul.botonera a:hover, ul.botonera a.pag-actual {
 
 /*/////imagen principal/////*/
 div.imagen-principal{
-    background-color: black;    
+    background-color: black; 
+    background-image: url(../images/TOCA\ ESTE\ TEXTO\ PARA\ DESCARGAR.png);
+    width: 100%;
     display: flex;
     justify-content: center;
 }
