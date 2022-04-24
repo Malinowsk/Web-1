@@ -14,18 +14,18 @@ body{
     font-size: 16px;
 }
 
-/*///////ENCABEZADO///////////*/
+/*////encabezado/////*/
 
-/*///////encabezado parte top///////////*/
+/*///////encabezado-parte-superior///////////*/
 
-div.encabezado-de-top , div.encabezado-de-bot , div.pie-de-pag{
+.encabezado-superior , .encabezado-inferior , .pie-de-pag{
     background-color: rgba(31, 61, 79, 1);
     color: #fff; 
     font-style: normal;
     text-transform: capitalize;
 }
 
-div.encabezado-de-top{
+.encabezado-superior{
     height: 50px;
     display: flex;
     justify-content: space-between; /* se alinean los bloques bien ensanchados con respecto al eje horizontal*/
@@ -34,67 +34,66 @@ div.encabezado-de-top{
     
 }
 
-div.encabezado-de-top ul{
+.encabezado-superior ul{
     margin-left: 90px;
     text-align: center;
 }
 
-div.encabezado-de-top ul li{
+.encabezado-superior li{
     text-transform: lowercase;
     padding: 1px;
     list-style: none;
 }
 
-li img.correo, li img.telefono{
+.encabezado-superior img.correo, .encabezado-superior img.telefono{
     width: 13px;
     height: 13px;
 }
 
-div.encabezado-de-top form{
+.encabezado-superior form{
     display: inline;
     padding: 0px 10px;
 }
 
-div.encabezado-de-top form label{
+.encabezado-superior label{
     font-size: 14px;
 }
 
 
-
-div.encabezado-de-top form input{
+.encabezado-superior input{
     height: 32px;
     width: 140px;
-    text-align: start;
     font-size: 15px;
     border-radius: 5px;
     padding: 0px 2px;
     margin: 0px 2px;
     border: 1px solid #d8e1e4;
     color: #69747f;
-    place-items: start;
-    
+    text-align: start; /*aliniamiento texto*/
 }
 
-div.encabezado-de-top form input::placeholder { 
+/*representa el texto provisional*/
+.encabezado-superior  input::placeholder { 
     color: #76959Fcc;   /*color de letra*/
     letter-spacing: 1px; /*sepacion enre letras*/
     text-align: center;  /*alineamos el texto en el centro*/
     text-indent: 0px;    /*cero identacion*/
   }
   
-div.encabezado-de-top form input:focus { 
+/*representa un elemento cuando le haces click*/
+.encabezado-superior input:focus { 
     text-indent: 8px; /* identamos el cursor donde se comienza a escribir*/
     outline: none; /*funciona para sacar borde interno de color negro cuando hacemos focus al input text*/
  }
 
-div.encabezado-de-top form input.checkbox{ /* boton para seleccionar */
+.encabezado-superior input.checkbox{ /* boton para seleccionar */
     height: auto;
     width: auto;
     padding: 0px 1px;
     margin: 0px 1px;
 }
 
-div.encabezado-de-top form button{
+.encabezado-superior button{
     height: 35px;
     width: auto;
     text-align: center;
@@ -104,27 +103,29 @@ div.encabezado-de-top form button{
     border: 0px;
     color: #fff;
     font-size: 13px;
-    font-weight: bold;
+    font-weight: bold; /*grosor de la letra*/
 }
 
-div.encabezado-de-top form button.sesion{
+.encabezado-superior button.sesion{
     background-color: #2b424f;
 }
 
-div.encabezado-de-top form button:hover{
+/*reprenta el elemento cuando el puntero pasa sobre el*/
+.encabezado-superior button:hover{
     color: #f8ac18;
 }
 
-div.encabezado-de-top form button:hover.sesion{
+
+div.encabezado-superior button:hover.sesion{
     background-color: #01111A;
     
 }
+/*/////termina encabezado-parte-superior//////*/
 
-/*///////encabezado parte bot///////////*/
 
+/*///////encabezado-parte-inferior///////////*/
 
-/* contiene logo , titulo principal h1 y nav */
-div.encabezado-de-bot{
+div.encabezado-inferior{
     
     border-top: 2px solid #f8ac18;
     display: flex; /* los bloques pasan hacer inline*/ 
@@ -137,26 +138,26 @@ div.encabezado-de-bot{
 }
 
 
-/*////////TITULO H1 Y LOGO/////////////*/
+/*//logo (icono - titulo)//*/
 
 div.logo{
     display: flex;
     padding-right: 40px;
 }
 
-div.logo img.logo{
+.logo img.logo{
     width: 55px;
     height: 55px;
     padding-top: 12px;
 }
 
-div.logo h1{
+.logo h1{
     padding: 10px;
     font-size: 22px;
     letter-spacing: 2px;
 }
 
-/*////////BOTONERA/////////////*/
+/*//botonera (nav)//*/
 
 div.botonera{
     
@@ -169,70 +170,112 @@ ul.botonera{
     list-style: none; /*saca el puntito de cada li*/
     display: flex; /* los bloques pasan hacer inline*/ 
     justify-content: space-around; /* los separa a los extremos pero no tanto*/  
-    
 }
 
 ul.botonera li{
-    
-    margin: 0 5px;
-    
+    margin: 0 5px;   
 }
 
 
-ul.botonera li a{
+ul.botonera a{
     color: #ffffffcc; 
-    font-weight: 700;
+    font-weight: 700px;   /*grosor de la letra*/
     text-decoration: none; /* saca la linea de abajo de los link que se ponen por defecto*/
     padding: 10px 0px;
-    display: block; /* esto lo hago para que los textos de la botonera no suban para top*/
     margin: 0px 10px;
     text-align: center;
-    
-    
 }
 
 /* apariencia cuando se pasa el puntero del mouse por encima*/
-ul.botonera li a:hover, ul.botonera li a.pag-actual { 
+ul.botonera a:hover, ul.botonera a.pag-actual { 
     color: #f8ac18;
-    
+
 }
 /*/////termina botonera//////*/
-
 /*/////termina encabezado//////*/
 
 
 /*/////////main///////////*/
-div.imagen-bot-cabecera{
+
+/*/////imagen principal/////*/
+div.imagen-principal{
     background-color: black;    
     display: flex;
     justify-content: center;
 }
 
-div.imagen-bot-cabecera img{
+div.imagen-principal img{
     width: 90%; /*ajusta la imagen al 100% de la pantalla*/  
 }
+/*////termina imagen principal////*/
 
-
-/*/////////tabla///////////*/
-div.tabla{
+/*/////tarjetas de servicios/////*/
+div.main .sesion{
+    margin: 0px 94px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     text-align: center;
     text-transform: capitalize;
-    padding: 10px;
-    
+}
 
-}
-h2 {
+.sesion div.titulo {
+    color: #f8ac18;
+    font-size: 24px;
     width: 100%;
-    padding: 10px;
-    
+    padding: 52px 0px 44px;
+}
+
+.sesion div.contenedor-tarjetas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 8px 0px;
+}
+
+.sesion div.tarjeta{
+    border: 1px solid #D8E1E4;
+    width: 32%;
+}
+
+.sesion div.imagen{
+    background-color: yellow;
+    width: 387px;
+    height: 120px;
+    overflow: hidden;  
+}
+
+
+
+.sesion div.texto{
+    color: #01111A;
+}
+
+.sesion .texto:hover{
+    background-color: #D8E1E4;
+}
+
+.sesion .texto h3{
+    font-size: 20px;
+    font-weight: bold; /*grosor de la letra*/
+    text-align: center;
+    padding: 20px 0px;
     
 }
+
+.sesion .texto p{
+    text-align: justify;
+    padding: 0px 15px;
+}
+/*/////termina tarjetas de servicio/////*/
+
+
+/*/////////tabla///////////*/
+
 table{
-    
     background-color: white;
+    width: 100%;
+    padding: 8px 0px;
 }
 
 tr , td , th {
@@ -253,7 +296,7 @@ td img{
 }
 /*/////termina tabla///////*/
 
-/*/////termina cuerpo//////*/
+/*/////termina main//////*/
 
 
 /*//comienza footer////*/
@@ -299,52 +342,5 @@ p.fin{
     margin: 5px;
 }
 
-/*////////////////termina pie de pag//////////////////////////*/
-
-
-.section{
-    display: flex;
-    flex-direction: column;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-}
-
-.titulo{
-    display: flex;
-    justify-content: center;
-    font-size: 2em;
-}
-
-.contenedor-card{
-    height: 500px;
-    display: flex;
-    margin: 0px 100px;
-    justify-content: space-between;
-}
-
-.card{
-    width: 350px;
-    height: 500px;
-    border: 1px solid #D8E1E4;
-    
-    overflow: hidden;
-}
-
-.card-texto h1{
-    font-size: 1.5em;
-    text-align: center;
-    padding: 20px 0px;
-}
-
-.card-texto p{
-    font-size: 1em;
-    text-align: center;
-}
-
-.imagen{
-    width: 350px;
-    height: 120px;
-    display: flex;
-}
-
 /*/////termina footer//////*/
+
