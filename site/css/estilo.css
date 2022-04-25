@@ -392,7 +392,8 @@ td img{
 
 /*//comienza footer////*/
 div.pie-de-pag{
-    padding: 20px 80px;
+    padding: 30px 80px;
+    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
