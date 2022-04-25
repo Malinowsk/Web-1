@@ -273,6 +273,7 @@ div.imagen img.tarjeta{
 }
 
 .sesion .texto p{
+    text-transform: initial;
     text-align: justify;
     padding: 0px 15px;
 }
