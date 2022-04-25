@@ -198,7 +198,7 @@ ul.botonera a:hover, ul.botonera a.pag-actual {
 /*/////termina encabezado//////*/
 
 
-/*/////////main///////////*/
+/*/////////main del home///////////*/
 
 /*/////imagen principal/////*/
 div.imagen-principal{
@@ -239,23 +239,23 @@ div.main .sesion{
     width: 100%;
 }
 
-.sesion div.tarjeta{
+.contenedor-tarjetas div.tarjeta{
     border: 1px solid #D8E1E4;
     width: 32%;
 }
 
-.sesion div.tarjeta:hover{
+.contenedor-tarjetas div.tarjeta:hover{
     border: 1px solid #f8ac18;
     background-color: #D8E1E4;
 }
 
-.sesion div.imagen{
+.contenedor-tarjetas div.imagen{
     width: 100%;
     height: 120px;
-    overflow: hidden;  
+    overflow: hidden; /*el contenido que sobresale no se ve*/
 }
 
-div.imagen img{
+div.imagen img.tarjeta{
     width: 100%;
     height: 100%;
 }
@@ -264,7 +264,7 @@ div.imagen img{
     color: #01111A;
 }
 
-.sesion .texto h3{
+.sesion h3{
     font-size: 20px;
     font-weight: bold; /*grosor de la letra*/
     text-align: center;
@@ -288,11 +288,14 @@ table{
 }
 
 tr , td , th {
-    color: #01111A;
     width: 250px;
     height: 50px;
     padding: 3px;
     border: 2px solid #f8ac18;
+}
+
+tr , td{
+    color: #01111A;
 }
 
 th{
@@ -304,6 +307,85 @@ td img{
     height: 100%;
 }
 /*/////termina tabla///////*/
+
+/*/////recomendacion de libros//////*/
+
+.sesion .contenedor-libros{
+    background-color: #fff;
+    padding: 8px 0px;
+    width: 100%;
+}
+
+.contenedor-libros .libro{
+    display: flex;
+    padding: 5px 0px;
+    border: 3px solid #01111A;
+    background-color: #D8E1E4;
+    margin: 4px 2px;
+    color: #ffffffcc;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.libro .imagen{
+    background-color: red;
+    margin: 0px 2.5px 0px 5px;
+    border: 3px solid #01111A;
+    width: 205px;
+    height: 273px;
+}
+
+.libro img{
+    width: 205px;
+    height: 273px;
+}
+
+.libro .descripcion{
+    width: 80%;
+    background-color: #04344E;
+    margin: 0px 5px 0px 2.5px;
+    border: 3px solid #01111A;
+    height: 263px;
+    text-align: justify;
+    padding: 5px;
+}
+
+.descripcion h3{
+    text-align: justify;
+    font-size: 20px;
+    padding: 2px;
+    margin-bottom: 4px;
+    color: #000;
+}
+
+.descripcion h4{
+    color: #01111A;
+    font-size: 18px;
+    padding: 2px;
+    margin: 4px 0px;
+    text-decoration: underline;
+}
+
+.descripcion p{
+    padding: 2px;
+    margin: 4px 0px;
+    font-style: italic;
+}
+
+.descripcion p::first-letter{
+    color: #f8ac18;
+    font-size: 20px;
+
+}
+
+.descripcion a{
+    padding: 2px;
+    margin-top: 5px;
+    color: #f8ac18;
+    text-decoration: none;
+}
+
+/*/////termina recomendacion de libros//////*/
 
 /*/////termina main//////*/
 
@@ -322,11 +404,10 @@ div a.politicas{
 }
 
 div.pie-de-pag div.redes-sociales{
-    
     padding: 10px;  
 }
 
-div.pie-de-pag div.redes-sociales ul.redes-sociales{
+div.pie-de-pag ul.redes-sociales{
     display:flex;
     list-style:none;
     justify-content: flex-end;
