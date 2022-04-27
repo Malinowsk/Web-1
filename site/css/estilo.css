@@ -63,7 +63,7 @@ label{
 }
 
 
-input{
+input , textarea{
     height: 32px;
     width: 140px;
     font-size: 15px;
@@ -76,7 +76,7 @@ input{
 }
 
 /*representa el texto provisional*/
-input::placeholder { 
+input::placeholder , textarea::placeholder { 
     color: #76959Fcc;   /*color de letra*/
     letter-spacing: 1px; /*sepacion enre letras*/
     text-align: center;  /*alineamos el texto en el centro*/
@@ -84,7 +84,7 @@ input::placeholder {
   }
   
 /*representa un elemento cuando le haces click*/
-input:focus { 
+input:focus , textarea:focus { 
     text-indent: 8px; /* identamos el cursor donde se comienza a escribir*/
     outline: none; /*funciona para sacar borde interno de color negro cuando hacemos focus al input text*/
  }
@@ -480,7 +480,7 @@ form.contacto strong{
     margin: 0px 0px 0px 3px;
 }
 
-form.contacto input{
+form.contacto input , form.contacto textarea.mensaje{
     padding: 15px 24px;
     border: 2px solid #d8e1e4;
     width: 345.5px;
@@ -489,19 +489,22 @@ form.contacto input{
 }
 form.contacto input::placeholder { 
     
-    text-align: left;  /*alineamos el texto en el centro*/
+    text-align: left; 
     
 }
 
-form.contacto input:focus { 
+form.contacto input:focus , form.contacto textarea:focus { 
     text-indent: 0px;
+    
 }
 
-form.contacto input.mensaje{
+form.contacto textarea.mensaje{
     width: 797px;
-    height: 80px;
+    min-height: 80px;
     padding: 6px 12px;
     border: 2px solid #ccc;
+    
+    
 }
 
 form.contacto input.checkbox{
@@ -521,8 +524,4 @@ form.contacto input.checkbox{
     padding: 5px;
     color: white;
     background-color: #047ccc;
-}
-
-form.contacto button.enviar{
-    background-color: red;
 }

@@ -59,6 +59,7 @@
 
 
         <div class="sesion">
+            
             <div class="titulo-sumiso">
                 <h2>Contacto</h2>
             </div>
@@ -67,39 +68,41 @@
                 <div class="contenedor">
                     <div class="cont-interno">
                         <label>Nombre <strong>(*)</strong></label>
-                        <input type="text" placeholder="Nombre">
+                        <input type="text" placeholder="Nombre" required>
                     </div>
                     <div class="cont-interno">
                         <label>Email <strong>(*)</strong></label>
-                        <input type="email" placeholder="Email">
+                        <input type="email" placeholder="Email" required>
                     </div>
                 </div>
 
                 <div class="contenedor">
                     <div class="cont-interno">
                         <label >Apellido <strong>(*)</strong></label>
-                        <input type="text" placeholder="Apellido">
+                        <input type="text" placeholder="Apellido" required>
                     </div>
                     <div class="cont-interno">
                         <label>Asunto <strong>(*)</strong></label>
-                        <input type="email" placeholder="Asunto">
+                        <input type="email" placeholder="Asunto" required>
                     </div>  
                 </div>
+                <div class="cont-interno">
+                    <label>Mensaje</label>
+                    <textarea class="mensaje"></textarea>
+                </div>
                 <div class="contenedor">
-                    <div class="cont-interno">
-                        <label>Mensaje</label>
-                        <input class="mensaje" type="textarea">
-                    </div>
                     <div class="condiciones">
                         <label> <strong>(*)</strong> </label>
-                        <input class="checkbox" type="checkbox">
+                        <input class="checkbox" type="checkbox" required>
                         <label>Debes leer y aceptar las condiciones legales</label>
                     </div>
                     <div class="condiciones">
                         <button>enviar</button>
                     </div>
                 </div>
+                
             </form>
+
         </div>
     </div>
 
