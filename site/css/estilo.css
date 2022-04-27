@@ -323,7 +323,7 @@ td img{
     border: 3px solid #01111A;
     background-color: #D8E1E4;
     margin: 4px 2px;
-    color: #ffffffcc;
+    color: #ffffffaa;
     justify-content: space-around;
     align-items: flex-start;
 }
@@ -356,11 +356,10 @@ td img{
     font-size: 20px;
     padding: 2px;
     margin-bottom: 4px;
-    color: #000;
 }
 
 .descripcion h4{
-    color: #01111A;
+    color: #ffffffcc;
     font-size: 18px;
     padding: 2px;
     margin: 4px 0px;
@@ -371,6 +370,10 @@ td img{
     padding: 2px;
     margin: 4px 0px;
     font-style: italic;
+}
+
+.descripcion h4:hover, .descripcion p:hover , .descripcion h3 , div a:hover.politicas{
+    color: #ffffff;
 }
 
 .descripcion p::first-letter{
@@ -392,6 +395,7 @@ td img{
 
 
 /*//comienza footer////*/
+
 div.pie-de-pag{
     padding: 30px 80px;
     margin-top: 50px;
@@ -402,7 +406,7 @@ div.pie-de-pag{
 }
 
 div a.politicas{
-    color: #fff;
+    color: #ffffffaa;
 }
 
 div.pie-de-pag div.redes-sociales{
