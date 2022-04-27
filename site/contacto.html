@@ -59,50 +59,40 @@
 
 
         <div class="sesion">
-            <div class="titulo">
+            <div class="titulo-sumiso">
                 <h2>Contacto</h2>
             </div>
 
-            <form>
-                <p>Datos personales</p>
-                <div>
-                    <label>Apellido y nombre</label>
-                    <input type="text">
+            <form class="contacto">
+                <div class="contenedor">
+                    <div class="cont-interno">
+                        <label>Nombre <strong>(*)</strong></label>
+                        <input type="text" placeholder="Nombre">
+                    </div>
+                    <div class="cont-interno">
+                        <label>Email <strong>(*)</strong></label>
+                        <input type="email" placeholder="Email">
+                    </div>
                 </div>
-                <div>
-                    <label>Documento de identidad</label>
-                    <input type="text">
+
+                <div class="contenedor">
+                    <div class="cont-interno">
+                        <label >Apellido <strong>(*)</strong></label>
+                        <input type="text" placeholder="Apellido">
+                    </div>
+                    <div class="cont-interno">
+                        <label>Asunto <strong>(*)</strong></label>
+                        <input type="email" placeholder="Asunto">
+                    </div>  
+                </div>
+
+                <div class="cont-interno">
+                    <label>Mensaje</label>
+                    <input class="mensaje" type="textarea">
                 </div>
 
                 <div>
-                    <label>Fecha de nacimiento</label>
-                    <input type="date">
-                </div>
-
-                <div>
-                    <label>Dirección</label>
-                    <input type="text">
-                </div>
-
-                <p>Datos laborales</p>
-                <div>
-                    <label>Nombre de la empresa</label>
-                    <input type="text">
-                </div>
-                <div>
-                    <label>Actividad</label>
-                    <input type="text">
-                </div>
-                <div>
-                    <label>Dirección</label>
-                    <input type="text">
-                </div>
-                <div>
-                    <label>Observaciones</label>
-                    <input type="textarea">
-                </div>
-                <div>
-                    <button>Registrarse</button>
+                    <button>enviar</button>
                 </div>
 
             </form>

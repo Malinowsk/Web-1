@@ -58,12 +58,12 @@ body{
     padding: 0px 10px;
 }
 
-.encabezado-superior label{
+label{
     font-size: 14px;
 }
 
 
-.encabezado-superior input{
+input{
     height: 32px;
     width: 140px;
     font-size: 15px;
@@ -76,7 +76,7 @@ body{
 }
 
 /*representa el texto provisional*/
-.encabezado-superior  input::placeholder { 
+input::placeholder { 
     color: #76959Fcc;   /*color de letra*/
     letter-spacing: 1px; /*sepacion enre letras*/
     text-align: center;  /*alineamos el texto en el centro*/
@@ -84,12 +84,12 @@ body{
   }
   
 /*representa un elemento cuando le haces click*/
-.encabezado-superior input:focus { 
+input:focus { 
     text-indent: 8px; /* identamos el cursor donde se comienza a escribir*/
     outline: none; /*funciona para sacar borde interno de color negro cuando hacemos focus al input text*/
  }
 
-.encabezado-superior input.checkbox{ /* boton para seleccionar */
+input.checkbox{ /* boton para seleccionar */
     height: auto;
     width: auto;
     padding: 0px 1px;
@@ -224,12 +224,21 @@ div.main .sesion{
     text-transform: capitalize;
 }
 
-.sesion div.titulo {
-    color: #f8ac18;
+.sesion div.titulo-vistoso , .sesion div.titulo-sumiso{
     font-size: 24px;
     width: 100%;
     padding: 52px 0px 44px;
 }
+
+.sesion div.titulo {
+    color: #f8ac18;
+}
+
+.sesion div.titulo-sumiso {
+    color: #2b424f;
+    text-align: left;
+}
+
 
 .sesion div.contenedor-tarjetas{
     display: flex;
@@ -440,3 +449,63 @@ p.fin{
 
 /*/////termina footer//////*/
 
+
+.sesion form.contacto{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-right: 20px;
+}
+
+form.contacto > div.contenedor{
+    width: 50%;
+    margin: 5px 0px;
+}
+
+form.contacto div.cont-interno{
+    margin-bottom: 24px;
+    
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+form.contacto label{
+    padding: 16px 15px 0px;
+    color: #333333;
+}
+
+form.contacto strong{
+    color: #f8ac18;
+    margin: 0px 0px 0px 3px;
+}
+
+form.contacto input{
+    padding: 15px 24px;
+    border: 2px solid #d8e1e4;
+    width: 345.5px;
+    height: 20px;
+    font-size: 16px;
+}
+form.contacto input::placeholder { 
+    
+    text-align: left;  /*alineamos el texto en el centro*/
+    
+  }
+
+  form.contacto input:focus { 
+    text-indent: 0px;
+  }
+
+  form.contacto input.mensaje{
+    width: 797px;
+    height: 80px;
+    padding: 6px 12px;
+    border: 2px solid #ccc;
+    
+  }
+
+  form.contacto button.enviar{
+      background-color: red;
+  }
