@@ -351,6 +351,9 @@ td img{
 }
 
 .libro .descripcion{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     width: 80%;
     background-color: #04344E;
     margin: 0px 5px 0px 2.5px;
@@ -387,7 +390,7 @@ td img{
 
 .descripcion p::first-letter{
     color: #f8ac18;
-    font-size: 20px;
+    font-size: 25px;
 
 }
 
@@ -499,7 +502,7 @@ form.contacto input:focus , form.contacto textarea:focus {
 }
 
 form.contacto textarea.mensaje{
-    width: 797px;
+    min-width: 797px;
     min-height: 80px;
     padding: 6px 12px;
     border: 2px solid #ccc;
