@@ -465,7 +465,6 @@ form.contacto > div.contenedor{
 
 form.contacto div.cont-interno{
     margin-bottom: 24px;
-    
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -492,20 +491,38 @@ form.contacto input::placeholder {
     
     text-align: left;  /*alineamos el texto en el centro*/
     
-  }
+}
 
-  form.contacto input:focus { 
+form.contacto input:focus { 
     text-indent: 0px;
-  }
+}
 
-  form.contacto input.mensaje{
+form.contacto input.mensaje{
     width: 797px;
     height: 80px;
     padding: 6px 12px;
     border: 2px solid #ccc;
-    
-  }
+}
 
-  form.contacto button.enviar{
-      background-color: red;
-  }
+form.contacto input.checkbox{
+    width: auto;
+}
+
+.condiciones{
+    display: flex;
+    align-items: flex-end;
+    text-transform: none;
+    padding: 0px 35px;
+}
+
+.condiciones button{
+    margin: 30px 45px;
+    text-transform: capitalize;
+    padding: 5px;
+    color: white;
+    background-color: #047ccc;
+}
+
+form.contacto button.enviar{
+    background-color: red;
+}
