@@ -29,15 +29,18 @@ function validarCaptcha(){
     //alert(document.getElementById("valor-captcha").value)
     //alert(typeof(document.getElementById("valor-captcha").value))
     if(parseInt(document.getElementById("valor-captcha").value)==parseInt(resultado)){
-        //contenedor.lassList.remove("captcha");
         let contenedor = document.getElementById("captcha");
         contenedor.innerHTML="";
+        contenedor.classList.remove("captcha");
         let mensaje = document.getElementById("info-resolucion");
+        mensaje.classList.add("mensaje-validado");
         mensaje.innerHTML = "Validación satisfactoria";
-        
+        alert("llegue1")
     }
     else{
-        //let mensaje = document.getElementById("info-resolucion");
-        //mensaje.innerHTML = "La validación es incorrecta";
+        let mensaje = document.getElementById("info-resolucion");
+        mensaje.classList.add("mensaje-validado");
+        mensaje.innerHTML = "La validación es incorrecta";
+        alert("llegue");
     }
 }

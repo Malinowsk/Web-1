@@ -568,4 +568,10 @@ form.contacto input.checkbox{ /*sacar esta 2 veces*/
     background-color: #047ccc;
 }
 
+.mensaje-validado{
+    color: red;
+    margin-top: 30px; 
+    margin-left: 20px;
+}
+
 
