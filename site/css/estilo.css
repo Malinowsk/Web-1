@@ -63,7 +63,7 @@ label{
 }
 
 
-input , textarea{
+input , textarea, .condiciones .captcha input{
     height: 32px;
     width: 140px;
     font-size: 15px;
@@ -140,7 +140,6 @@ div.encabezado-inferior{
     top: 0; /* en que posicion queda el div cuando es afectado por position sticky*/
 }
 
-
 /*//logo (icono - titulo)//*/
 
 div.logo{
@@ -203,7 +202,7 @@ ul.botonera a:hover, ul.botonera a.pag-actual {
 /*/////imagen principal/////*/
 div.imagen-principal{
     background-color: black; 
-    background-image: url(../images/TOCA\ ESTE\ TEXTO\ PARA\ DESCARGAR.png);
+    background-image: url(../images/fondo-azul.png);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -459,11 +458,13 @@ p.fin{
     flex-wrap: wrap;
     width: 100%;
     margin-right: 20px;
+    
 }
 
 form.contacto > div.contenedor{
     width: 50%;
     margin: 5px 0px;
+    
 }
 
 form.contacto div.cont-interno{
@@ -510,21 +511,66 @@ form.contacto textarea.mensaje{
     
 }
 
-form.contacto input.checkbox{
+form.contacto input.checkbox{ /*sacar esta 2 veces*/
     width: auto;
 }
 
-.condiciones{
+.condiciones {
     display: flex;
-    align-items: flex-end;
+    width: 100%;
     text-transform: none;
-    padding: 0px 35px;
+    margin-left: 300px;
+    margin-top: 5x;
+    margin-bottom: 10px;
+    align-items: flex-start;
+    
+}
+
+
+.generar-captcha , .captcha{
+    padding: 10px 0px;
+    background-color: #04344E;
+    border: #01111A 2px solid;
+    border-radius: 5px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.condiciones .generar-captcha label , .condiciones .captcha p{
+    color: white;
+}
+
+
+.captcha{
+    width: 300px;
+    height: 150px;
+}
+
+.condiciones .captcha p{
+    margin: 15px;
+}
+
+.condiciones .captcha input:focus{
+    text-align: center; /*aliniacion central del valor introducido*/
+    text-indent: -5px; /*identacion un poco a la izquierda*/
+}
+
+.condiciones .captcha input{
+    text-align: center;
 }
 
 .condiciones button{
-    margin: 30px 45px;
+    margin: 30px 40px;
     text-transform: capitalize;
     padding: 5px;
     color: white;
     background-color: #047ccc;
 }
+
+.mensaje-validado{
+    color: red;
+    margin-top: 30px; 
+    margin-left: 20px;
+}
+
+

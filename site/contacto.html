@@ -24,7 +24,7 @@
     <div class="encabezado-superior">
         <ul>
             <li> <i class="fa fa-envelope"></i> info@bithumanoide.com</li>
-            <li> <i class="fas fa-phone"></i> +492494-543422</li>
+            <li> <i class="fas fa-phone"></i> +54 9 2284 77-42493</li>
         </ul>
 
         <form>
@@ -92,20 +92,41 @@
                         <input type="text" placeholder="Asunto" required>
                     </div>  
                 </div>
+
                 <div class="cont-interno">
                     <label>Mensaje</label>
                     <textarea class="mensaje"></textarea>
                 </div>
-                <div class="contenedor">
-                    <div class="condiciones">
+                
+                    
+                <div class="condiciones">
+                    
                         <label> <strong>(*)</strong> </label>
                         <input class="checkbox" type="checkbox" required>
                         <label>Debes leer y aceptar las condiciones legales</label>
-                    </div>
-                    <div class="condiciones">
-                        <button>enviar</button>
-                    </div>
+                    
                 </div>
+
+                <div class="condiciones">
+                    <div class="generar-captcha">
+                            <label> <strong>(*)</strong> </label>
+                            <input id="generar-captcha" class="checkbox" type="checkbox" required>
+                            <label>No soy un robot</label>
+                    </div>
+                    <div id="captcha"></div>
+                    <p id="info-resolucion"></p>
+                    <!-- <div class="captcha">
+                        <p>¿ Cuánto es <span id="primer-num">0</span> + <span id="seg-num">0</span> ?</p>
+                        <input type="text">
+                        <div><button>validar</button></div>
+                    </div> -->
+                    <!-- <p style="color: red; margin-top: 30px; margin-left: 20px;" >Validacion satisfactoria</p> -->
+                </div>
+                
+                <div class="condiciones">
+                    <button>enviar</button>
+                </div>
+                
                 
             </form>
 
@@ -139,6 +160,8 @@
         <p class="fin">Copyright © 2022 Bit Humanoide - Bs.As Tandil</p>
 
     </div>
+
+    <script type="text/javascript" src="js/captcha.js"></script>
 </body>
 
 </html>
