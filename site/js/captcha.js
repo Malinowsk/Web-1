@@ -1,46 +1,42 @@
-document.getElementById("generar-captcha").addEventListener("focus",generarCaptcha); //pongo a escuchar el evento para generar el captcha
-let resultado;
-
+//genera el captcha para validar que es un humano
 function generarCaptcha(){
-    let contenedor_captcha = document.getElementById("captcha");
-    let primer_numero = generarNumero();
-    let segundo_numero = generarNumero();
-    contenedor_captcha.innerHTML = '<p>¿ Cuánto es <span id="primer-num">'+ primer_numero +'</span> + <span id="seg-num">'+ segundo_numero +'</span> ?</p><input id="valor-captcha" type="text"><div><button id="validar">validar</button></div>';
-    generarEventoDeValidacion();
+    let primer_numero = generarNumero(); // genero numero aleatorio
+    let segundo_numero = generarNumero(); // genero numero aleatorio
+    let contenedor_captcha = document.querySelector("#captcha"); // selecciono el div 
+    contenedor_captcha.innerHTML = '<p>¿ Cuánto es '+ primer_numero +' + '+ segundo_numero +' ?</p><input id="valor-captcha" type="text"><div><button id="validar" type="button">validar</button></div>';
     contenedor_captcha.classList.add("captcha"); //agrego clase 
-
+    generarEventoDeValidacion(); //funcion que pone a escuchar un evento para validar con  el captcha
     resultado= primer_numero + segundo_numero; // guardo resultado valido del captcha
-    console.log(resultado);
-    console.log(typeof(resultado));
 }
 
 function generarNumero(){
-    let numero_azar= Math.floor(Math.random()*10);
-    return numero_azar;
+    return Math.floor(Math.random()*10); //devuelve un numero entero entre 0 y 9
 }
 
 function generarEventoDeValidacion(){
-    document.getElementById("validar").addEventListener("click",validarCaptcha);
+    document.querySelector("#validar").addEventListener("click",validarCaptcha); //pongo a escuchar el evento para validar el captcha
 }
 
+
+//funcion para validar si el valor puesto para el captcha es el correcto o no
 function validarCaptcha(){
-    //console.log(resultado);
-    //console.log(typeof(resultado));
-    //alert(document.getElementById("valor-captcha").value)
-    //alert(typeof(document.getElementById("valor-captcha").value))
-    if(parseInt(document.getElementById("valor-captcha").value)==parseInt(resultado)){
-        let contenedor = document.getElementById("captcha");
+    if(document.querySelector("#valor-captcha").value==resultado){
+        let contenedor = document.querySelector("#captcha");
         contenedor.innerHTML="";
         contenedor.classList.remove("captcha");
-        let mensaje = document.getElementById("info-resolucion");
-        mensaje.classList.add("mensaje-validado");
-        mensaje.innerHTML = "Validación satisfactoria";
-        alert("llegue1")
+        informarResultado("Validación satisfactoria! ");
     }
     else{
-        let mensaje = document.getElementById("info-resolucion");
-        mensaje.classList.add("mensaje-validado");
-        mensaje.innerHTML = "La validación es incorrecta";
-        alert("llegue");
+        informarResultado("La validación se efectuó incorrectamente!");
     }
 }
+
+//funcion que muestra por pantalla mensaje sobre la resolucion del captcha   
+function informarResultado(mensaje){ 
+    let parrafo = document.querySelector("#info-resolucion");
+        parrafo.classList.add("mensaje-validado");
+        parrafo.innerHTML = mensaje;
+}
+
+document.querySelector("#generar-captcha").addEventListener("focus",generarCaptcha); //pongo a escuchar el evento para generar el captcha
+let resultado; // variable para guardar el valor valido del captcha
