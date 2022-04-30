@@ -56,16 +56,21 @@
             <img src="images/cabecera.jpeg" alt="adas"/>
         </div>
         <div class="sesion">
-            <div class="#">
-                <h1>
-                    nuestros servicios
-                </h1>
+            <div class="contenedor-servicios">
+                <div class="titulo-vistoso">
+                    <h1>
+                        nuestros servicios
+                    </h1>
+                </div>
+            
                 <p>Dentro de nuestros servicios de Desarrollo en Inteligencia Artificial mostramos al público distintos proyectos en relación con el área especializada en el que trabajaremos. En esta sección se pueden observar proyectos ya implementados por nuestros desarrolladores y categorizados según el área del servicio especializado.</p>
                 <div class="tabla-contenido">
-                    <h3> tabla de contenido </h3>
+                    <div class="titulo-secundario">
+                        <h3> tabla de contenido </h3>
+                    </div>
                     <ul>
                         <li>
-                            <a href="">Neural Networks</a>
+                            <a href="#new-net">Neural Networks</a>
                             <ul>
                                 <li><a href="">clasificacion de cancer de mama</a></li>
                                 <li><a href="">Detección de somnolencia del conductor</a></li>
@@ -95,27 +100,33 @@
         </div>
 
         <div class="sesion"> 
-            <div class="titulo-sumiso">
+            <div id="new-net" class="titulo-sumiso">
                 <h2>Neural Networks</h2>
             </div>
-            <div class="#">
-                <h4>Clasificación del cáncer de mama</h4>
+            <div class="contenedor-proyecto">
+                <div class="titulo-secundario">
+                    <h4>Clasificación del cáncer de mama</h4>
+                </div>
                 <p>Lenguaje: Python</p>
                 <p>Conjunto de datos: IDC (Carcinoma ductal invasivo)</p>
                 <p>Código fuente: <a target="_blanck" href="https://data-flair.training/blogs/project-in-python-breast-cancer-classification/">Clasificación del cáncer de mama con aprendizaje profundo</a></p>
                 <p>En caso de que quieras añadir un proyecto relacionado con la industria de la salud a tu portafolio, puedes intentar construir un sistema de detección de cáncer de mama utilizando Python. Los casos de cáncer de mama han aumentado últimamente, y la mejor manera de luchar contra el cáncer de mama es identificarlo en una etapa temprana y tomar las medidas preventivas adecuadas.</p>
                 <p>Para construir tal sistema con Python, puedes usar el conjunto de datos IDC (Invasive Ductal Carcinoma), que contiene imágenes histológicas de células malignas que inducen al cáncer, y puedes entrenar tu modelo en este conjunto de datos. Para este proyecto, encontrará las redes neuronales convolucionales más adecuadas para la tarea, y en cuanto a las bibliotecas de Python, puede usar NumPy, OpenCV, TensorFlow, Keras, scikit-learn, y Matplotlib.</p>
             </div>
-            <div class="#">
-                <h4>Detección de somnolencia del conductor</h4>
+            <div class="contenedor-proyecto">
+                <div class="titulo-secundario">
+                    <h4>Detección de somnolencia del conductor</h4>
+                </div>
                 <p>Lenguaje: Python</p>
                 <p>Código fuente: <a target="_blanck" href="https://data-flair.training/blogs/python-project-driver-drowsiness-detection-system/">Código fuente: Sistema de detección de somnolencia del conductor con OpenCV y Keras</a></p>
                 <p>Los accidentes de tráfico cobran muchas vidas cada año, y una de las causas de los accidentes de tráfico son los conductores somnolientos. Siendo una causa potencial de peligro en la carretera, una de las mejores maneras de prevenirlo es implementar un sistema de detección de somnolencia.</p>
                 <p>Un sistema de detección de la somnolencia de los conductores como éste es otro proyecto que tiene el potencial de salvar muchas vidas al evaluar constantemente los ojos del conductor y alertarlo con alarmas en caso de que el sistema detecte el cierre frecuente de los ojos.</p>
                 <p>Para este proyecto es imprescindible una cámara web que permita al sistema vigilar periódicamente los ojos del conductor. Para que esto suceda, este proyecto Python requerirá un modelo de aprendizaje profundo y bibliotecas como OpenCV, TensorFlow, Pygame y Keras.</p>
             </div>
-            <div class="#">
-                <h4>Detección de género y predicción de edad</h4>
+            <div class="contenedor-proyecto">
+                <div class="titulo-secundario">
+                    <h4>Detección de género y predicción de edad</h4>
+                </div>
                 <p>Lenguaje: Python</p>
                 <p>Conjunto de datos: Adience</p>
                 <p>Paquetes: OpenCV</p>
@@ -123,11 +134,15 @@
                 <p>Identificado como un problema de clasificación, este proyecto de detección de género y predicción de edad pondrá a prueba tanto su aprendizaje de máquina como sus habilidades de visión por computador. El objetivo aquí es construir un sistema que tome la imagen de una persona e intente identificar su edad y género.</p>
                 <p>Para este divertido proyecto, puedes implementar Redes Neuronales Convolucionales y usar Python con el paquete OpenCV. Puedes tomar el conjunto de datos de Adience para este proyecto. Factores como el maquillaje, la iluminación, las expresiones faciales harán esto un desafío e intentarán despistar a tu modelo, así que tenlo en cuenta.</p>
             </div>
-            <div class="#">
-                <h4>reconocimiento de imágenes utilizando redes neuronales artificiales</h4>
-                <h5>Resumen</h5>
+            <div class="contenedor-proyecto">
+                <div class="titulo-secundario">
+                    <h4>reconocimiento de imágenes utilizando redes neuronales artificiales</h4>
+                    <p> <strong>Resumen</strong> </p>
+                </div>
                 <p>Este trabajo describe el proceso de extracción de patrones característicos de imágenes, mediante la ayuda de Redes Neuronales Artificiales. La información de la Red Neuronal junto con datos adicionales de las imágenes, serán almacenados en una base de datos y consumidos por un servicio web. Un teléfono móvil con sistema operativo Android consumirá la información almacenada en el servicio web. Posteriormente al realizar una captura de imagen con la cámara del teléfono, este procesará la imagen y junto con los datos consumidos por el servicio web será capaz identificar de qué imagen se trata. Para el tratamiento de las imágenes se utilizarán librerías OpenCV, tanto en el servidor como en el teléfono móvil.</p>
-                <h5>Objetivos</h5>
+                <div class="titulo-secundario">
+                    <p> <strong>Objetivos</strong> </p>
+                </div>                
                 <p>Los objetivos planteados en este trabajo de investigación son los siguientes:</p>
                 <ul>
                     <li>
@@ -142,8 +157,10 @@
 
 
         <div class="sesion">
-            <h3>Natural Languaje Processing</h3>
-            <div class="#">
+            <div id="nat-leng" class="titulo-sumiso">
+                <h2>Natural Languaje Processing</h2>
+            </div>
+            <div class="contenedor-proyecto">
                 <h4>Construyendo Chatbots con python</h4>
                 <p>Lenguaje: Python</p>
                 <p>Conjunto de datos: Intents archivo JSON</p>
@@ -172,7 +189,10 @@
         </div>
 
         <div class="sesion">
-            <h3>Data Science</h3>
+            <div id="dat-sci" class="titulo-sumiso">
+                <h2>Data Science</h2>
+            </div>
+            <h3></h3>
             <div class="#">
                 <h4>Detección de fraude con tarjetas de crédito</h4>
                 <p>Lenguaje: R o Python</p>

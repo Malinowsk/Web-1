@@ -14,6 +14,10 @@ body{
     font-size: 16px;
 }
 
+h1,h2,h3,h4{
+    text-transform: capitalize;
+}
+
 h1{
     font-size: 32px;
 }
@@ -31,7 +35,6 @@ h4{
 p{
     font-size: 16px;
     text-transform: initial;
-    text-align: justify;
 }
 
 /*////encabezado/////*/
@@ -82,8 +85,11 @@ label{
     font-size: 14px;
 }
 
+.captcha{
+    text-align: center;
+}
 
-input , textarea, .condiciones .captcha input{
+.encabezado-superior input, .captcha input , textarea{
     height: 32px;
     width: 140px;
     font-size: 15px;
@@ -92,7 +98,7 @@ input , textarea, .condiciones .captcha input{
     margin: 0px 2px;
     border: 1px solid #d8e1e4;
     color: #69747f;
-    text-align: start; /*aliniamiento texto*/
+    text-indent: 8px;
 }
 
 /*representa el texto provisional*/
@@ -235,8 +241,14 @@ div.imagen-principal img{
 /*////termina imagen principal////*/
 
 /*/////tarjetas de servicios/////*/
-div.main .sesion{
+
+
+/*para cambiar*/
+.main .sesion{
     margin: 0px 94px;
+}
+
+.sesion .contenedor-tarjetas, .contenedor-tabla{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -245,20 +257,27 @@ div.main .sesion{
 }
 
 .sesion div.titulo-vistoso , .sesion div.titulo-sumiso{
-    font-size: 24px;
     width: 100%;
     padding: 52px 0px 44px;
 }
 
 .sesion div.titulo-vistoso {
+    text-align: center;
     color: #f8ac18;
 }
 
-.sesion div.titulo-sumiso {
+.sesion div.titulo-sumiso, .titulo-secundario {
     color: #2b424f;
     text-align: left;
 }
 
+.titulo-secundario{
+    margin-bottom: 10px;
+}
+
+.titulo-secundario p{
+    margin-top: 10px;
+}
 
 .sesion div.contenedor-tarjetas{
     display: flex;
@@ -293,8 +312,7 @@ div.imagen img.tarjeta{
     color: #01111A;
 }
 
-.sesion h3{
-    font-size: 20px;
+.tarjeta h3{
     font-weight: bold; /*grosor de la letra*/
     
     padding: 20px 0px;
@@ -303,6 +321,7 @@ div.imagen img.tarjeta{
 
 .sesion .texto p{
     padding: 0px 15px 10px;
+    text-align: justify;
 }
 /*/////termina tarjetas de servicio/////*/
 
@@ -470,6 +489,7 @@ p.fin{
 
 /*/////termina footer//////*/
 
+/* HTML contacto */
 
 .sesion form.contacto{
     display: flex;
@@ -480,7 +500,7 @@ p.fin{
     
 }
 
-form.contacto > div.contenedor{
+form.contacto div.contenedor-contacto{
     width: 50%;
     margin: 5px 0px;
     
@@ -503,7 +523,7 @@ form.contacto strong{
     margin: 0px 0px 0px 3px;
 }
 
-form.contacto input , form.contacto textarea.mensaje{
+.contenedor-contacto input , form.contacto textarea.mensaje{
     padding: 15px 24px;
     border: 2px solid #d8e1e4;
     width: 345.5px;
@@ -541,7 +561,7 @@ form.contacto input.checkbox{ /*sacar esta 2 veces*/
     margin-left: 300px;
     margin-top: 5x;
     margin-bottom: 10px;
-    align-items: flex-start;
+    align-items: baseline;
     
 }
 
@@ -592,3 +612,29 @@ form.contacto input.checkbox{ /*sacar esta 2 veces*/
     margin-left: 20px;
 }
 
+/* termina HTML contacto */
+
+/* arranca main HTML servicios*/
+
+.contenedor-servicios p{
+    text-align: center;
+    padding: 8px 0px;
+}
+
+.tabla-contenido{
+    margin-top: 44px;
+}
+
+.tabla-contenido ul, .contenedor-proyecto ul{
+    margin-left: 20px;
+}
+
+.tabla-contenido ul a{
+    text-decoration: none;
+}
+
+.contenedor-proyecto{
+    margin-bottom: 20px;
+}
+
+/* termina main HTML servicios*/
