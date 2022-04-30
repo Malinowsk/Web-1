@@ -30,4 +30,8 @@ function mostrarBotonClickeadoVerde(){
 }
 
 
+//Una consulta, nosotros queremos que cuando el usuario toque un botón le aparezca una sección chiquita de la página (que en principio no esta), para lograrlo con lo que sabemos hasta ahora, lo hicimos agregamos html al js, para este caso puntual podemos dejarlo de esa manera o nos podes recomendar buscar alguna forma mas elegante?
 
+//Una consulta, nosotros queremos que cuando el usuario toque un botón le aparezca una sección chiquita de la página 
+//(que en principio no esta), para lograrlo con lo que sabemos hasta ahora, lo hicimos agregamos html al js, para este 
+//caso puntual podemos dejarlo de esa manera o nos podes recomendar buscar alguna forma mas elegante?
