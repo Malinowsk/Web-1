@@ -40,9 +40,14 @@ div.encabezado-de-top ul{
 }
 
 div.encabezado-de-top ul li{
+    list-style: none;
     text-transform: lowercase;
     padding: 1px;
     
+}
+
+div.encabezado-de-top ul li span{
+    margin: 0px 10px;
 }
 
 div.encabezado-de-top form{
@@ -128,6 +133,7 @@ div.encabezado-de-bot{
     align-items: center; /* acomoda en el mismo renglon de forma centrada la botonera con el titulo h1*/
     position: sticky; /* sirve para cuando el usuario hace scroll hacia abajo, todo el div siga mostrandose en la pantalla*/ 
     top: 0; /* en que posicion queda el div cuando es afectado por position sticky*/
+    z-index: 100;
 }
 
 
@@ -193,21 +199,40 @@ ul.botonera li a:hover, ul.botonera li a.pag-actual {
 /*////////////////termina botonera//////////////////////////*/
 /*////////////////termina encabezado////////////////////////*/
 
-div.imagen-bot-cabecera{
+div.imagen-cabecera{
     background-color: black;
-    
-    display: flex;
-    justify-content: center;
-
+    display: block;    
 }
 
-div.imagen-bot-cabecera img{
-    
-    width: 90%; /*ajusta la imagen al 100% de la pantalla*/  
-    
+.img1{
+    width: 90%; /*ajusta la imagen al 100% de la pantalla*/
+    position: relative;
+    margin: 0 auto;
+    z-index: 50;
+}
+
+.img2{
+    width: 100%;
+    position: absolute;
+    height: 360px;
+    width: auto;
+    right: 0;
+    filter: blur(5px);
 }
 
 /*////////////////comienza pie de pag//////////////////////////*/
+
+.experimento{
+    width: 400px;
+    height: 400px;
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+}
+
+.experimento img{
+    
+}
 
 
 div.pie-de-pag{
