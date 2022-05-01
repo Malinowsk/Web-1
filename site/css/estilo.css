@@ -273,7 +273,7 @@ div.imagen-principal img{
     text-align: left;
 }
 
-.titulo-secundario, .titulo-terciario{
+.titulo-secundario{
     margin-bottom: 10px;
 }
 
@@ -664,6 +664,10 @@ form.contacto input.checkbox{ /*sacar esta 2 veces*/
 
 .contenedor-proyecto{
     margin-bottom: 15px;
+    border: dashed 5px;
+    border-color: #01111A #f8ac18 #f8ac18 #01111A;
+    padding: 10px 15px;
+    border-radius: 10px;
 }
 
 .contenedor-proyecto p{
@@ -674,13 +678,6 @@ form.contacto input.checkbox{ /*sacar esta 2 veces*/
 .contenedor-proyecto h3{
     padding-top: 10px;
 }
-
-/*
-.contenedor-proyecto p::first-letter{
-    color: #f8ac18;
-    font-size: 30px;
-    font-style: italic;
-}*/
 
 /* termina main HTML servicios*/
 
