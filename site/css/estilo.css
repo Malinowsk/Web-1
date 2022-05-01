@@ -275,7 +275,7 @@ div.imagen-principal img{
     margin-bottom: 10px;
 }
 
-.titulo-secundario p{
+.titulo-secundario h4{
     margin-top: 10px;
 }
 
@@ -634,7 +634,16 @@ form.contacto input.checkbox{ /*sacar esta 2 veces*/
 }
 
 .contenedor-proyecto{
-    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.contenedor-proyecto p{
+    padding-top: 10px;
+    text-align: justify;
+}
+
+.contenedor-proyecto h3{
+    padding-top: 10px;
 }
 
 /* termina main HTML servicios*/
