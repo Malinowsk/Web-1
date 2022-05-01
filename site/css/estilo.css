@@ -92,6 +92,8 @@ label{
 .encabezado-superior input, .captcha input , textarea{
     height: 32px;
     width: 140px;
+    max-height: 32px; /* para dejar la caja de mensaje fija*/
+    max-width: 140px; /* para dejar la caja de mensaje fija*/
     font-size: 15px;
     border-radius: 5px;
     padding: 0px 2px;
@@ -421,7 +423,7 @@ td img{
     font-style: italic;
 }
 
-.descripcion h4:hover, .descripcion p:hover , .descripcion h3 , div a:hover.politicas{
+.descripcion h4:hover, .descripcion p:hover , .descripcion h3 , div a:hover.politicas , .tabla-contenido ul a:hover{
     color: #ffffff;
 }
 
@@ -561,7 +563,7 @@ form.contacto input.checkbox{ /*sacar esta 2 veces*/
     margin-left: 300px;
     margin-top: 5x;
     margin-bottom: 10px;
-    align-items: baseline;
+    align-items: flex-start;
     
 }
 
@@ -604,6 +606,7 @@ form.contacto input.checkbox{ /*sacar esta 2 veces*/
     padding: 5px;
     color: white;
     background-color: #047ccc;
+
 }
 
 .mensaje-validado{
@@ -616,22 +619,45 @@ form.contacto input.checkbox{ /*sacar esta 2 veces*/
 
 /* arranca main HTML servicios*/
 
-.contenedor-servicios p{
-    text-align: center;
+ococococ p de servicio{
+    text-align: justify;
     padding: 8px 0px;
+}
+
+.contenedor-para-centrado{
+    display: flex;
+    justify-content: center;
 }
 
 .tabla-contenido{
     margin-top: 44px;
+    background-color: #04344E;
+    width: 50%;
+    padding: 10px 0px;
+    border: #f8ac18 5px solid;
+}
+
+.seccion-contenido{
+    display: flex;
+    justify-content: center;
+}
+
+.seccion-contenido h3 {
+    color: #fff;
+    margin-bottom: 5px;
 }
 
 .tabla-contenido ul, .contenedor-proyecto ul{
     margin-left: 20px;
+    list-style-type: square;
+    
 }
 
 .tabla-contenido ul a{
     text-decoration: none;
+    color: #ffffff77;
 }
+
 
 .contenedor-proyecto{
     margin-left: 10px;
@@ -645,5 +671,12 @@ form.contacto input.checkbox{ /*sacar esta 2 veces*/
 .contenedor-proyecto h3{
     padding-top: 10px;
 }
+
+/*
+.contenedor-proyecto p::first-letter{
+    color: #f8ac18;
+    font-size: 30px;
+    font-style: italic;
+}*/
 
 /* termina main HTML servicios*/
