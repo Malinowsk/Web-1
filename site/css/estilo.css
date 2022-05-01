@@ -176,9 +176,8 @@ div.logo{
 }
 
 .logo img.logo{
-    width: 55px;
-    height: 55px;
-    padding-top: 12px;
+    height: 75px;
+    padding-top: 2px;
 }
 
 .logo p.logo{
