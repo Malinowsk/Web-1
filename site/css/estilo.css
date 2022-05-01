@@ -619,8 +619,8 @@ form.contacto input.checkbox{ /*sacar esta 2 veces*/
 
 /* arranca main HTML servicios*/
 
-ococococ p de servicio{
-    text-align: justify;
+.texto-centrado p{
+    text-align: center;
     padding: 8px 0px;
 }
 
@@ -680,3 +680,10 @@ ococococ p de servicio{
 }*/
 
 /* termina main HTML servicios*/
+
+
+/*empieza experimento*/
+
+.oculto{
+    display: none;
+}
