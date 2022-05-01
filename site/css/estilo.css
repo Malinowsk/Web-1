@@ -273,11 +273,14 @@ div.imagen-principal img{
     text-align: left;
 }
 
-.titulo-secundario{
+.titulo-secundario, .titulo-terciario{
     margin-bottom: 10px;
 }
 
-.titulo-secundario h4{
+.titulo-terciario{
+    font-style: italic;
+    color: #01111A;
+    font-weight: 1000;
     margin-top: 10px;
 }
 
@@ -427,13 +430,13 @@ td img{
     color: #ffffff;
 }
 
-.descripcion p::first-letter{
+.parrafo-inicial::first-letter{
     color: #f8ac18;
     font-size: 25px;
 
 }
 
-.descripcion a{
+a{
     padding: 2px;
     margin-top: 5px;
     color: #f8ac18;
