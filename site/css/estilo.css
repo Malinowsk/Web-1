@@ -229,16 +229,17 @@ ul.botonera a:hover, ul.botonera a.pag-actual {
 /*/////////main del home///////////*/
 
 /*/////imagen principal/////*/
+
 div.imagen-principal{
     background-color: black; 
-    background-image: url(../images/fondo-azul.png);
-    width: 100%;
+    background-image: url(../images/fondo-azul4.png); /*imagen de fondo azul difuminada*/
+    background-size: auto 100%; /* ajuste de la imagen de fondo*/
     display: flex;
     justify-content: center;
 }
 
 div.imagen-principal img{
-    width: 90%; /*ajusta la imagen al 100% de la pantalla*/  
+    width: 85%; /*ajusta la imagen al 100% de la pantalla*/  
 }
 /*////termina imagen principal////*/
 
