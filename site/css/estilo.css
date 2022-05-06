@@ -39,6 +39,12 @@ p{
 
 /*////encabezado/////*/
 
+header{
+    position: sticky;
+    top: -64px;
+    z-index: 100;
+}
+
 /*///////encabezado-parte-superior///////////*/
 
 .encabezado-superior , .encabezado-inferior , .pie-de-pag{
@@ -164,9 +170,6 @@ div.encabezado-inferior{
     padding: 7px 80px;
     flex-flow: row wrap; /* a medida que se achica la pantalla los componentes se acomodan en a la parte inferior */
     align-items: center; /* acomoda en el mismo renglon de forma centrada la botonera con el titulo h1*/
-    position: sticky; /* sirve para cuando el usuario hace scroll hacia abajo, todo el div siga mostrandose en la pantalla*/ 
-    top: 0; /* en que posicion queda el div cuando es afectado por position sticky*/
-    z-index: 100;
 }
 
 /*//logo (icono - titulo)//*/
