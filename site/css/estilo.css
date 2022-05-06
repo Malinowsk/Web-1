@@ -166,6 +166,7 @@ div.encabezado-inferior{
     align-items: center; /* acomoda en el mismo renglon de forma centrada la botonera con el titulo h1*/
     position: sticky; /* sirve para cuando el usuario hace scroll hacia abajo, todo el div siga mostrandose en la pantalla*/ 
     top: 0; /* en que posicion queda el div cuando es afectado por position sticky*/
+    z-index: 100;
 }
 
 /*//logo (icono - titulo)//*/
@@ -677,6 +678,15 @@ form.contacto input.checkbox{ /*sacar esta 2 veces*/
 
 .contenedor-proyecto h3{
     padding-top: 10px;
+}
+
+.titulo-linkeado{
+    position: relative;
+}
+
+.posicionado{
+    position: absolute;
+    top: -120px;
 }
 
 /* termina main HTML servicios*/
