@@ -8,13 +8,16 @@
     padding: 0px;
 }
 
-body{
-    background-color: #fff;
-    font-family: 'HKGrotesk-Medium', Arial, Helvetica, sans-serif;
+body, .contenedor-contacto input , form.contacto textarea.mensaje, p{
     font-size: 16px;
 }
 
-h1,h2,h3,h4{
+body{
+    background-color: #fff;
+    font-family: 'HKGrotesk-Medium', Arial, Helvetica, sans-serif;
+}
+
+h1 , h2 , h3 , h4 , .contenedor-tabla , .condiciones button{
     text-transform: capitalize;
 }
 
@@ -33,13 +36,12 @@ h4{
 }
 
 p{
-    font-size: 16px;
     text-transform: initial;
 }
 
 /*////encabezado/////*/
 
-header{
+div.header{
     position: sticky;
     top: -64px;
     z-index: 100;
@@ -47,11 +49,16 @@ header{
 
 /*///////encabezado-parte-superior///////////*/
 
+.encabezado-superior , .encabezado-inferior , .pie-de-pag, .encabezado-superior button{
+    background-color: #1f3d4f;
+}
+
+.encabezado-superior , .encabezado-inferior , .pie-de-pag, .encabezado-superior button, .descripcion h4:hover, .descripcion p:hover , .descripcion h3 , div a:hover.politicas , .tabla-contenido ul a:hover{
+    color: #fff;
+}
+
 .encabezado-superior , .encabezado-inferior , .pie-de-pag{
-    background-color: rgba(31, 61, 79, 1);
-    color: #fff; 
     font-style: normal;
-    text-transform: capitalize;
 }
 
 .encabezado-superior{
@@ -136,9 +143,7 @@ input.checkbox{ /* boton para seleccionar */
     text-align: center;
     padding: 0px 5px;
     margin: 0px 5px;
-    background-color: rgba(31, 61, 79, 1);
     border: 0px;
-    color: #fff;
     font-size: 13px;
     font-weight: bold; /*grosor de la letra*/
 }
@@ -259,7 +264,6 @@ div.imagen-principal img{
     justify-content: center;
     flex-wrap: wrap;
     text-align: center;
-    text-transform: capitalize;
 }
 
 .sesion div.titulo-vistoso , .sesion div.titulo-sumiso{
@@ -367,7 +371,6 @@ td img{
 /*/////recomendacion de libros//////*/
 
 .sesion .contenedor-libros{
-    background-color: #fff;
     padding: 8px 0px;
     width: 100%;
 }
@@ -418,7 +421,6 @@ td img{
 
 .descripcion h4{
     color: #ffffffcc;
-    font-size: 18px;
     padding: 2px;
     margin: 4px 0px;
     text-decoration: underline;
@@ -428,10 +430,6 @@ td img{
     padding: 2px;
     margin: 4px 0px;
     font-style: italic;
-}
-
-.descripcion h4:hover, .descripcion p:hover , .descripcion h3 , div a:hover.politicas , .tabla-contenido ul a:hover{
-    color: #ffffff;
 }
 
 .parrafo-inicial::first-letter{
@@ -537,7 +535,6 @@ form.contacto strong{
     border: 2px solid #d8e1e4;
     width: 345.5px;
     height: 20px;
-    font-size: 16px;
 }
 form.contacto input::placeholder { 
     
@@ -609,7 +606,6 @@ form.contacto input.checkbox{ /*sacar esta 2 veces*/
 
 .condiciones button{
     margin: 30px 40px;
-    text-transform: capitalize;
     padding: 5px;
     color: white;
     background-color: #047ccc;
