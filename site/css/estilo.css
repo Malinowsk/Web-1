@@ -14,7 +14,36 @@ body{
     font-size: 16px;
 }
 
+h1,h2,h3,h4{
+    text-transform: capitalize;
+}
+
+h1{
+    font-size: 32px;
+}
+
+h2{
+    font-size: 30px;
+}
+h3{
+    font-size: 20px;    
+}
+h4{
+    font-size: 18px;
+}
+
+p{
+    font-size: 16px;
+    text-transform: initial;
+}
+
 /*////encabezado/////*/
+
+header{
+    position: sticky;
+    top: -64px;
+    z-index: 100;
+}
 
 /*///////encabezado-parte-superior///////////*/
 
@@ -62,17 +91,22 @@ label{
     font-size: 14px;
 }
 
+.captcha{
+    text-align: center;
+}
 
-input , textarea, .condiciones .captcha input{
+.encabezado-superior input, .captcha input , textarea{
     height: 32px;
     width: 140px;
+    max-height: 32px; /* para dejar la caja de mensaje fija*/
+    max-width: 140px; /* para dejar la caja de mensaje fija*/
     font-size: 15px;
     border-radius: 5px;
     padding: 0px 2px;
     margin: 0px 2px;
     border: 1px solid #d8e1e4;
     color: #69747f;
-    text-align: start; /*aliniamiento texto*/
+    text-indent: 8px;
 }
 
 /*representa el texto provisional*/
@@ -136,27 +170,25 @@ div.encabezado-inferior{
     padding: 7px 80px;
     flex-flow: row wrap; /* a medida que se achica la pantalla los componentes se acomodan en a la parte inferior */
     align-items: center; /* acomoda en el mismo renglon de forma centrada la botonera con el titulo h1*/
-    position: sticky; /* sirve para cuando el usuario hace scroll hacia abajo, todo el div siga mostrandose en la pantalla*/ 
-    top: 0; /* en que posicion queda el div cuando es afectado por position sticky*/
 }
 
 /*//logo (icono - titulo)//*/
 
 div.logo{
     display: flex;
-    padding-right: 40px;
+    padding-right: 39.15px;
 }
 
 .logo img.logo{
-    width: 55px;
-    height: 55px;
-    padding-top: 12px;
+    height: 75px;
+    padding-top: 2px;
 }
 
-.logo h1{
+.logo p.logo{
     padding: 10px;
     font-size: 22px;
     letter-spacing: 2px;
+    font-weight: bold;
 }
 
 /*//botonera (nav)//*/
@@ -200,22 +232,29 @@ ul.botonera a:hover, ul.botonera a.pag-actual {
 /*/////////main del home///////////*/
 
 /*/////imagen principal/////*/
+
 div.imagen-principal{
     background-color: black; 
-    background-image: url(../images/fondo-azul.png);
-    width: 100%;
+    background-image: url(../images/fondo-azul4.png); /*imagen de fondo azul difuminada*/
+    background-size: auto 100%; /* ajuste de la imagen de fondo*/
     display: flex;
     justify-content: center;
 }
 
 div.imagen-principal img{
-    width: 90%; /*ajusta la imagen al 100% de la pantalla*/  
+    width: 85%; /*ajusta la imagen al 100% de la pantalla*/  
 }
 /*////termina imagen principal////*/
 
 /*/////tarjetas de servicios/////*/
-div.main .sesion{
+
+
+/*para cambiar*/
+.main .sesion{
     margin: 0px 94px;
+}
+
+.sesion .contenedor-tarjetas, .contenedor-tabla{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -224,20 +263,30 @@ div.main .sesion{
 }
 
 .sesion div.titulo-vistoso , .sesion div.titulo-sumiso{
-    font-size: 24px;
     width: 100%;
     padding: 52px 0px 44px;
 }
 
 .sesion div.titulo-vistoso {
+    text-align: center;
     color: #f8ac18;
 }
 
-.sesion div.titulo-sumiso {
+.sesion div.titulo-sumiso, .titulo-secundario {
     color: #2b424f;
     text-align: left;
 }
 
+.titulo-secundario{
+    margin-bottom: 10px;
+}
+
+.titulo-terciario{
+    font-style: italic;
+    color: #01111A;
+    font-weight: 1000;
+    margin-top: 10px;
+}
 
 .sesion div.contenedor-tarjetas{
     display: flex;
@@ -272,18 +321,16 @@ div.imagen img.tarjeta{
     color: #01111A;
 }
 
-.sesion h3{
-    font-size: 20px;
+.tarjeta h3{
     font-weight: bold; /*grosor de la letra*/
-    text-align: center;
+    
     padding: 20px 0px;
     
 }
 
 .sesion .texto p{
-    text-transform: initial;
-    text-align: justify;
     padding: 0px 15px 10px;
+    text-align: justify;
 }
 /*/////termina tarjetas de servicio/////*/
 
@@ -383,17 +430,17 @@ td img{
     font-style: italic;
 }
 
-.descripcion h4:hover, .descripcion p:hover , .descripcion h3 , div a:hover.politicas{
+.descripcion h4:hover, .descripcion p:hover , .descripcion h3 , div a:hover.politicas , .tabla-contenido ul a:hover{
     color: #ffffff;
 }
 
-.descripcion p::first-letter{
+.parrafo-inicial::first-letter{
     color: #f8ac18;
     font-size: 25px;
 
 }
 
-.descripcion a{
+a{
     padding: 2px;
     margin-top: 5px;
     color: #f8ac18;
@@ -451,6 +498,7 @@ p.fin{
 
 /*/////termina footer//////*/
 
+/* HTML contacto */
 
 .sesion form.contacto{
     display: flex;
@@ -461,7 +509,7 @@ p.fin{
     
 }
 
-form.contacto > div.contenedor{
+form.contacto div.contenedor-contacto{
     width: 50%;
     margin: 5px 0px;
     
@@ -484,7 +532,7 @@ form.contacto strong{
     margin: 0px 0px 0px 3px;
 }
 
-form.contacto input , form.contacto textarea.mensaje{
+.contenedor-contacto input , form.contacto textarea.mensaje{
     padding: 15px 24px;
     border: 2px solid #d8e1e4;
     width: 345.5px;
@@ -565,6 +613,7 @@ form.contacto input.checkbox{ /*sacar esta 2 veces*/
     padding: 5px;
     color: white;
     background-color: #047ccc;
+
 }
 
 .mensaje-validado{
@@ -573,4 +622,81 @@ form.contacto input.checkbox{ /*sacar esta 2 veces*/
     margin-left: 20px;
 }
 
+/* termina HTML contacto */
 
+/* arranca main HTML servicios*/
+
+.texto-centrado p{
+    text-align: center;
+    padding: 8px 0px;
+}
+
+.contenedor-para-centrado{
+    display: flex;
+    justify-content: center;
+}
+
+.tabla-contenido{
+    margin-top: 44px;
+    background-color: #04344E;
+    width: 50%;
+    padding: 10px 0px;
+    border: #f8ac18 5px solid;
+}
+
+.seccion-contenido{
+    display: flex;
+    justify-content: center;
+}
+
+.seccion-contenido h3 {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.tabla-contenido ul, .contenedor-proyecto ul{
+    margin-left: 20px;
+    list-style-type: square;
+    
+}
+
+.tabla-contenido ul a{
+    text-decoration: none;
+    color: #ffffff77;
+}
+
+
+.contenedor-proyecto{
+    margin-bottom: 15px;
+    border: dashed 5px;
+    border-color: #01111A #f8ac18 #f8ac18 #01111A;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.contenedor-proyecto p{
+    padding-top: 10px;
+    text-align: justify;
+}
+
+.contenedor-proyecto h3{
+    padding-top: 10px;
+}
+
+.titulo-linkeado{
+    position: relative;
+}
+
+.posicionado{
+    position: absolute;
+    top: -120px;
+}
+
+/* termina main HTML servicios*/
+
+
+/*empieza experimento*/
+
+.oculto{
+    display: none;
+}

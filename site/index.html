@@ -10,58 +10,61 @@
     <!-- font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- logo -->
-    <link rel="icon" href="images/1.png">
+    <link rel="icon" href="images/2.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Space+Grotesk&display=swap" rel="stylesheet">
 
-    <title> Bit Humanoide </title>
+    <title> Bit Humanoide - Home </title>
 </head>
 
 <body>
 
-    <div class="encabezado-superior">
-        <ul>
-            <li> <i class="fa fa-envelope"></i> info@bithumanoide.com</li>
-            <li> <i class="fas fa-phone"></i>  +54 9 2284 77-42493</li>
-        </ul>
-        
-        <form>
-            <input type="text" placeholder="Nombre Usuario"> 
-            <input type="password" placeholder="Contraseña"> 
-            <label>Recordarme: </label><input class="checkbox" type="checkbox">
-            <button class="sesion">Iniciar sesión</button>
-            <button>Registrar</button>
-        </form>
-    </div>
-    
-    <div class="encabezado-inferior">
-        <div class="logo">
-            <img class="logo" src="images/1.png" alt="robot">
-            <h1>Bit<br>Humanoide</h1>
-        </div>
-    
-        <div class="botonera"> 
-            <ul class="botonera">
-                <li><a class="pag-actual" href="index.html">Inicio</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+    <header>
+        <div class="encabezado-superior">
+            <ul>
+                <li> <i class="fa fa-envelope"></i> info@bithumanoide.com</li>
+                <li> <i class="fas fa-phone"></i> +54 9 2284 77 42493</li>
             </ul>
+    
+            <form>
+                <input type="text" placeholder="Nombre Usuario">
+                <input type="password" placeholder="Contraseña">
+                <label>Recordarme: </label><input class="checkbox" type="checkbox">
+                <button class="sesion">Iniciar sesión</button>
+                <button>Registrar</button>
+            </form>
         </div>
-    </div>
+    
+        <div class="encabezado-inferior">
+            <div class="logo">
+                <img class="logo" src="images/1.png" alt="robot">
+                <p class="logo">Bit<br>Humanoide</p>
+            </div>
+    
+            <div class="botonera">
+                <ul class="botonera">
+                    <li><a class="pag-actual" href="index.html"><i class="fa fa-home"></i> Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
 
     <div class="main">
-
+      
         <div class="imagen-principal">
             <img src="images/cabecera.jpeg" alt="adas"/>
         </div>
+       
         
         <div class="sesion">
 
             <div class="titulo-vistoso">
-                <h2>
+                <h1>
                     Nuestros servicios
-                </h2>
+                </h1>
             </div>
 
             <div class="contenedor-tarjetas">
@@ -109,64 +112,79 @@
 
         <div class="sesion">
             <div class="titulo-vistoso">
-                <h2>Tecnologías más requeridas</h2>
+                <h1>Tecnologías más requeridas</h1>
             </div>
-            
-            <table>
-                <thead>
-                    <tr>
-                        <th>tecnología</th>
-                        <th>área de uso</th>
-                        <th>nivel de dificultad</th>
-                        <th>personal especializado</th>
-                    </tr>
-                </thead>
+            <div class="contenedor-tabla">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>tecnología</th>
+                            <th>área de uso</th>
+                            <th>nivel de dificultad</th>
+                            <th>personal especializado</th>
+                        </tr>
+                    </thead>
 
-                <tbody>
-                    <tr>
-                        <td><img src="images/tensorflow.png" alt="tensorflow"></td>
-                        <td>redes neuronales convolucionales</td>
-                        <td>8/10</td>
-                        <td>juan ignacio rago/ulises palazzo</td>
-                    </tr>
-                    <tr>
-                        <td><img src="images/rasa.png" alt="rasa"></td>
-                        <td>desarrollo de chatbots</td>
-                        <td>4/10</td>
-                        <td>ulises palazzo</td>
-                    </tr>
-                    <tr>
-                        <td><img src="images/python.png" alt="python"></td>
-                        <td>desarrollo general</td>
-                        <td>6/10</td>
-                        <td>juan ignacio rago / ulises palazzo</td>
-                    </tr>
-                    <tr>
-                        <td><img src="images/weka.png" alt="weka"></td>
-                        <td>algoritmos en general</td>
-                        <td>5/10</td>
-                        <td>juan ignacio rago</td>
-                    </tr>
-                    <tr>
-                        <td><img src="images/kera.png" alt="kera"></td>
-                        <td>redes neuronales</td>
-                        <td>9/10</td>
-                        <td>ulises palazzo</td>
-                    </tr>
-                    <tr>
-                        <td><img src="images/r.png" alt="r"></td>
-                        <td>análisis de datos</td>
-                        <td>7/10</td>
-                        <td>juan ignacio rago</td>
-                    </tr>
-                </tbody>
-               
-            </table>
+                    <tbody>
+                        <tr>
+                            <td><img src="images/tensorflow.png" alt="tensorflow"></td>
+                            <td>redes neuronales convolucionales</td>
+                            <td>8/10</td>
+                            <td>juan ignacio rago/ulises palazzo</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/rasa.png" alt="rasa"></td>
+                            <td>desarrollo de chatbots</td>
+                            <td>4/10</td>
+                            <td>ulises palazzo</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/python.png" alt="python"></td>
+                            <td>desarrollo general</td>
+                            <td>6/10</td>
+                            <td>juan ignacio rago / ulises palazzo</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/weka.png" alt="weka"></td>
+                            <td>algoritmos en general</td>
+                            <td>5/10</td>
+                            <td>juan ignacio rago</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/kera.png" alt="kera"></td>
+                            <td>redes neuronales</td>
+                            <td>9/10</td>
+                            <td>ulises palazzo</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/r.png" alt="r"></td>
+                            <td>análisis de datos</td>
+                            <td>7/10</td>
+                            <td>juan ignacio rago</td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="images/torch.png" alt="r"></td>
+                            <td>aprendizaje profundo</td>
+                            <td>8/10</td>
+                            <td>juan ignacio rago</td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="images/pandas.png" alt="r"></td>
+                            <td>análisis de datos</td>
+                            <td>5/10</td>
+                            <td>Ulises Palazzo</td>
+                        </tr>
+                    </tbody>
+                
+                </table>
+            </div>
         </div>
         
         <div class="sesion">
             <div class="titulo-sumiso">
-                <h2> libros recomendados </h2>
+                <h1> libros recomendados </h1>
             </div>
             
             <div class="contenedor-libros">
@@ -178,7 +196,7 @@
                     <div class="descripcion">
                         <h3>Intro to Python for Computer Science and Data Science: Learning to Program with AI, Big Data and The Cloud</h3>
                         <h4>Deitel, Paul; Deitel, Harvey</h4>
-                        <p>For introductory-level Python programming and/or data-science courses. A groundbreaking, flexible approach to computer science and data science The Deitels' Introduction to Python for Computer Science and Data Science: Learning to Program with AI, Big Data and the Cloud offers a unique approach to teaching introductory Python programming, appropriate for both computer-science and data-science audiences. </p>
+                        <p class="parrafo-inicial">For introductory-level Python programming and/or data-science courses. A groundbreaking, flexible approach to computer science and data science The Deitels' Introduction to Python for Computer Science and Data Science: Learning to Program with AI, Big Data and the Cloud offers a unique approach to teaching introductory Python programming, appropriate for both computer-science and data-science audiences. </p>
                         <a href="https://www.iberlibro.com/9780135404676/Intro-Python-Computer-Science-Data-0135404673/plp" target="_blanck">https://www.iberlibro.com/9780135404676/Intro-Python-Computer-Science-Data-0135404673/plp</a>
                     </div>  
                 </div>
@@ -190,7 +208,7 @@
                     <div class="descripcion">
                         <h3>Artificial Intelligence Evolution, Ethics and Public Policy</h3>
                         <h4>Saswat Sarangi, Pankaj Sharma</h4>
-                        <p>This book traces the evolution of AI in contemporary history. It analyses how AI is primarily being driven by "capital" as the only "factor of production" and its consequences for the global political economy. It further explores the dystopian prospect of mass unemployment by AI and takes up the ethical aspects of AI and its possible use in undermining natural and fundamental rights.</p>
+                        <p class="parrafo-inicial">This book traces the evolution of AI in contemporary history. It analyses how AI is primarily being driven by "capital" as the only "factor of production" and its consequences for the global political economy. It further explores the dystopian prospect of mass unemployment by AI and takes up the ethical aspects of AI and its possible use in undermining natural and fundamental rights.</p>
                         <a href="https://www.routledge.com/Artificial-Intelligence-Evolution-Ethics-and-Public-Policy/Sarangi-Sharma/p/book/9781138625389" target="_blanck">https://www.routledge.com/Artificial-Intelligence-Evolution-Ethics-and-Public-Policy/9781138625389</a>
                     </div>  
                 </div>
@@ -202,7 +220,7 @@
                     <div class="descripcion">
                         <h3>Ciencia de Datos Python : Una guia definitiva para que los principiantes aprendan los fundamentos de la ciencia de datos con Python</h3>
                         <h4>Christopher Wilkinson</h4>
-                        <p>Python Data Science- descripciónUna guía definitiva para aprender los fundamentos de la ciencia de datos de Python está llena de conocimientos y estrategias para científicos de datos, profesionales de programación y estudiantes que quieren equiparse con las nuevas bibliotecas de tendencia y funciones de Python como administración de datos como gestión de datos Herramienta. Este libro cuenta con todas las principales técnicas de recopilación, interpretación y procesamiento de datos para lograr información refinada.</p>
+                        <p class="parrafo-inicial">Python Data Science- descripciónUna guía definitiva para aprender los fundamentos de la ciencia de datos de Python está llena de conocimientos y estrategias para científicos de datos, profesionales de programación y estudiantes que quieren equiparse con las nuevas bibliotecas de tendencia y funciones de Python como administración de datos como gestión de datos Herramienta. Este libro cuenta con todas las principales técnicas de recopilación, interpretación y procesamiento de datos para lograr información refinada.</p>
                         <a href="https://www.bookdepository.com/es/Ciencia-de-Datos-Python-Christopher-Wilkinson/9781654192389" target="_blanck">https://www.bookdepository.com/es/Ciencia-de-Datos-Python-Christopher-Wilkinson/9781654192389</a>
                     </div>  
                 </div>
@@ -218,7 +236,7 @@
 
         <div class="logo">
             <img class="logo" src="images/1.png" alt="robot">
-            <h1>Bit<br>Humanoide</h1>
+            <p class="logo">Bit<br>Humanoide</p>
         </div>
 
         <div>
