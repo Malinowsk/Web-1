@@ -53,7 +53,7 @@ div.header{
     background-color: #1f3d4f;
 }
 
-.encabezado-superior , .encabezado-inferior , .pie-de-pag, .encabezado-superior button, .descripcion h4:hover, .descripcion p:hover , .descripcion h3 , div a:hover.politicas , .tabla-contenido ul a:hover{
+.encabezado-superior , .encabezado-inferior , .condiciones .generar-captcha label , .condiciones .captcha p, .pie-de-pag, .encabezado-superior button, .contenedor-para-centrado h3, .descripcion h4:hover, th, .descripcion p:hover , .descripcion h3 , div a:hover.politicas , .condiciones button, .tabla-contenido ul a:hover{
     color: #fff;
 }
 
@@ -61,11 +61,50 @@ div.header{
     font-style: normal;
 }
 
-.encabezado-superior{
+.encabezado-superior, tr , td , th{
     height: 50px;
+}
+
+.encabezado-superior, div.encabezado-inferior, div.logo, ul.botonera, div.imagen-principal,
+.contenedor-tabla, .sesion div.contenedor-tarjetas, .contenedor-libros .libro, .libro .descripcion,
+div.pie-de-pag, .sesion form.contacto, form.contacto div.cont-interno, .condiciones, div.pie-de-pag ul.redes-sociales, .contenedor-para-centrado{
     display: flex;
-    justify-content: space-between; /* se alinean los bloques bien ensanchados con respecto al eje horizontal*/
-    align-items: flex-end; /*se alinea los bloques en la parte de abajo con respeto al eje vertical*/
+}
+
+.encabezado-superior, div.encabezado-inferior, .sesion div.contenedor-tarjetas, div.pie-de-pag{
+    justify-content: space-between;
+}
+
+div.imagen-principal, .contenedor-tabla, .contenedor-para-centrado{
+    justify-content: center;
+}
+
+ul.botonera, .contenedor-libros .libro, .libro .descripcion, .sesion form.contacto{
+    justify-content: space-around;
+}
+
+div.pie-de-pag ul.redes-sociales, form.contacto div.cont-interno{
+    justify-content: flex-end;
+}
+
+
+.libro .descripcion{
+    flex-direction: column;
+}
+
+.encabezado-superior{ 
+    align-items: flex-end;
+}
+
+div.encabezado-inferior , div.pie-de-pag{
+    align-items: center;
+}
+
+.contenedor-libros .libro , .condiciones{
+    align-items: flex-start;
+}
+
+.encabezado-superior{
     padding: 7px 100px;
 }
 
@@ -73,15 +112,32 @@ div.header{
     margin-right: 5px;
 }
 
+.encabezado-superior, .captcha ,input::placeholder , textarea::placeholder 
+, .contenedor-tabla ,.sesion div.titulo-vistoso ,
+.sesion div.contenedor-tarjetas, p.fin, .condiciones .captcha input:focus,
+.condiciones .captcha input, .texto-centrado p {
+    text-align: center; /*alineamos el texto en el centro*/
+}
+
+.sesion .texto p ,.libro .descripcion ,.descripcion h3,.contenedor-proyecto p{
+    text-align: justify;
+}
+
+.sesion div.titulo-sumiso, .titulo-secundario , form.contacto input::placeholder{
+    text-align: left;
+}
+
 .encabezado-superior ul{
     margin-left: 90px;
-    text-align: center;
+}
+
+.encabezado-superior li, ul.botonera, div.pie-de-pag ul.redes-sociales{
+    list-style: none;/*saca el puntito de cada li*/
 }
 
 .encabezado-superior li{
     text-transform: lowercase;
     padding: 1px;
-    list-style: none;
 }
 
 .encabezado-superior img.correo, .encabezado-superior img.telefono{
@@ -90,16 +146,11 @@ div.header{
 }
 
 .encabezado-superior form{
-    display: inline;
     padding: 0px 10px;
 }
 
 label{
     font-size: 14px;
-}
-
-.captcha{
-    text-align: center;
 }
 
 .encabezado-superior input, .captcha input , textarea{
@@ -120,7 +171,6 @@ label{
 input::placeholder , textarea::placeholder { 
     color: #76959Fcc;   /*color de letra*/
     letter-spacing: 1px; /*sepacion enre letras*/
-    text-align: center;  /*alineamos el texto en el centro*/
     text-indent: 0px;    /*cero identacion*/
   }
   
@@ -137,50 +187,46 @@ input.checkbox{ /* boton para seleccionar */
     margin: 0px 1px;
 }
 
+.encabezado-superior button, .logo p.logo, .tarjeta h3{
+    font-weight: bold; /*grosor de la letra*/
+}
+
 .encabezado-superior button{
     height: 35px;
     width: auto;
-    text-align: center;
     padding: 0px 5px;
     margin: 0px 5px;
     border: 0px;
     font-size: 13px;
-    font-weight: bold; /*grosor de la letra*/
 }
 
 .encabezado-superior button.sesion{
     background-color: #2b424f;
 }
 
-/*reprenta el elemento cuando el puntero pasa sobre el*/
-.encabezado-superior button:hover{
+.encabezado-superior button:hover, ul.botonera a:hover, ul.botonera a.pag-actual,.sesion div.titulo-vistoso,
+.contenedor-tarjetas div.tarjeta:hover, .parrafo-inicial::first-letter, a, form.contacto strong{
     color: #f8ac18;
 }
 
-
-div.encabezado-superior button:hover.sesion{
+div.encabezado-superior button:hover.sesion, img.redes:hover{
     background-color: #01111A;
     
 }
-/*/////termina encabezado-parte-superior//////*/
 
+div.encabezado-inferior, .contenedor-tabla , 
+.sesion div.contenedor-tarjetas , div.pie-de-pag , .sesion form.contacto{ 
+    flex-wrap: wrap; /* a medida que se achica la pantalla los componentes se acomodan en a la parte inferior */
+}
 
-/*///////encabezado-parte-inferior///////////*/
-
-div.encabezado-inferior{
-    
+div.encabezado-inferior{ 
     border-top: 2px solid #f8ac18;
-    display: flex; /* los bloques pasan hacer inline*/ 
-    justify-content: space-between; /* las cajas contenidas se separan a la punta de los extremos*/  
     padding: 7px 80px;
-    flex-flow: row wrap; /* a medida que se achica la pantalla los componentes se acomodan en a la parte inferior */
-    align-items: center; /* acomoda en el mismo renglon de forma centrada la botonera con el titulo h1*/
 }
 
 /*//logo (icono - titulo)//*/
 
 div.logo{
-    display: flex;
     padding-right: 39.15px;
 }
 
@@ -193,57 +239,44 @@ div.logo{
     padding: 10px;
     font-size: 22px;
     letter-spacing: 2px;
-    font-weight: bold;
 }
 
 /*//botonera (nav)//*/
 
 div.botonera{
-    
     margin: 8px;
     padding: 0px 10px;
 }
 
 ul.botonera{ 
     margin: 1px;
-    list-style: none; /*saca el puntito de cada li*/
-    display: flex; /* los bloques pasan hacer inline*/ 
-    justify-content: space-around; /* los separa a los extremos pero no tanto*/  
 }
 
 ul.botonera li{
     margin: 0 5px;   
 }
 
+ul.botonera a, .descripcion h4{
+    color: #ffffffcc;
+}
 
 ul.botonera a{
-    color: #ffffffcc; 
     font-weight: 700px;   /*grosor de la letra*/
-    text-decoration: none; /* saca la linea de abajo de los link que se ponen por defecto*/
     padding: 10px 0px;
     margin: 0px 10px;
-    text-align: center;
 }
 
 /* apariencia cuando se pasa el puntero del mouse por encima*/
-ul.botonera a:hover, ul.botonera a.pag-actual { 
-    color: #f8ac18;
 
-}
 /*/////termina botonera//////*/
 /*/////termina encabezado//////*/
 
-
 /*/////////main del home///////////*/
-
 /*/////imagen principal/////*/
 
-div.imagen-principal{
-    background-color: black; 
+div.imagen-principal{ /*.contenedor-center*/
     background-image: url(../images/fondo-azul4.png); /*imagen de fondo azul difuminada*/
     background-size: auto 100%; /* ajuste de la imagen de fondo*/
-    display: flex;
-    justify-content: center;
 }
 
 div.imagen-principal img{
@@ -259,43 +292,33 @@ div.imagen-principal img{
     margin: 0px 94px;
 }
 
-.sesion .contenedor-tarjetas, .contenedor-tabla{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-}
-
 .sesion div.titulo-vistoso , .sesion div.titulo-sumiso{
     width: 100%;
     padding: 52px 0px 44px;
 }
 
-.sesion div.titulo-vistoso {
-    text-align: center;
-    color: #f8ac18;
-}
-
 .sesion div.titulo-sumiso, .titulo-secundario {
     color: #2b424f;
-    text-align: left;
 }
 
 .titulo-secundario{
     margin-bottom: 10px;
 }
 
-.titulo-terciario{
+.titulo-terciario, .descripcion p{
     font-style: italic;
+}
+
+.titulo-terciario, .sesion div.texto, tr , td{
     color: #01111A;
+}
+
+.titulo-terciario{
     font-weight: 1000;
     margin-top: 10px;
 }
 
 .sesion div.contenedor-tarjetas{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     padding: 8px 0px;
     width: 100%;
 }
@@ -307,7 +330,6 @@ div.imagen-principal img{
 
 .contenedor-tarjetas div.tarjeta:hover{
     border: 1px solid #d8e1e4;
-    background-color: #f8ac18;
 }
 
 .contenedor-tarjetas div.imagen{
@@ -321,20 +343,13 @@ div.imagen img.tarjeta{
     height: 100%;
 }
 
-.sesion div.texto{
-    color: #01111A;
-}
-
 .tarjeta h3{
-    font-weight: bold; /*grosor de la letra*/
-    
     padding: 20px 0px;
     
 }
 
 .sesion .texto p{
     padding: 0px 15px 10px;
-    text-align: justify;
 }
 /*/////termina tarjetas de servicio/////*/
 
@@ -342,25 +357,18 @@ div.imagen img.tarjeta{
 /*/////////tabla///////////*/
 
 table{
-    background-color: white;
     width: 100%;
     padding: 8px 0px;
 }
 
 tr , td , th {
     width: 250px;
-    height: 50px;
     padding: 3px;
     border: 2px solid #f8ac18;
 }
 
-tr , td{
-    color: #01111A;
-}
-
-th{
+th, .libro .descripcion, .generar-captcha , .captcha, .tabla-contenido{
     background-color: #04344E;
-    color: white;
 }
 
 td img{
@@ -375,15 +383,15 @@ td img{
     width: 100%;
 }
 
+div a.politicas, .contenedor-libros .libro{
+    color: #ffffffaa;
+}
+
 .contenedor-libros .libro{
-    display: flex;
     padding: 5px 0px;
     border: 3px solid #01111A;
     background-color: #D8E1E4;
     margin: 4px 2px;
-    color: #ffffffaa;
-    justify-content: space-around;
-    align-items: flex-start;
 }
 
 .libro .imagen{
@@ -400,27 +408,20 @@ td img{
 }
 
 .libro .descripcion{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     width: 80%;
-    background-color: #04344E;
     margin: 0px 5px 0px 2.5px;
     border: 3px solid #01111A;
     height: 263px;
-    text-align: justify;
     padding: 5px;
 }
 
 .descripcion h3{
-    text-align: justify;
     font-size: 20px;
     padding: 2px;
     margin-bottom: 4px;
 }
 
 .descripcion h4{
-    color: #ffffffcc;
     padding: 2px;
     margin: 4px 0px;
     text-decoration: underline;
@@ -429,19 +430,15 @@ td img{
 .descripcion p{
     padding: 2px;
     margin: 4px 0px;
-    font-style: italic;
 }
 
 .parrafo-inicial::first-letter{
-    color: #f8ac18;
     font-size: 25px;
-
 }
 
 a{
     padding: 2px;
     margin-top: 5px;
-    color: #f8ac18;
     text-decoration: none;
 }
 
@@ -452,17 +449,9 @@ a{
 
 /*//comienza footer////*/
 
-div.pie-de-pag{
+div.pie-de-pag{ 
     padding: 30px 80px;
     margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-div a.politicas{
-    color: #ffffffaa;
 }
 
 div.pie-de-pag div.redes-sociales{
@@ -470,9 +459,6 @@ div.pie-de-pag div.redes-sociales{
 }
 
 div.pie-de-pag ul.redes-sociales{
-    display:flex;
-    list-style:none;
-    justify-content: flex-end;
     padding: 8px 18px;
 }
 
@@ -484,12 +470,7 @@ img.redes{
     margin: 2px;
 }
 
-img.redes:hover{
-    background-color: #01111A;
-}
-
 p.fin{
-    text-align: center;
     width: 100%;
     margin: 5px;
 }
@@ -499,9 +480,6 @@ p.fin{
 /* HTML contacto */
 
 .sesion form.contacto{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
     width: 100%;
     margin-right: 20px;
     
@@ -516,8 +494,6 @@ form.contacto div.contenedor-contacto{
 form.contacto div.cont-interno{
     margin-bottom: 24px;
     width: 100%;
-    display: flex;
-    justify-content: flex-end;
 }
 
 form.contacto label{
@@ -526,7 +502,6 @@ form.contacto label{
 }
 
 form.contacto strong{
-    color: #f8ac18;
     margin: 0px 0px 0px 3px;
 }
 
@@ -535,11 +510,6 @@ form.contacto strong{
     border: 2px solid #d8e1e4;
     width: 345.5px;
     height: 20px;
-}
-form.contacto input::placeholder { 
-    
-    text-align: left; 
-    
 }
 
 form.contacto input:focus , form.contacto textarea:focus { 
@@ -551,40 +521,25 @@ form.contacto textarea.mensaje{
     min-width: 797px;
     min-height: 80px;
     padding: 6px 12px;
-    border: 2px solid #ccc;
-    
-    
-}
-
-form.contacto input.checkbox{ /*sacar esta 2 veces*/
-    width: auto;
+    border: 2px solid #ccc;  
 }
 
 .condiciones {
-    display: flex;
     width: 100%;
     text-transform: none;
     margin-left: 300px;
     margin-top: 5x;
     margin-bottom: 10px;
-    align-items: flex-start;
-    
 }
 
 
 .generar-captcha , .captcha{
     padding: 10px 0px;
-    background-color: #04344E;
     border: #01111A 2px solid;
     border-radius: 5px;
     margin-left: 40px;
     margin-top: 20px;
 }
-
-.condiciones .generar-captcha label , .condiciones .captcha p{
-    color: white;
-}
-
 
 .captcha{
     width: 300px;
@@ -596,20 +551,13 @@ form.contacto input.checkbox{ /*sacar esta 2 veces*/
 }
 
 .condiciones .captcha input:focus{
-    text-align: center; /*aliniacion central del valor introducido*/
     text-indent: -5px; /*identacion un poco a la izquierda*/
-}
-
-.condiciones .captcha input{
-    text-align: center;
 }
 
 .condiciones button{
     margin: 30px 40px;
     padding: 5px;
-    color: white;
     background-color: #047ccc;
-
 }
 
 .mensaje-validado{
@@ -623,30 +571,17 @@ form.contacto input.checkbox{ /*sacar esta 2 veces*/
 /* arranca main HTML servicios*/
 
 .texto-centrado p{
-    text-align: center;
     padding: 8px 0px;
-}
-
-.contenedor-para-centrado{
-    display: flex;
-    justify-content: center;
 }
 
 .tabla-contenido{
     margin-top: 44px;
-    background-color: #04344E;
     width: 50%;
     padding: 10px 0px;
-    border: #f8ac18 5px solid;
+    border:  5px solid #f8ac18;
 }
 
-.seccion-contenido{
-    display: flex;
-    justify-content: center;
-}
-
-.seccion-contenido h3 {
-    color: #fff;
+.contenedor-para-centrado h3 {
     margin-bottom: 5px;
 }
 
@@ -657,7 +592,6 @@ form.contacto input.checkbox{ /*sacar esta 2 veces*/
 }
 
 .tabla-contenido ul a{
-    text-decoration: none;
     color: #ffffff77;
 }
 
@@ -672,7 +606,6 @@ form.contacto input.checkbox{ /*sacar esta 2 veces*/
 
 .contenedor-proyecto p{
     padding-top: 10px;
-    text-align: justify;
 }
 
 .contenedor-proyecto h3{
