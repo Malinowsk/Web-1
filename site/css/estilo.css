@@ -47,7 +47,7 @@ p{
 }
 
 body{
-    background-color: #fff;
+    background-color: #ffffff;
     font-family: 'HKGrotesk-Medium', Arial, Helvetica, sans-serif;
 }
 
@@ -75,6 +75,10 @@ th, .libro .descripcion, .generar-captcha , .captcha, .tabla-contenido{
     background-color: #047ccc;
 }
 
+.contenedor-libros .libro{
+    background-color: #D8E1E4;
+}
+
 div.header{
     position: sticky;
     top: -64px; /* esconde la cabecera superior*/
@@ -82,7 +86,7 @@ div.header{
 }
 
 .encabezado-superior , .encabezado-inferior , .condiciones .generar-captcha label , .condiciones .captcha p, .pie-de-pag, .encabezado-superior button, .contenedor-para-centrado h3, .descripcion h4:hover, th, .descripcion p:hover , .descripcion h3 , div a:hover.politicas , .condiciones button, .tabla-contenido ul a:hover{
-    color: #fff;
+    color: #ffffff;
 }
 
 .encabezado-superior button:hover, ul.botonera a:hover, ul.botonera a.pag-actual,.sesion div.titulo-vistoso,
@@ -110,6 +114,60 @@ div a.politicas, .contenedor-libros .libro{
     color: #ffffff77;
 }
 
+.encabezado-superior input, .captcha input , textarea{
+    color: #69747f;
+}
+
+input::placeholder , textarea::placeholder { 
+    color: #76959Fcc;   /*color de letra*/
+}
+
+form.contacto label{
+    color: #333333;
+}
+
+.mensaje-validado{
+    color: red;
+}
+
+.encabezado-superior input, .captcha input , textarea, .contenedor-tarjetas div.tarjeta, 
+.contenedor-tarjetas div.tarjeta:hover{
+    border: 1px solid #d8e1e4;
+}
+
+.contenedor-contacto input , form.contacto textarea.mensaje{
+    border: 2px solid #d8e1e4;
+}
+
+tr , td , th {
+    border: 2px solid #f8ac18;
+}
+
+div.encabezado-inferior{ 
+    border-top: 2px solid #f8ac18;
+}
+
+.tabla-contenido{
+    border:  5px solid #f8ac18;
+}
+
+.contenedor-proyecto{
+    border: dashed 5px;
+    border-color: #01111A #f8ac18 #f8ac18 #01111A;
+}
+
+.contenedor-libros .libro,.libro .imagen,.libro .descripcion{
+    border: 3px solid #01111A;
+}
+
+.generar-captcha , .captcha{
+    border: 2px solid #01111A;
+}
+
+form.contacto textarea.mensaje{
+    border: 2px solid #cccccc;  
+}
+
 .encabezado-superior , .encabezado-inferior , .pie-de-pag{
     font-style: normal;
 }
@@ -122,6 +180,11 @@ div a.politicas, .contenedor-libros .libro{
 .contenedor-tabla, .sesion div.contenedor-tarjetas, .contenedor-libros .libro, .libro .descripcion,
 div.pie-de-pag, .sesion form.contacto, form.contacto div.cont-interno, .condiciones, div.pie-de-pag ul.redes-sociales, .contenedor-para-centrado{
     display: flex;
+}
+
+div.encabezado-inferior, .contenedor-tabla , 
+.sesion div.contenedor-tarjetas , div.pie-de-pag , .sesion form.contacto{ 
+    flex-wrap: wrap; /* a medida que se achica la pantalla los componentes se acomodan en a la parte inferior */
 }
 
 .encabezado-superior, div.encabezado-inferior, .sesion div.contenedor-tarjetas, div.pie-de-pag{
@@ -179,6 +242,15 @@ div.encabezado-inferior , div.pie-de-pag{
     list-style-type: square;
 }
 
+.encabezado-superior button, .logo p.logo, .tarjeta h3{
+    font-weight: bold; /*grosor de la letra*/
+}
+
+div.imagen-principal{
+    background-image: url(../images/fondo-azul4.png); /*imagen de fondo azul difuminada*/
+    background-size: auto 100%; /* ajuste de la imagen de fondo*/
+}
+
 .encabezado-superior, tr , td , th{
     height: 50px;
 }
@@ -217,14 +289,11 @@ div.encabezado-inferior , div.pie-de-pag{
     border-radius: 5px;
     padding: 0px 2px;
     margin: 0px 2px;
-    border: 1px solid #d8e1e4;
-    color: #69747f;
     text-indent: 8px;
 }
 
 /*representa el texto provisional*/
 input::placeholder , textarea::placeholder { 
-    color: #76959Fcc;   /*color de letra*/
     letter-spacing: 1px; /*sepacion enre letras*/
     text-indent: 0px;    /*cero identacion*/
   }
@@ -242,9 +311,6 @@ input.checkbox{ /* boton para seleccionar */
     margin: 0px 1px;
 }
 
-.encabezado-superior button, .logo p.logo, .tarjeta h3{
-    font-weight: bold; /*grosor de la letra*/
-}
 
 .encabezado-superior button{
     height: 35px;
@@ -255,13 +321,7 @@ input.checkbox{ /* boton para seleccionar */
     font-size: 13px;
 }
 
-div.encabezado-inferior, .contenedor-tabla , 
-.sesion div.contenedor-tarjetas , div.pie-de-pag , .sesion form.contacto{ 
-    flex-wrap: wrap; /* a medida que se achica la pantalla los componentes se acomodan en a la parte inferior */
-}
-
 div.encabezado-inferior{ 
-    border-top: 2px solid #f8ac18;
     padding: 7px 80px;
 }
 
@@ -303,26 +363,10 @@ ul.botonera a{
     margin: 0px 10px;
 }
 
-/* apariencia cuando se pasa el puntero del mouse por encima*/
-
-/*/////termina botonera//////*/
-/*/////termina encabezado//////*/
-
-/*/////////main del home///////////*/
-/*/////imagen principal/////*/
-
-div.imagen-principal{ /*.contenedor-center*/
-    background-image: url(../images/fondo-azul4.png); /*imagen de fondo azul difuminada*/
-    background-size: auto 100%; /* ajuste de la imagen de fondo*/
-}
 
 div.imagen-principal img{
-    width: 85%; /*ajusta la imagen al 100% de la pantalla*/  
+    width: 85%; 
 }
-/*////termina imagen principal////*/
-
-/*/////tarjetas de servicios/////*/
-
 
 /*para cambiar*/
 .main .sesion{
@@ -346,10 +390,6 @@ div.imagen-principal img{
 .sesion div.contenedor-tarjetas{
     padding: 8px 0px;
     width: 100%;
-}
-
-.contenedor-tarjetas div.tarjeta, .contenedor-tarjetas div.tarjeta:hover{
-    border: 1px solid #d8e1e4;
 }
 
 .contenedor-tarjetas div.tarjeta{
@@ -385,10 +425,7 @@ table{
 tr , td , th {
     width: 250px;
     padding: 3px;
-    border: 2px solid #f8ac18;
 }
-
-
 
 td img{
     height: 100%;
@@ -399,13 +436,8 @@ td img{
     width: 100%;
 }
 
-.contenedor-libros .libro,.libro .imagen,.libro .descripcion{
-    border: 3px solid #01111A;
-}
-
 .contenedor-libros .libro{
     padding: 5px 0px;
-    background-color: #D8E1E4;
     margin: 4px 2px;
 }
 
@@ -508,7 +540,6 @@ form.contacto div.cont-interno{
 
 form.contacto label{
     padding: 16px 15px 0px;
-    color: #333333;
 }
 
 form.contacto strong{
@@ -517,7 +548,7 @@ form.contacto strong{
 
 .contenedor-contacto input , form.contacto textarea.mensaje{
     padding: 15px 24px;
-    border: 2px solid #d8e1e4;
+    
     width: 345.5px;
     height: 20px;
 }
@@ -531,7 +562,6 @@ form.contacto textarea.mensaje{
     min-width: 797px;
     min-height: 80px;
     padding: 6px 12px;
-    border: 2px solid #ccc;  
 }
 
 .condiciones {
@@ -542,10 +572,8 @@ form.contacto textarea.mensaje{
     margin-bottom: 10px;
 }
 
-
 .generar-captcha , .captcha{
     padding: 10px 0px;
-    border: #01111A 2px solid;
     border-radius: 5px;
     margin-left: 40px;
     margin-top: 20px;
@@ -570,7 +598,6 @@ form.contacto textarea.mensaje{
 }
 
 .mensaje-validado{
-    color: red;
     margin-top: 30px; 
     margin-left: 20px;
 }
@@ -583,7 +610,6 @@ form.contacto textarea.mensaje{
     margin-top: 44px;
     width: 50%;
     padding: 10px 0px;
-    border:  5px solid #f8ac18;
 }
 
 .contenedor-para-centrado h3 {
@@ -594,13 +620,8 @@ form.contacto textarea.mensaje{
     margin-left: 20px;
 }
 
-
-
-
 .contenedor-proyecto{
     margin-bottom: 15px;
-    border: dashed 5px;
-    border-color: #01111A #f8ac18 #f8ac18 #01111A;
     padding: 10px 15px;
     border-radius: 10px;
 }
