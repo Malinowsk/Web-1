@@ -8,19 +8,6 @@
     padding: 0px;
 }
 
-body, .contenedor-contacto input , form.contacto textarea.mensaje, p{
-    font-size: 16px;
-}
-
-body{
-    background-color: #fff;
-    font-family: 'HKGrotesk-Medium', Arial, Helvetica, sans-serif;
-}
-
-h1 , h2 , h3 , h4 , .contenedor-tabla , .condiciones button{
-    text-transform: capitalize;
-}
-
 h1{
     font-size: 32px;
 }
@@ -35,34 +22,100 @@ h4{
     font-size: 18px;
 }
 
+body, .contenedor-contacto input , form.contacto textarea.mensaje, p{
+    font-size: 16px;
+}
+
+label{
+    font-size: 14px;
+}
+
+.parrafo-inicial::first-letter{
+    font-size: 25px;
+}
+
+h1 , h2 , h3 , h4 , .contenedor-tabla , .condiciones button{
+    text-transform: capitalize;
+}
+
 p{
     text-transform: initial;
 }
 
-/*////encabezado/////*/
-
-div.header{
-    position: sticky;
-    top: -64px;
-    z-index: 100;
+.encabezado-superior li{
+    text-transform: lowercase;
 }
 
-/*///////encabezado-parte-superior///////////*/
+body{
+    background-color: #fff;
+    font-family: 'HKGrotesk-Medium', Arial, Helvetica, sans-serif;
+}
 
 .encabezado-superior , .encabezado-inferior , .pie-de-pag, .encabezado-superior button{
     background-color: #1f3d4f;
+}
+
+.encabezado-superior button.sesion{
+    background-color: #2b424f;
+}
+
+div.encabezado-superior button:hover.sesion, img.redes:hover{
+    background-color: #01111A;   
+}
+
+.contenedor-tarjetas div.tarjeta:hover{
+    background-color: #f8ac18;
+}
+
+th, .libro .descripcion, .generar-captcha , .captcha, .tabla-contenido{
+    background-color: #04344E;
+}
+
+.condiciones button{
+    background-color: #047ccc;
+}
+
+div.header{
+    position: sticky;
+    top: -64px; /* esconde la cabecera superior*/
+    z-index: 100; /* necesario por el relative y absolute*/
 }
 
 .encabezado-superior , .encabezado-inferior , .condiciones .generar-captcha label , .condiciones .captcha p, .pie-de-pag, .encabezado-superior button, .contenedor-para-centrado h3, .descripcion h4:hover, th, .descripcion p:hover , .descripcion h3 , div a:hover.politicas , .condiciones button, .tabla-contenido ul a:hover{
     color: #fff;
 }
 
+.encabezado-superior button:hover, ul.botonera a:hover, ul.botonera a.pag-actual,.sesion div.titulo-vistoso,
+.contenedor-tarjetas div.tarjeta:hover, .parrafo-inicial::first-letter, a, form.contacto strong{
+    color: #f8ac18;
+}
+
+.sesion div.titulo-sumiso, .titulo-secundario {
+    color: #2b424f;
+}
+
+.titulo-terciario, .sesion div.texto, tr , td{
+    color: #01111A;
+}
+
+ul.botonera a, .descripcion h4{
+    color: #ffffffcc;
+}
+
+div a.politicas, .contenedor-libros .libro{
+    color: #ffffffaa;
+}
+
+.tabla-contenido ul a{
+    color: #ffffff77;
+}
+
 .encabezado-superior , .encabezado-inferior , .pie-de-pag{
     font-style: normal;
 }
 
-.encabezado-superior, tr , td , th{
-    height: 50px;
+.titulo-terciario, .descripcion p{
+    font-style: italic;
 }
 
 .encabezado-superior, div.encabezado-inferior, div.logo, ul.botonera, div.imagen-principal,
@@ -87,7 +140,6 @@ div.pie-de-pag ul.redes-sociales, form.contacto div.cont-interno{
     justify-content: flex-end;
 }
 
-
 .libro .descripcion{
     flex-direction: column;
 }
@@ -102,14 +154,6 @@ div.encabezado-inferior , div.pie-de-pag{
 
 .contenedor-libros .libro , .condiciones{
     align-items: flex-start;
-}
-
-.encabezado-superior{
-    padding: 7px 100px;
-}
-
-.encabezado-superior i{
-    margin-right: 5px;
 }
 
 .encabezado-superior, .captcha ,input::placeholder , textarea::placeholder 
@@ -127,16 +171,31 @@ div.encabezado-inferior , div.pie-de-pag{
     text-align: left;
 }
 
-.encabezado-superior ul{
-    margin-left: 90px;
-}
-
 .encabezado-superior li, ul.botonera, div.pie-de-pag ul.redes-sociales{
     list-style: none;/*saca el puntito de cada li*/
 }
 
+.tabla-contenido ul, .contenedor-proyecto ul{
+    list-style-type: square;
+}
+
+.encabezado-superior, tr , td , th{
+    height: 50px;
+}
+
+.encabezado-superior{
+    padding: 7px 100px;
+}
+
+.encabezado-superior i{
+    margin-right: 5px;
+}
+
+.encabezado-superior ul{
+    margin-left: 90px;
+}
+
 .encabezado-superior li{
-    text-transform: lowercase;
     padding: 1px;
 }
 
@@ -147,10 +206,6 @@ div.encabezado-inferior , div.pie-de-pag{
 
 .encabezado-superior form{
     padding: 0px 10px;
-}
-
-label{
-    font-size: 14px;
 }
 
 .encabezado-superior input, .captcha input , textarea{
@@ -200,20 +255,6 @@ input.checkbox{ /* boton para seleccionar */
     font-size: 13px;
 }
 
-.encabezado-superior button.sesion{
-    background-color: #2b424f;
-}
-
-.encabezado-superior button:hover, ul.botonera a:hover, ul.botonera a.pag-actual,.sesion div.titulo-vistoso,
-.contenedor-tarjetas div.tarjeta:hover, .parrafo-inicial::first-letter, a, form.contacto strong{
-    color: #f8ac18;
-}
-
-div.encabezado-superior button:hover.sesion, img.redes:hover{
-    background-color: #01111A;
-    
-}
-
 div.encabezado-inferior, .contenedor-tabla , 
 .sesion div.contenedor-tarjetas , div.pie-de-pag , .sesion form.contacto{ 
     flex-wrap: wrap; /* a medida que se achica la pantalla los componentes se acomodan en a la parte inferior */
@@ -256,10 +297,6 @@ ul.botonera li{
     margin: 0 5px;   
 }
 
-ul.botonera a, .descripcion h4{
-    color: #ffffffcc;
-}
-
 ul.botonera a{
     font-weight: 700px;   /*grosor de la letra*/
     padding: 10px 0px;
@@ -297,20 +334,8 @@ div.imagen-principal img{
     padding: 52px 0px 44px;
 }
 
-.sesion div.titulo-sumiso, .titulo-secundario {
-    color: #2b424f;
-}
-
 .titulo-secundario{
     margin-bottom: 10px;
-}
-
-.titulo-terciario, .descripcion p{
-    font-style: italic;
-}
-
-.titulo-terciario, .sesion div.texto, tr , td{
-    color: #01111A;
 }
 
 .titulo-terciario{
@@ -323,19 +348,19 @@ div.imagen-principal img{
     width: 100%;
 }
 
+.contenedor-tarjetas div.tarjeta, .contenedor-tarjetas div.tarjeta:hover{
+    border: 1px solid #d8e1e4;
+}
+
 .contenedor-tarjetas div.tarjeta{
-    border: 1px solid #D8E1E4;
     width: 32%;
 }
 
-.contenedor-tarjetas div.tarjeta:hover{
-    border: 1px solid #d8e1e4;
-}
 
 .contenedor-tarjetas div.imagen{
     width: 100%;
     height: 120px;
-    overflow: hidden; /*el contenido que sobresale no se ve*/
+    /*overflow: hidden; /*el contenido que sobresale no se ve*/
 }
 
 div.imagen img.tarjeta{
@@ -351,10 +376,6 @@ div.imagen img.tarjeta{
 .sesion .texto p{
     padding: 0px 15px 10px;
 }
-/*/////termina tarjetas de servicio/////*/
-
-
-/*/////////tabla///////////*/
 
 table{
     width: 100%;
@@ -367,37 +388,29 @@ tr , td , th {
     border: 2px solid #f8ac18;
 }
 
-th, .libro .descripcion, .generar-captcha , .captcha, .tabla-contenido{
-    background-color: #04344E;
-}
+
 
 td img{
     height: 100%;
 }
-/*/////termina tabla///////*/
-
-/*/////recomendacion de libros//////*/
 
 .sesion .contenedor-libros{
     padding: 8px 0px;
     width: 100%;
 }
 
-div a.politicas, .contenedor-libros .libro{
-    color: #ffffffaa;
+.contenedor-libros .libro,.libro .imagen,.libro .descripcion{
+    border: 3px solid #01111A;
 }
 
 .contenedor-libros .libro{
     padding: 5px 0px;
-    border: 3px solid #01111A;
     background-color: #D8E1E4;
     margin: 4px 2px;
 }
 
 .libro .imagen{
-    background-color: red;
     margin: 0px 2.5px 0px 5px;
-    border: 3px solid #01111A;
     width: 205px;
     height: 273px;
 }
@@ -410,7 +423,6 @@ div a.politicas, .contenedor-libros .libro{
 .libro .descripcion{
     width: 80%;
     margin: 0px 5px 0px 2.5px;
-    border: 3px solid #01111A;
     height: 263px;
     padding: 5px;
 }
@@ -432,9 +444,7 @@ div a.politicas, .contenedor-libros .libro{
     margin: 4px 0px;
 }
 
-.parrafo-inicial::first-letter{
-    font-size: 25px;
-}
+
 
 a{
     padding: 2px;
@@ -557,7 +567,6 @@ form.contacto textarea.mensaje{
 .condiciones button{
     margin: 30px 40px;
     padding: 5px;
-    background-color: #047ccc;
 }
 
 .mensaje-validado{
@@ -565,10 +574,6 @@ form.contacto textarea.mensaje{
     margin-top: 30px; 
     margin-left: 20px;
 }
-
-/* termina HTML contacto */
-
-/* arranca main HTML servicios*/
 
 .texto-centrado p{
     padding: 8px 0px;
@@ -587,13 +592,9 @@ form.contacto textarea.mensaje{
 
 .tabla-contenido ul, .contenedor-proyecto ul{
     margin-left: 20px;
-    list-style-type: square;
-    
 }
 
-.tabla-contenido ul a{
-    color: #ffffff77;
-}
+
 
 
 .contenedor-proyecto{
