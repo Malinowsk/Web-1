@@ -50,7 +50,7 @@ label{
 
 
                 /* text-transform */
-h1 , h2 , h3 , h4 , .contenedor-tabla , .condiciones button{
+h1 , h2 , h3 , h4 , .contenedor-tabla , .validacion button{
     text-transform: capitalize;
 }
 
@@ -62,7 +62,7 @@ p{
     text-transform: lowercase;
 }
 
-.condiciones {
+.validacion {
     text-transform: none;
 }
 
@@ -92,7 +92,7 @@ th, .libro .descripcion , .captcha, .tabla-contenido{
     background-color: #04344E;
 }
 
-.condiciones button{
+.validacion button{
     background-color: #047ccc;
 }
 
@@ -102,7 +102,7 @@ th, .libro .descripcion , .captcha, .tabla-contenido{
 
                     /* color de texto */
 
-.encabezado-superior , .encabezado-inferior, .condiciones .captcha p, .pie-de-pag, .encabezado-superior button, .contenedor-para-centrado h3, .descripcion h4:hover, th, .descripcion p:hover , .descripcion h3 , div a:hover.politicas , .condiciones button, .tabla-contenido ul a:hover{
+.encabezado-superior , .encabezado-inferior, .validacion .captcha p, .pie-de-pag, .encabezado-superior button, .contenedor-para-centrado h3, .descripcion h4:hover, th, .descripcion p:hover , .descripcion h3 , div a:hover.politicas , .validacion button, .tabla-contenido ul a:hover{
     color: #ffffff;
 }
 
@@ -131,7 +131,7 @@ div a.politicas, .contenedor-libros .libro{
     color: #ffffff77;
 }
 
-.encabezado-superior input, .captcha input , textarea{
+input , textarea{
     color: #69747f;
 }
 
@@ -152,7 +152,7 @@ form.contacto label{
 }
 
                     /* bordes */
-.encabezado-superior input, .captcha input , textarea, .contenedor-tarjetas div.tarjeta, 
+.encabezado-superior input, .captcha input , .contenedor-tarjetas div.tarjeta, 
 .contenedor-tarjetas div.tarjeta:hover{
     border: 1px solid #d8e1e4;
 }
@@ -186,9 +186,6 @@ div.encabezado-inferior{
     border: 2px solid #01111A;
 }
 
-form.contacto textarea.mensaje{
-    border: 2px solid #cccccc;  
-}
 
                     /* font-style */
 .encabezado-superior , .encabezado-inferior , .pie-de-pag{
@@ -214,7 +211,7 @@ ul.botonera a{
                     /* Atributos de flex */
 .encabezado-superior, div.encabezado-inferior, div.logo, ul.botonera, div.imagen-principal,
 .contenedor-tabla, .sesion div.contenedor-tarjetas, .contenedor-libros .libro, .libro .descripcion,
-div.pie-de-pag, .sesion form.contacto, form.contacto div.cont-interno, .condiciones, div.pie-de-pag ul.redes-sociales, .contenedor-para-centrado{
+div.pie-de-pag, .sesion form.contacto, form.contacto div.cont-interno, .validacion, div.pie-de-pag ul.redes-sociales, .contenedor-para-centrado{
     display: flex;
 }
 
@@ -235,8 +232,17 @@ ul.botonera, .contenedor-libros .libro, .libro .descripcion, .sesion form.contac
     justify-content: space-around;
 }
 
-div.pie-de-pag ul.redes-sociales, form.contacto div.cont-interno{
+div.pie-de-pag ul.redes-sociales{
     justify-content: flex-end;
+}
+
+form.contacto div.cont-interno{
+    justify-content: flex-start;
+    width: 100%;
+}
+
+form.contacto .contenedor-contacto div.cont-interno{
+    width: 50%;
 }
 
 .libro .descripcion{
@@ -247,20 +253,19 @@ div.pie-de-pag ul.redes-sociales, form.contacto div.cont-interno{
     align-items: flex-end;
 }
 
-div.encabezado-inferior , div.pie-de-pag{
+div.encabezado-inferior , div.pie-de-pag form.contacto div.cont-interno{
     align-items: center;
 }
 
-.contenedor-libros .libro , .condiciones{
+.contenedor-libros .libro , .validacion{
     align-items: flex-start;
 }
-
                     /* aliniacion de texto */
 
-.encabezado-superior, .captcha ,input::placeholder , textarea::placeholder 
+.encabezado-superior, .captcha ,input::placeholder
 , .contenedor-tabla ,.sesion div.titulo-vistoso ,
-.sesion div.contenedor-tarjetas, p.fin, .condiciones .captcha input:focus,
-.condiciones .captcha input, .texto-centrado p {
+.sesion div.contenedor-tarjetas, p.fin, .validacion .captcha input:focus,
+.validacion .captcha input, .texto-centrado p {
     text-align: center; /*alineamos el texto en el centro*/
 }
 
@@ -320,17 +325,8 @@ input::placeholder , textarea::placeholder {
                                 /*focus*/
 
 /*representa un elemento cuando le haces click*/
-input:focus , textarea:focus { 
-text-indent: 8px; /* identamos el cursor donde se comienza a escribir*/
-outline: none; /*funciona para sacar borde interno de color negro cuando hacemos focus al input text*/
-}
-
-form.contacto input:focus , form.contacto textarea:focus { 
-text-indent: 0px;
-}
-
-.condiciones .captcha input:focus{
-text-indent: -5px; /*identacion un poco a la izquierda*/
+input:focus , textarea:focus {
+    outline: none; /*funciona para sacar borde interno de color negro cuando hacemos focus al input text*/
 }
 
 div.imagen-principal{
@@ -373,14 +369,17 @@ div.imagen-principal{
     padding: 0px 10px;
 }
 
-.encabezado-superior input, .captcha input , textarea{
+.encabezado-superior input{
+    border-radius: 5px;
+    margin: 0px 2px;
+}
+
+.encabezado-superior input, .captcha input{
     height: 32px;
     width: 140px;
     max-height: 32px; /* para dejar la caja de mensaje fija*/
     max-width: 140px; /* para dejar la caja de mensaje fija*/
-    border-radius: 5px;
     padding: 0px 2px;
-    margin: 0px 2px;
     text-indent: 8px;
 }
 
@@ -587,71 +586,89 @@ p.fin{
 /* HTML contacto */
 
 .sesion form.contacto{
-    width: 100%;
-    margin-right: 20px;
-    
+    align-content: space-between;
+}
+.sesion form.contacto{
+    height: 600px;
 }
 
 form.contacto div.contenedor-contacto{
-    width: 50%;
-    margin: 5px 0px;
-    
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+form.contacto div.contenedor-contacto{
+    width: 100%;
+    height: 150px;
 }
 
 form.contacto div.cont-interno{
-    margin-bottom: 24px;
-    width: 100%;
+    align-items: center;
+}
+form.contacto div.cont-interno p{
+    margin-left: 10px;
+    font-size: 14px;
 }
 
 form.contacto label{
     padding: 16px 15px 0px;
 }
 
+
+form.contacto input{
+    width: 65%;
+    height: 50px;
+    padding: 0px 24px;
+}
+
+form.contacto .checkbox{
+    height: auto;
+    width: auto;
+}
+
+form.contacto .cont-interno label{
+    padding: 0px 15px;
+    height: 100%;
+    width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
 form.contacto strong{
     margin: 0px 0px 0px 3px;
 }
 
-.contenedor-contacto input , form.contacto textarea.mensaje{
-    padding: 15px 24px;
-    
-    width: 345.5px;
-    height: 20px;
-}
-
 form.contacto textarea.mensaje{
-    min-width: 797px;
+    min-width: 84.5%;
     min-height: 80px;
-    padding: 6px 12px;
+    max-width: 84.5%;
+    max-height: 80px;
+    padding-top: 10px;
+    padding-left: 24px;
 }
 
-.condiciones {
-    width: 100%;
-    margin-left: 300px;
-    margin-top: 5x;
-    margin-bottom: 10px;
+.validacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 250px;
+    justify-content: space-between;
 }
 
 .captcha{
-    padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
     border-radius: 5px;
-    margin-left: 40px;
-    margin-top: 20px;
     width: 300px;
     height: 150px;
 }
 
-.condiciones .captcha p{
-    margin: 15px;
-}
-
-.condiciones button{
-    margin: 30px 40px;
-    padding: 5px;
-}
-
-.mensaje-invalido , .mensaje-valido {
-    margin-top: 30px; 
-    margin-left: 20px;
+.validacion button{
+    padding: 3px;
 }
 
 .texto-centrado p{
