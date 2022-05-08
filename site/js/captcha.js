@@ -4,8 +4,6 @@ function generarCaptcha(){
     let segundo_numero = generarNumero(); // genero numero aleatorio 
     document.querySelector("#prim_num").innerHTML = primer_numero; // agrego prim num en etiqueta span
     document.querySelector("#seg_num").innerHTML = segundo_numero; // agrego seg num en etiqueta span
-    let contenedor_captcha = document.querySelector("#captcha"); // selecciono el div 
-    contenedor_captcha.classList.toggle("oculto"); // le agrego o saco al div la clase para que aparesca o desaparesca
     resultado= primer_numero + segundo_numero; // guardo resultado valido del captcha
 }
 
@@ -19,20 +17,27 @@ function validarCaptcha(){
         let contenedor = document.querySelector("#captcha");
         contenedor.innerHTML="";
         contenedor.classList.remove("captcha");
-        informarResultado("Validación satisfactoria! ");
-        document.querySelector("#generar-captcha").removeEventListener("click",generarCaptcha); // borramos el evento de hacer click en el boton de generar captcha
+        informarResultado("Validación satisfactoria! ", true);
     }
     else{
-        informarResultado("La validación se efectuó incorrectamente!");
+        informarResultado("La validación se efectuó incorrectamente!", false);
     }
 }
 
 //funcion que muestra por pantalla mensaje sobre la resolucion del captcha   
-function informarResultado(mensaje){ 
+function informarResultado(mensaje , valido){ 
     let parrafo = document.querySelector("#info-resolucion");
-        parrafo.innerHTML = mensaje;
+    parrafo.innerHTML = mensaje;
+    if (valido){
+        parrafo.classList.add("mensaje-valido");
+        parrafo.classList.remove("mensaje-invalido");
+    }
+    else
+    {
+        parrafo.classList.add("mensaje-invalido");
+    }
 }
 
-document.querySelector("#generar-captcha").addEventListener("click",generarCaptcha); //pongo a escuchar el evento para generar el captcha
-document.querySelector("#validar").addEventListener("click",validarCaptcha);//pongo a escuchar el evento para validar el captcha
 let resultado; // variable para guardar el valor valido del captcha
+generarCaptcha();
+document.querySelector("#validar").addEventListener("click",validarCaptcha);//pongo a escuchar el evento para validar el captcha

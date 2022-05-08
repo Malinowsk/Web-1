@@ -7,17 +7,7 @@
     margin: 0px;
     padding: 0px;
 }
-
-body{
-    background-color: #fff;
-    font-family: 'HKGrotesk-Medium', Arial, Helvetica, sans-serif;
-    font-size: 16px;
-}
-
-h1,h2,h3,h4{
-    text-transform: capitalize;
-}
-
+            /*font size*/
 h1{
     font-size: 32px;
 }
@@ -25,40 +15,340 @@ h1{
 h2{
     font-size: 30px;
 }
+
+.parrafo-inicial::first-letter{
+    font-size: 25px;
+}
+
+.logo p.logo{
+    font-size: 22px;
+}
+
 h3{
     font-size: 20px;    
 }
+
 h4{
     font-size: 18px;
 }
 
-p{
+body, .contenedor-contacto input , form.contacto textarea.mensaje, p{
     font-size: 16px;
-    text-transform: initial;
 }
 
-/*////encabezado/////*/
-
-header{
-    position: sticky;
-    top: -64px;
-    z-index: 100;
+.encabezado-superior input, .captcha input , textarea{
+    font-size: 15px;
 }
 
-/*///////encabezado-parte-superior///////////*/
+label{
+    font-size: 14px;
+}
 
-.encabezado-superior , .encabezado-inferior , .pie-de-pag{
-    background-color: rgba(31, 61, 79, 1);
-    color: #fff; 
-    font-style: normal;
+.encabezado-superior button{
+    font-size: 13px;
+}
+
+
+                /* text-transform */
+h1 , h2 , h3 , h4 , .contenedor-tabla , .condiciones button{
     text-transform: capitalize;
 }
 
-.encabezado-superior{
-    height: 50px;
+p{
+    text-transform: initial;
+}
+
+.encabezado-superior li{
+    text-transform: lowercase;
+}
+
+.condiciones {
+    text-transform: none;
+}
+
+                /* background-color */
+body{
+    background-color: #ffffff;
+    font-family: 'HKGrotesk-Medium', Arial, Helvetica, sans-serif;
+}
+
+.encabezado-superior , .encabezado-inferior , .pie-de-pag, .encabezado-superior button{
+    background-color: #1f3d4f;
+}
+
+.encabezado-superior button.sesion{
+    background-color: #2b424f;
+}
+
+div.encabezado-superior button:hover.sesion, img.redes:hover{
+    background-color: #01111A;   
+}
+
+.contenedor-tarjetas div.tarjeta:hover{
+    background-color: #f8ac18;
+}
+
+th, .libro .descripcion , .captcha, .tabla-contenido{
+    background-color: #04344E;
+}
+
+.condiciones button{
+    background-color: #047ccc;
+}
+
+.contenedor-libros .libro{
+    background-color: #D8E1E4;
+}
+
+                    /* color de texto */
+
+.encabezado-superior , .encabezado-inferior, .condiciones .captcha p, .pie-de-pag, .encabezado-superior button, .contenedor-para-centrado h3, .descripcion h4:hover, th, .descripcion p:hover , .descripcion h3 , div a:hover.politicas , .condiciones button, .tabla-contenido ul a:hover{
+    color: #ffffff;
+}
+
+.encabezado-superior button:hover, ul.botonera a:hover, ul.botonera a.pag-actual,.sesion div.titulo-vistoso,
+.contenedor-tarjetas div.tarjeta:hover, .parrafo-inicial::first-letter, a, form.contacto strong{
+    color: #f8ac18;
+}
+
+.sesion div.titulo-sumiso, .titulo-secundario {
+    color: #2b424f;
+}
+
+.titulo-terciario, .sesion div.texto, tr , td{
+    color: #01111A;
+}
+
+ul.botonera a, .descripcion h4{
+    color: #ffffffcc;
+}
+
+div a.politicas, .contenedor-libros .libro{
+    color: #ffffffaa;
+}
+
+.tabla-contenido ul a{
+    color: #ffffff77;
+}
+
+.encabezado-superior input, .captcha input , textarea{
+    color: #69747f;
+}
+
+input::placeholder , textarea::placeholder { 
+    color: #76959Fcc;   
+}
+
+form.contacto label{
+    color: #333333;
+}
+
+.mensaje-invalido{
+    color: red;
+}
+
+.mensaje-valido{
+    color: green;
+}
+
+                    /* bordes */
+.encabezado-superior input, .captcha input , textarea, .contenedor-tarjetas div.tarjeta, 
+.contenedor-tarjetas div.tarjeta:hover{
+    border: 1px solid #d8e1e4;
+}
+
+.contenedor-contacto input , form.contacto textarea.mensaje{
+    border: 2px solid #d8e1e4;
+}
+
+tr , td , th {
+    border: 2px solid #f8ac18;
+}
+
+div.encabezado-inferior{ 
+    border-top: 2px solid #f8ac18;
+}
+
+.tabla-contenido{
+    border:  5px solid #f8ac18;
+}
+
+.contenedor-proyecto{
+    border: dashed 5px;
+    border-color: #01111A #f8ac18 #f8ac18 #01111A;
+}
+
+.contenedor-libros .libro,.libro .imagen,.libro .descripcion{
+    border: 3px solid #01111A;
+}
+
+.captcha{
+    border: 2px solid #01111A;
+}
+
+form.contacto textarea.mensaje{
+    border: 2px solid #cccccc;  
+}
+
+                    /* font-style */
+.encabezado-superior , .encabezado-inferior , .pie-de-pag{
+    font-style: normal;
+}
+
+.titulo-terciario, .descripcion p{
+    font-style: italic;
+}
+                    /*texto en negrita*/
+.encabezado-superior button, .logo p.logo, .tarjeta h3{
+    font-weight: bold; /*grosor de la letra*/
+}
+
+ul.botonera a{
+    font-weight: 700px; 
+}
+
+.titulo-terciario{
+    font-weight: 1000;
+}
+
+                    /* Atributos de flex */
+.encabezado-superior, div.encabezado-inferior, div.logo, ul.botonera, div.imagen-principal,
+.contenedor-tabla, .sesion div.contenedor-tarjetas, .contenedor-libros .libro, .libro .descripcion,
+div.pie-de-pag, .sesion form.contacto, form.contacto div.cont-interno, .condiciones, div.pie-de-pag ul.redes-sociales, .contenedor-para-centrado{
     display: flex;
-    justify-content: space-between; /* se alinean los bloques bien ensanchados con respecto al eje horizontal*/
-    align-items: flex-end; /*se alinea los bloques en la parte de abajo con respeto al eje vertical*/
+}
+
+div.encabezado-inferior, .contenedor-tabla , 
+.sesion div.contenedor-tarjetas , div.pie-de-pag , .sesion form.contacto{ 
+    flex-wrap: wrap; /* a medida que se achica la pantalla los componentes se acomodan en a la parte inferior */
+}
+
+.encabezado-superior, div.encabezado-inferior, .sesion div.contenedor-tarjetas, div.pie-de-pag{
+    justify-content: space-between;
+}
+
+div.imagen-principal, .contenedor-tabla, .contenedor-para-centrado{
+    justify-content: center;
+}
+
+ul.botonera, .contenedor-libros .libro, .libro .descripcion, .sesion form.contacto{
+    justify-content: space-around;
+}
+
+div.pie-de-pag ul.redes-sociales, form.contacto div.cont-interno{
+    justify-content: flex-end;
+}
+
+.libro .descripcion{
+    flex-direction: column;
+}
+
+.encabezado-superior{ 
+    align-items: flex-end;
+}
+
+div.encabezado-inferior , div.pie-de-pag{
+    align-items: center;
+}
+
+.contenedor-libros .libro , .condiciones{
+    align-items: flex-start;
+}
+
+                    /* aliniacion de texto */
+
+.encabezado-superior, .captcha ,input::placeholder , textarea::placeholder 
+, .contenedor-tabla ,.sesion div.titulo-vistoso ,
+.sesion div.contenedor-tarjetas, p.fin, .condiciones .captcha input:focus,
+.condiciones .captcha input, .texto-centrado p {
+    text-align: center; /*alineamos el texto en el centro*/
+}
+
+.sesion .texto p ,.libro .descripcion ,.descripcion h3,.contenedor-proyecto p{
+    text-align: justify;
+}
+
+.sesion div.titulo-sumiso, .titulo-secundario , form.contacto input::placeholder{
+    text-align: left;
+}
+                            /* estilo de lista */
+
+.encabezado-superior li, ul.botonera, div.pie-de-pag ul.redes-sociales{
+    list-style: none;/*saca el puntito de cada li*/
+}
+
+.tabla-contenido ul, .contenedor-proyecto ul{
+    list-style-type: square;
+}
+
+                            /* estilo de subrayado */
+a{
+    text-decoration: none;
+}
+
+.descripcion h4{
+    text-decoration: underline;
+}
+
+
+                            /*atributo position*/
+div.header{
+    position: sticky;
+    top: -64px; /* esconde la cabecera superior*/
+    z-index: 100; /* necesario por el relative y absolute*/
+}
+
+.posicionado{
+    position: absolute;
+    top: -120px;
+}
+
+.titulo-linkeado{
+    position: relative;
+}
+
+
+
+                            /*placeholder*/
+
+/*representa el texto provisional*/
+input::placeholder , textarea::placeholder { 
+    letter-spacing: 1px; /*sepacion entre letras*/
+    text-indent: 0px;    /*cero identacion*/
+}
+
+                                /*focus*/
+
+/*representa un elemento cuando le haces click*/
+input:focus , textarea:focus { 
+text-indent: 8px; /* identamos el cursor donde se comienza a escribir*/
+outline: none; /*funciona para sacar borde interno de color negro cuando hacemos focus al input text*/
+}
+
+form.contacto input:focus , form.contacto textarea:focus { 
+text-indent: 0px;
+}
+
+.condiciones .captcha input:focus{
+text-indent: -5px; /*identacion un poco a la izquierda*/
+}
+
+div.imagen-principal{
+    background-image: url(../images/fondo-azul4.png); /*imagen de fondo azul difuminada*/
+    background-size: auto 100%; /* ajuste de la imagen de fondo*/
+}
+
+
+/*///////////////ESTILO DE TAMAÑOS Y MEDIDAS///////////////////////////////////////////////////////////////*/
+
+
+                /*//comienza header////*/
+
+.encabezado-superior, tr , td , th{
+    height: 50px;
+}
+
+.encabezado-superior{
     padding: 7px 100px;
 }
 
@@ -68,13 +358,10 @@ header{
 
 .encabezado-superior ul{
     margin-left: 90px;
-    text-align: center;
 }
 
 .encabezado-superior li{
-    text-transform: lowercase;
     padding: 1px;
-    list-style: none;
 }
 
 .encabezado-superior img.correo, .encabezado-superior img.telefono{
@@ -83,16 +370,7 @@ header{
 }
 
 .encabezado-superior form{
-    display: inline;
     padding: 0px 10px;
-}
-
-label{
-    font-size: 14px;
-}
-
-.captcha{
-    text-align: center;
 }
 
 .encabezado-superior input, .captcha input , textarea{
@@ -100,28 +378,12 @@ label{
     width: 140px;
     max-height: 32px; /* para dejar la caja de mensaje fija*/
     max-width: 140px; /* para dejar la caja de mensaje fija*/
-    font-size: 15px;
     border-radius: 5px;
     padding: 0px 2px;
     margin: 0px 2px;
-    border: 1px solid #d8e1e4;
-    color: #69747f;
     text-indent: 8px;
 }
 
-/*representa el texto provisional*/
-input::placeholder , textarea::placeholder { 
-    color: #76959Fcc;   /*color de letra*/
-    letter-spacing: 1px; /*sepacion enre letras*/
-    text-align: center;  /*alineamos el texto en el centro*/
-    text-indent: 0px;    /*cero identacion*/
-  }
-  
-/*representa un elemento cuando le haces click*/
-input:focus , textarea:focus { 
-    text-indent: 8px; /* identamos el cursor donde se comienza a escribir*/
-    outline: none; /*funciona para sacar borde interno de color negro cuando hacemos focus al input text*/
- }
 
 input.checkbox{ /* boton para seleccionar */
     height: auto;
@@ -133,49 +395,18 @@ input.checkbox{ /* boton para seleccionar */
 .encabezado-superior button{
     height: 35px;
     width: auto;
-    text-align: center;
     padding: 0px 5px;
     margin: 0px 5px;
-    background-color: rgba(31, 61, 79, 1);
     border: 0px;
-    color: #fff;
-    font-size: 13px;
-    font-weight: bold; /*grosor de la letra*/
 }
 
-.encabezado-superior button.sesion{
-    background-color: #2b424f;
-}
-
-/*reprenta el elemento cuando el puntero pasa sobre el*/
-.encabezado-superior button:hover{
-    color: #f8ac18;
-}
-
-
-div.encabezado-superior button:hover.sesion{
-    background-color: #01111A;
-    
-}
-/*/////termina encabezado-parte-superior//////*/
-
-
-/*///////encabezado-parte-inferior///////////*/
-
-div.encabezado-inferior{
-    
-    border-top: 2px solid #f8ac18;
-    display: flex; /* los bloques pasan hacer inline*/ 
-    justify-content: space-between; /* las cajas contenidas se separan a la punta de los extremos*/  
+div.encabezado-inferior{ 
     padding: 7px 80px;
-    flex-flow: row wrap; /* a medida que se achica la pantalla los componentes se acomodan en a la parte inferior */
-    align-items: center; /* acomoda en el mismo renglon de forma centrada la botonera con el titulo h1*/
 }
 
 /*//logo (icono - titulo)//*/
 
 div.logo{
-    display: flex;
     padding-right: 39.15px;
 }
 
@@ -186,80 +417,38 @@ div.logo{
 
 .logo p.logo{
     padding: 10px;
-    font-size: 22px;
     letter-spacing: 2px;
-    font-weight: bold;
 }
 
 /*//botonera (nav)//*/
 
 div.botonera{
-    
     margin: 8px;
     padding: 0px 10px;
 }
 
 ul.botonera{ 
     margin: 1px;
-    list-style: none; /*saca el puntito de cada li*/
-    display: flex; /* los bloques pasan hacer inline*/ 
-    justify-content: space-around; /* los separa a los extremos pero no tanto*/  
 }
 
 ul.botonera li{
     margin: 0 5px;   
 }
 
-
 ul.botonera a{
-    color: #ffffffcc; 
-    font-weight: 700px;   /*grosor de la letra*/
-    text-decoration: none; /* saca la linea de abajo de los link que se ponen por defecto*/
     padding: 10px 0px;
     margin: 0px 10px;
-    text-align: center;
 }
 
-/* apariencia cuando se pasa el puntero del mouse por encima*/
-ul.botonera a:hover, ul.botonera a.pag-actual { 
-    color: #f8ac18;
-
-}
-/*/////termina botonera//////*/
-/*/////termina encabezado//////*/
-
-
-/*/////////main del home///////////*/
-
-/*/////imagen principal/////*/
-
-div.imagen-principal{
-    background-color: black; 
-    background-image: url(../images/fondo-azul4.png); /*imagen de fondo azul difuminada*/
-    background-size: auto 100%; /* ajuste de la imagen de fondo*/
-    display: flex;
-    justify-content: center;
-}
+                /*//comienza main////*/
 
 div.imagen-principal img{
-    width: 85%; /*ajusta la imagen al 100% de la pantalla*/  
+    width: 85%; 
 }
-/*////termina imagen principal////*/
-
-/*/////tarjetas de servicios/////*/
-
 
 /*para cambiar*/
 .main .sesion{
     margin: 0px 94px;
-}
-
-.sesion .contenedor-tarjetas, .contenedor-tabla{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-    text-transform: capitalize;
 }
 
 .sesion div.titulo-vistoso , .sesion div.titulo-sumiso{
@@ -267,49 +456,27 @@ div.imagen-principal img{
     padding: 52px 0px 44px;
 }
 
-.sesion div.titulo-vistoso {
-    text-align: center;
-    color: #f8ac18;
-}
-
-.sesion div.titulo-sumiso, .titulo-secundario {
-    color: #2b424f;
-    text-align: left;
-}
-
 .titulo-secundario{
     margin-bottom: 10px;
 }
 
 .titulo-terciario{
-    font-style: italic;
-    color: #01111A;
-    font-weight: 1000;
     margin-top: 10px;
 }
 
 .sesion div.contenedor-tarjetas{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     padding: 8px 0px;
     width: 100%;
 }
 
 .contenedor-tarjetas div.tarjeta{
-    border: 1px solid #D8E1E4;
     width: 32%;
-}
-
-.contenedor-tarjetas div.tarjeta:hover{
-    border: 1px solid #d8e1e4;
-    background-color: #f8ac18;
 }
 
 .contenedor-tarjetas div.imagen{
     width: 100%;
     height: 120px;
-    overflow: hidden; /*el contenido que sobresale no se ve*/
+    /*overflow: hidden; /*el contenido que sobresale no se ve*/
 }
 
 div.imagen img.tarjeta{
@@ -317,76 +484,41 @@ div.imagen img.tarjeta{
     height: 100%;
 }
 
-.sesion div.texto{
-    color: #01111A;
-}
-
 .tarjeta h3{
-    font-weight: bold; /*grosor de la letra*/
-    
     padding: 20px 0px;
     
 }
 
 .sesion .texto p{
     padding: 0px 15px 10px;
-    text-align: justify;
 }
-/*/////termina tarjetas de servicio/////*/
-
-
-/*/////////tabla///////////*/
 
 table{
-    background-color: white;
     width: 100%;
     padding: 8px 0px;
 }
 
 tr , td , th {
     width: 250px;
-    height: 50px;
     padding: 3px;
-    border: 2px solid #f8ac18;
-}
-
-tr , td{
-    color: #01111A;
-}
-
-th{
-    background-color: #04344E;
-    color: white;
 }
 
 td img{
     height: 100%;
 }
-/*/////termina tabla///////*/
-
-/*/////recomendacion de libros//////*/
 
 .sesion .contenedor-libros{
-    background-color: #fff;
     padding: 8px 0px;
     width: 100%;
 }
 
 .contenedor-libros .libro{
-    display: flex;
     padding: 5px 0px;
-    border: 3px solid #01111A;
-    background-color: #D8E1E4;
     margin: 4px 2px;
-    color: #ffffffaa;
-    justify-content: space-around;
-    align-items: flex-start;
 }
 
 .libro .imagen{
-    background-color: red;
     margin: 0px 2.5px 0px 5px;
-    border: 3px solid #01111A;
     width: 205px;
     height: 273px;
 }
@@ -397,74 +529,37 @@ td img{
 }
 
 .libro .descripcion{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     width: 80%;
-    background-color: #04344E;
     margin: 0px 5px 0px 2.5px;
-    border: 3px solid #01111A;
     height: 263px;
-    text-align: justify;
     padding: 5px;
 }
 
 .descripcion h3{
-    text-align: justify;
-    font-size: 20px;
     padding: 2px;
     margin-bottom: 4px;
 }
 
 .descripcion h4{
-    color: #ffffffcc;
-    font-size: 18px;
     padding: 2px;
     margin: 4px 0px;
-    text-decoration: underline;
 }
 
 .descripcion p{
     padding: 2px;
     margin: 4px 0px;
-    font-style: italic;
-}
-
-.descripcion h4:hover, .descripcion p:hover , .descripcion h3 , div a:hover.politicas , .tabla-contenido ul a:hover{
-    color: #ffffff;
-}
-
-.parrafo-inicial::first-letter{
-    color: #f8ac18;
-    font-size: 25px;
-
 }
 
 a{
     padding: 2px;
     margin-top: 5px;
-    color: #f8ac18;
-    text-decoration: none;
 }
-
-/*/////termina recomendacion de libros//////*/
-
-/*/////termina main//////*/
-
 
 /*//comienza footer////*/
 
-div.pie-de-pag{
+div.pie-de-pag{ 
     padding: 30px 80px;
     margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-div a.politicas{
-    color: #ffffffaa;
 }
 
 div.pie-de-pag div.redes-sociales{
@@ -472,12 +567,8 @@ div.pie-de-pag div.redes-sociales{
 }
 
 div.pie-de-pag ul.redes-sociales{
-    display:flex;
-    list-style:none;
-    justify-content: flex-end;
     padding: 8px 18px;
 }
-
 
 img.redes{
     border-radius: 10px;
@@ -486,12 +577,7 @@ img.redes{
     margin: 2px;
 }
 
-img.redes:hover{
-    background-color: #01111A;
-}
-
 p.fin{
-    text-align: center;
     width: 100%;
     margin: 5px;
 }
@@ -501,9 +587,6 @@ p.fin{
 /* HTML contacto */
 
 .sesion form.contacto{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
     width: 100%;
     margin-right: 20px;
     
@@ -518,78 +601,41 @@ form.contacto div.contenedor-contacto{
 form.contacto div.cont-interno{
     margin-bottom: 24px;
     width: 100%;
-    display: flex;
-    justify-content: flex-end;
 }
 
 form.contacto label{
     padding: 16px 15px 0px;
-    color: #333333;
 }
 
 form.contacto strong{
-    color: #f8ac18;
     margin: 0px 0px 0px 3px;
 }
 
 .contenedor-contacto input , form.contacto textarea.mensaje{
     padding: 15px 24px;
-    border: 2px solid #d8e1e4;
+    
     width: 345.5px;
     height: 20px;
-    font-size: 16px;
-}
-form.contacto input::placeholder { 
-    
-    text-align: left; 
-    
-}
-
-form.contacto input:focus , form.contacto textarea:focus { 
-    text-indent: 0px;
-    
 }
 
 form.contacto textarea.mensaje{
     min-width: 797px;
     min-height: 80px;
     padding: 6px 12px;
-    border: 2px solid #ccc;
-    
-    
-}
-
-form.contacto input.checkbox{ /*sacar esta 2 veces*/
-    width: auto;
 }
 
 .condiciones {
-    display: flex;
     width: 100%;
-    text-transform: none;
     margin-left: 300px;
     margin-top: 5x;
     margin-bottom: 10px;
-    align-items: flex-start;
-    
 }
 
-
-.generar-captcha , .captcha{
+.captcha{
     padding: 10px 0px;
-    background-color: #04344E;
-    border: #01111A 2px solid;
     border-radius: 5px;
     margin-left: 40px;
     margin-top: 20px;
-}
-
-.condiciones .generar-captcha label , .condiciones .captcha p{
-    color: white;
-}
-
-
-.captcha{
     width: 300px;
     height: 150px;
 }
@@ -598,105 +644,46 @@ form.contacto input.checkbox{ /*sacar esta 2 veces*/
     margin: 15px;
 }
 
-.condiciones .captcha input:focus{
-    text-align: center; /*aliniacion central del valor introducido*/
-    text-indent: -5px; /*identacion un poco a la izquierda*/
-}
-
-.condiciones .captcha input{
-    text-align: center;
-}
-
 .condiciones button{
     margin: 30px 40px;
-    text-transform: capitalize;
     padding: 5px;
-    color: white;
-    background-color: #047ccc;
-
 }
 
-.mensaje-validado{
-    color: red;
+.mensaje-invalido , .mensaje-valido {
     margin-top: 30px; 
     margin-left: 20px;
 }
 
-/* termina HTML contacto */
-
-/* arranca main HTML servicios*/
-
 .texto-centrado p{
-    text-align: center;
     padding: 8px 0px;
-}
-
-.contenedor-para-centrado{
-    display: flex;
-    justify-content: center;
 }
 
 .tabla-contenido{
     margin-top: 44px;
-    background-color: #04344E;
     width: 50%;
     padding: 10px 0px;
-    border: #f8ac18 5px solid;
 }
 
-.seccion-contenido{
-    display: flex;
-    justify-content: center;
-}
-
-.seccion-contenido h3 {
-    color: #fff;
+.contenedor-para-centrado h3 {
     margin-bottom: 5px;
 }
 
 .tabla-contenido ul, .contenedor-proyecto ul{
     margin-left: 20px;
-    list-style-type: square;
-    
 }
-
-.tabla-contenido ul a{
-    text-decoration: none;
-    color: #ffffff77;
-}
-
 
 .contenedor-proyecto{
     margin-bottom: 15px;
-    border: dashed 5px;
-    border-color: #01111A #f8ac18 #f8ac18 #01111A;
     padding: 10px 15px;
     border-radius: 10px;
 }
 
 .contenedor-proyecto p{
     padding-top: 10px;
-    text-align: justify;
 }
 
 .contenedor-proyecto h3{
     padding-top: 10px;
 }
 
-.titulo-linkeado{
-    position: relative;
-}
-
-.posicionado{
-    position: absolute;
-    top: -120px;
-}
-
 /* termina main HTML servicios*/
-
-
-/*empieza experimento*/
-
-.oculto{
-    display: none;
-}
