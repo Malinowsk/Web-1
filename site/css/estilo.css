@@ -211,16 +211,16 @@ ul.botonera a{
                     /* Atributos de flex */
 .encabezado-superior, div.encabezado-inferior, div.logo, ul.botonera, div.imagen-principal,
 .contenedor-tabla, .sesion div.contenedor-tarjetas, .contenedor-libros .libro, .libro .descripcion,
-div.pie-de-pag, .sesion form.contacto, form.contacto div.cont-interno, .validacion, div.pie-de-pag ul.redes-sociales, .contenedor-para-centrado{
+div.pie-de-pag, .sesion form.contacto, form.contacto div.cont-interno, .validacion, div.pie-de-pag ul.redes-sociales, .contenedor-para-centrado, form.contacto div.contenedor-contacto, form.contacto .cont-interno label, .validacion, .captcha{
     display: flex;
 }
 
 div.encabezado-inferior, .contenedor-tabla , 
-.sesion div.contenedor-tarjetas , div.pie-de-pag , .sesion form.contacto{ 
+.sesion div.contenedor-tarjetas , div.pie-de-pag , .sesion form.contacto, form.contacto div.contenedor-contacto{ 
     flex-wrap: wrap; /* a medida que se achica la pantalla los componentes se acomodan en a la parte inferior */
 }
 
-.encabezado-superior, div.encabezado-inferior, .sesion div.contenedor-tarjetas, div.pie-de-pag{
+.encabezado-superior, div.encabezado-inferior, .sesion div.contenedor-tarjetas, div.pie-de-pag, form.contacto div.contenedor-contacto, .validacion{
     justify-content: space-between;
 }
 
@@ -232,7 +232,7 @@ ul.botonera, .contenedor-libros .libro, .libro .descripcion, .sesion form.contac
     justify-content: space-around;
 }
 
-div.pie-de-pag ul.redes-sociales{
+div.pie-de-pag ul.redes-sociales, form.contacto .cont-interno label{
     justify-content: flex-end;
 }
 
@@ -241,11 +241,15 @@ form.contacto div.cont-interno{
     width: 100%;
 }
 
-form.contacto .contenedor-contacto div.cont-interno{
-    width: 50%;
+.captcha{
+    justify-content: space-evenly;
 }
 
-.libro .descripcion{
+.sesion form.contacto{
+    align-content: space-between;
+}
+
+.libro .descripcion, .validacion, .captcha{
     flex-direction: column;
 }
 
@@ -253,7 +257,7 @@ form.contacto .contenedor-contacto div.cont-interno{
     align-items: flex-end;
 }
 
-div.encabezado-inferior , div.pie-de-pag form.contacto div.cont-interno{
+div.encabezado-inferior , div.pie-de-pag form.contacto div.cont-interno, form.contacto div.cont-interno, form.contacto .cont-interno label, .validacion, .captcha{
     align-items: center;
 }
 
@@ -485,7 +489,6 @@ div.imagen img.tarjeta{
 
 .tarjeta h3{
     padding: 20px 0px;
-    
 }
 
 .sesion .texto p{
@@ -554,122 +557,7 @@ a{
     margin-top: 5px;
 }
 
-/*//comienza footer////*/
-
-div.pie-de-pag{ 
-    padding: 30px 80px;
-    margin-top: 50px;
-}
-
-div.pie-de-pag div.redes-sociales{
-    padding: 10px;  
-}
-
-div.pie-de-pag ul.redes-sociales{
-    padding: 8px 18px;
-}
-
-img.redes{
-    border-radius: 10px;
-    width: 20px;
-    padding: 7px;
-    margin: 2px;
-}
-
-p.fin{
-    width: 100%;
-    margin: 5px;
-}
-
-/*/////termina footer//////*/
-
-/* HTML contacto */
-
-.sesion form.contacto{
-    align-content: space-between;
-}
-.sesion form.contacto{
-    height: 600px;
-}
-
-form.contacto div.contenedor-contacto{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-form.contacto div.contenedor-contacto{
-    width: 100%;
-    height: 150px;
-}
-
-form.contacto div.cont-interno{
-    align-items: center;
-}
-form.contacto div.cont-interno p{
-    margin-left: 10px;
-    font-size: 14px;
-}
-
-form.contacto label{
-    padding: 16px 15px 0px;
-}
-
-
-form.contacto input{
-    width: 65%;
-    height: 50px;
-    padding: 0px 24px;
-}
-
-form.contacto .checkbox{
-    height: auto;
-    width: auto;
-}
-
-form.contacto .cont-interno label{
-    padding: 0px 15px;
-    height: 100%;
-    width: 75px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-form.contacto strong{
-    margin: 0px 0px 0px 3px;
-}
-
-form.contacto textarea.mensaje{
-    min-width: 84.5%;
-    min-height: 80px;
-    max-width: 84.5%;
-    max-height: 80px;
-    padding-top: 10px;
-    padding-left: 24px;
-}
-
-.validacion {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 250px;
-    justify-content: space-between;
-}
-
-.captcha{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    border-radius: 5px;
-    width: 300px;
-    height: 150px;
-}
-
-.validacion button{
-    padding: 3px;
-}
+/* comienza servicios.html */
 
 .texto-centrado p{
     padding: 8px 0px;
@@ -704,3 +592,104 @@ form.contacto textarea.mensaje{
 }
 
 /* termina main HTML servicios*/
+
+/* HTML contacto */
+
+.sesion form.contacto{
+    height: 600px;
+}
+
+form.contacto div.contenedor-contacto{
+    width: 100%;
+    height: 150px;
+}
+
+form.contacto .contenedor-contacto div.cont-interno{
+    width: 50%;
+}
+
+form.contacto div.cont-interno p{
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+form.contacto label{
+    padding: 16px 15px 0px;
+}
+
+
+form.contacto input{
+    width: 65%;
+    height: 50px;
+    padding: 0px 24px;
+}
+
+form.contacto .checkbox{
+    height: auto;
+    width: auto;
+}
+
+form.contacto .cont-interno label{
+    padding: 0px 15px;
+    height: 100%;
+    width: 75px;
+}
+
+form.contacto strong{
+    margin: 0px 0px 0px 3px;
+}
+
+form.contacto textarea.mensaje{
+    min-width: 84.5%;
+    min-height: 80px;
+    max-width: 84.5%;
+    max-height: 80px;
+    padding-top: 10px;
+    padding-left: 24px;
+}
+
+.validacion {
+    height: 250px;
+}
+
+.captcha{
+    border-radius: 5px;
+    width: 300px;
+    height: 150px;
+}
+
+.validacion button{
+    padding: 3px;
+}
+
+/* termina contacto.html */
+
+/*//comienza footer////*/
+
+div.pie-de-pag{ 
+    padding: 30px 80px;
+    margin-top: 50px;
+}
+
+div.pie-de-pag div.redes-sociales{
+    padding: 10px;  
+}
+
+div.pie-de-pag ul.redes-sociales{
+    padding: 8px 18px;
+}
+
+img.redes{
+    border-radius: 10px;
+    width: 20px;
+    padding: 7px;
+    margin: 2px;
+}
+
+p.fin{
+    width: 100%;
+    margin: 5px;
+}
+
+/*/////termina footer//////*/
+
