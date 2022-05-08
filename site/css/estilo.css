@@ -7,7 +7,7 @@
     margin: 0px;
     padding: 0px;
 }
-
+            /*font size*/
 h1{
     font-size: 32px;
 }
@@ -15,9 +15,19 @@ h1{
 h2{
     font-size: 30px;
 }
+
+.parrafo-inicial::first-letter{
+    font-size: 25px;
+}
+
+.logo p.logo{
+    font-size: 22px;
+}
+
 h3{
     font-size: 20px;    
 }
+
 h4{
     font-size: 18px;
 }
@@ -26,14 +36,20 @@ body, .contenedor-contacto input , form.contacto textarea.mensaje, p{
     font-size: 16px;
 }
 
+.encabezado-superior input, .captcha input , textarea{
+    font-size: 15px;
+}
+
 label{
     font-size: 14px;
 }
 
-.parrafo-inicial::first-letter{
-    font-size: 25px;
+.encabezado-superior button{
+    font-size: 13px;
 }
 
+
+                /* text-transform */
 h1 , h2 , h3 , h4 , .contenedor-tabla , .condiciones button{
     text-transform: capitalize;
 }
@@ -46,6 +62,11 @@ p{
     text-transform: lowercase;
 }
 
+.condiciones {
+    text-transform: none;
+}
+
+                /* background-color */
 body{
     background-color: #ffffff;
     font-family: 'HKGrotesk-Medium', Arial, Helvetica, sans-serif;
@@ -67,7 +88,7 @@ div.encabezado-superior button:hover.sesion, img.redes:hover{
     background-color: #f8ac18;
 }
 
-th, .libro .descripcion, .generar-captcha , .captcha, .tabla-contenido{
+th, .libro .descripcion , .captcha, .tabla-contenido{
     background-color: #04344E;
 }
 
@@ -79,13 +100,9 @@ th, .libro .descripcion, .generar-captcha , .captcha, .tabla-contenido{
     background-color: #D8E1E4;
 }
 
-div.header{
-    position: sticky;
-    top: -64px; /* esconde la cabecera superior*/
-    z-index: 100; /* necesario por el relative y absolute*/
-}
+                    /* color de texto */
 
-.encabezado-superior , .encabezado-inferior , .condiciones .generar-captcha label , .condiciones .captcha p, .pie-de-pag, .encabezado-superior button, .contenedor-para-centrado h3, .descripcion h4:hover, th, .descripcion p:hover , .descripcion h3 , div a:hover.politicas , .condiciones button, .tabla-contenido ul a:hover{
+.encabezado-superior , .encabezado-inferior, .condiciones .captcha p, .pie-de-pag, .encabezado-superior button, .contenedor-para-centrado h3, .descripcion h4:hover, th, .descripcion p:hover , .descripcion h3 , div a:hover.politicas , .condiciones button, .tabla-contenido ul a:hover{
     color: #ffffff;
 }
 
@@ -119,17 +136,22 @@ div a.politicas, .contenedor-libros .libro{
 }
 
 input::placeholder , textarea::placeholder { 
-    color: #76959Fcc;   /*color de letra*/
+    color: #76959Fcc;   
 }
 
 form.contacto label{
     color: #333333;
 }
 
-.mensaje-validado{
+.mensaje-invalido{
     color: red;
 }
 
+.mensaje-valido{
+    color: green;
+}
+
+                    /* bordes */
 .encabezado-superior input, .captcha input , textarea, .contenedor-tarjetas div.tarjeta, 
 .contenedor-tarjetas div.tarjeta:hover{
     border: 1px solid #d8e1e4;
@@ -160,7 +182,7 @@ div.encabezado-inferior{
     border: 3px solid #01111A;
 }
 
-.generar-captcha , .captcha{
+.captcha{
     border: 2px solid #01111A;
 }
 
@@ -168,6 +190,7 @@ form.contacto textarea.mensaje{
     border: 2px solid #cccccc;  
 }
 
+                    /* font-style */
 .encabezado-superior , .encabezado-inferior , .pie-de-pag{
     font-style: normal;
 }
@@ -175,7 +198,20 @@ form.contacto textarea.mensaje{
 .titulo-terciario, .descripcion p{
     font-style: italic;
 }
+                    /*texto en negrita*/
+.encabezado-superior button, .logo p.logo, .tarjeta h3{
+    font-weight: bold; /*grosor de la letra*/
+}
 
+ul.botonera a{
+    font-weight: 700px; 
+}
+
+.titulo-terciario{
+    font-weight: 1000;
+}
+
+                    /* Atributos de flex */
 .encabezado-superior, div.encabezado-inferior, div.logo, ul.botonera, div.imagen-principal,
 .contenedor-tabla, .sesion div.contenedor-tarjetas, .contenedor-libros .libro, .libro .descripcion,
 div.pie-de-pag, .sesion form.contacto, form.contacto div.cont-interno, .condiciones, div.pie-de-pag ul.redes-sociales, .contenedor-para-centrado{
@@ -219,6 +255,8 @@ div.encabezado-inferior , div.pie-de-pag{
     align-items: flex-start;
 }
 
+                    /* aliniacion de texto */
+
 .encabezado-superior, .captcha ,input::placeholder , textarea::placeholder 
 , .contenedor-tabla ,.sesion div.titulo-vistoso ,
 .sesion div.contenedor-tarjetas, p.fin, .condiciones .captcha input:focus,
@@ -233,6 +271,7 @@ div.encabezado-inferior , div.pie-de-pag{
 .sesion div.titulo-sumiso, .titulo-secundario , form.contacto input::placeholder{
     text-align: left;
 }
+                            /* estilo de lista */
 
 .encabezado-superior li, ul.botonera, div.pie-de-pag ul.redes-sociales{
     list-style: none;/*saca el puntito de cada li*/
@@ -242,14 +281,68 @@ div.encabezado-inferior , div.pie-de-pag{
     list-style-type: square;
 }
 
-.encabezado-superior button, .logo p.logo, .tarjeta h3{
-    font-weight: bold; /*grosor de la letra*/
+                            /* estilo de subrayado */
+a{
+    text-decoration: none;
+}
+
+.descripcion h4{
+    text-decoration: underline;
+}
+
+
+                            /*atributo position*/
+div.header{
+    position: sticky;
+    top: -64px; /* esconde la cabecera superior*/
+    z-index: 100; /* necesario por el relative y absolute*/
+}
+
+.posicionado{
+    position: absolute;
+    top: -120px;
+}
+
+.titulo-linkeado{
+    position: relative;
+}
+
+
+
+                            /*placeholder*/
+
+/*representa el texto provisional*/
+input::placeholder , textarea::placeholder { 
+    letter-spacing: 1px; /*sepacion entre letras*/
+    text-indent: 0px;    /*cero identacion*/
+}
+
+                                /*focus*/
+
+/*representa un elemento cuando le haces click*/
+input:focus , textarea:focus { 
+text-indent: 8px; /* identamos el cursor donde se comienza a escribir*/
+outline: none; /*funciona para sacar borde interno de color negro cuando hacemos focus al input text*/
+}
+
+form.contacto input:focus , form.contacto textarea:focus { 
+text-indent: 0px;
+}
+
+.condiciones .captcha input:focus{
+text-indent: -5px; /*identacion un poco a la izquierda*/
 }
 
 div.imagen-principal{
     background-image: url(../images/fondo-azul4.png); /*imagen de fondo azul difuminada*/
     background-size: auto 100%; /* ajuste de la imagen de fondo*/
 }
+
+
+/*///////////////ESTILO DE TAMAÑOS Y MEDIDAS///////////////////////////////////////////////////////////////*/
+
+
+                /*//comienza header////*/
 
 .encabezado-superior, tr , td , th{
     height: 50px;
@@ -285,24 +378,12 @@ div.imagen-principal{
     width: 140px;
     max-height: 32px; /* para dejar la caja de mensaje fija*/
     max-width: 140px; /* para dejar la caja de mensaje fija*/
-    font-size: 15px;
     border-radius: 5px;
     padding: 0px 2px;
     margin: 0px 2px;
     text-indent: 8px;
 }
 
-/*representa el texto provisional*/
-input::placeholder , textarea::placeholder { 
-    letter-spacing: 1px; /*sepacion enre letras*/
-    text-indent: 0px;    /*cero identacion*/
-  }
-  
-/*representa un elemento cuando le haces click*/
-input:focus , textarea:focus { 
-    text-indent: 8px; /* identamos el cursor donde se comienza a escribir*/
-    outline: none; /*funciona para sacar borde interno de color negro cuando hacemos focus al input text*/
- }
 
 input.checkbox{ /* boton para seleccionar */
     height: auto;
@@ -311,14 +392,12 @@ input.checkbox{ /* boton para seleccionar */
     margin: 0px 1px;
 }
 
-
 .encabezado-superior button{
     height: 35px;
     width: auto;
     padding: 0px 5px;
     margin: 0px 5px;
     border: 0px;
-    font-size: 13px;
 }
 
 div.encabezado-inferior{ 
@@ -338,7 +417,6 @@ div.logo{
 
 .logo p.logo{
     padding: 10px;
-    font-size: 22px;
     letter-spacing: 2px;
 }
 
@@ -358,11 +436,11 @@ ul.botonera li{
 }
 
 ul.botonera a{
-    font-weight: 700px;   /*grosor de la letra*/
     padding: 10px 0px;
     margin: 0px 10px;
 }
 
+                /*//comienza main////*/
 
 div.imagen-principal img{
     width: 85%; 
@@ -383,7 +461,6 @@ div.imagen-principal img{
 }
 
 .titulo-terciario{
-    font-weight: 1000;
     margin-top: 10px;
 }
 
@@ -395,7 +472,6 @@ div.imagen-principal img{
 .contenedor-tarjetas div.tarjeta{
     width: 32%;
 }
-
 
 .contenedor-tarjetas div.imagen{
     width: 100%;
@@ -460,7 +536,6 @@ td img{
 }
 
 .descripcion h3{
-    font-size: 20px;
     padding: 2px;
     margin-bottom: 4px;
 }
@@ -468,7 +543,6 @@ td img{
 .descripcion h4{
     padding: 2px;
     margin: 4px 0px;
-    text-decoration: underline;
 }
 
 .descripcion p{
@@ -476,18 +550,10 @@ td img{
     margin: 4px 0px;
 }
 
-
-
 a{
     padding: 2px;
     margin-top: 5px;
-    text-decoration: none;
 }
-
-/*/////termina recomendacion de libros//////*/
-
-/*/////termina main//////*/
-
 
 /*//comienza footer////*/
 
@@ -503,7 +569,6 @@ div.pie-de-pag div.redes-sociales{
 div.pie-de-pag ul.redes-sociales{
     padding: 8px 18px;
 }
-
 
 img.redes{
     border-radius: 10px;
@@ -553,11 +618,6 @@ form.contacto strong{
     height: 20px;
 }
 
-form.contacto input:focus , form.contacto textarea:focus { 
-    text-indent: 0px;
-    
-}
-
 form.contacto textarea.mensaje{
     min-width: 797px;
     min-height: 80px;
@@ -566,20 +626,16 @@ form.contacto textarea.mensaje{
 
 .condiciones {
     width: 100%;
-    text-transform: none;
     margin-left: 300px;
     margin-top: 5x;
     margin-bottom: 10px;
 }
 
-.generar-captcha , .captcha{
+.captcha{
     padding: 10px 0px;
     border-radius: 5px;
     margin-left: 40px;
     margin-top: 20px;
-}
-
-.captcha{
     width: 300px;
     height: 150px;
 }
@@ -588,16 +644,12 @@ form.contacto textarea.mensaje{
     margin: 15px;
 }
 
-.condiciones .captcha input:focus{
-    text-indent: -5px; /*identacion un poco a la izquierda*/
-}
-
 .condiciones button{
     margin: 30px 40px;
     padding: 5px;
 }
 
-.mensaje-validado{
+.mensaje-invalido , .mensaje-valido {
     margin-top: 30px; 
     margin-left: 20px;
 }
@@ -634,20 +686,4 @@ form.contacto textarea.mensaje{
     padding-top: 10px;
 }
 
-.titulo-linkeado{
-    position: relative;
-}
-
-.posicionado{
-    position: absolute;
-    top: -120px;
-}
-
 /* termina main HTML servicios*/
-
-
-/*empieza experimento*/
-
-.oculto{
-    display: none;
-}
