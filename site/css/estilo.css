@@ -131,7 +131,7 @@ div a.politicas, .contenedor-libros .libro{
     color: #ffffff77;
 }
 
-.encabezado-superior input, .captcha input , textarea{
+input , textarea{
     color: #69747f;
 }
 
@@ -262,7 +262,7 @@ div.encabezado-inferior , div.pie-de-pag form.contacto div.cont-interno{
 }
                     /* aliniacion de texto */
 
-.encabezado-superior, .captcha ,input::placeholder , textarea::placeholder 
+.encabezado-superior, .captcha ,input::placeholder
 , .contenedor-tabla ,.sesion div.titulo-vistoso ,
 .sesion div.contenedor-tarjetas, p.fin, .validacion .captcha input:focus,
 .validacion .captcha input, .texto-centrado p {
