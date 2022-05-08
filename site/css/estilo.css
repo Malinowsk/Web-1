@@ -586,15 +586,20 @@ p.fin{
 /* HTML contacto */
 
 .sesion form.contacto{
-    height: 600px;
     align-content: space-between;
+}
+.sesion form.contacto{
+    height: 600px;
+}
+
+form.contacto div.contenedor-contacto{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 form.contacto div.contenedor-contacto{
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     height: 150px;
 }
 
@@ -609,6 +614,7 @@ form.contacto div.cont-interno p{
 form.contacto label{
     padding: 16px 15px 0px;
 }
+
 
 form.contacto input{
     width: 65%;
@@ -635,12 +641,12 @@ form.contacto strong{
 }
 
 form.contacto textarea.mensaje{
-    min-width: 87%;
+    min-width: 84.5%;
     min-height: 80px;
-    max-width: 87%;
+    max-width: 84.5%;
     max-height: 80px;
-    padding-top: 5px;
-    padding-left: 5px;
+    padding-top: 10px;
+    padding-left: 24px;
 }
 
 .validacion {
