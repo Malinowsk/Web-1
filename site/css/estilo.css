@@ -186,9 +186,6 @@ div.encabezado-inferior{
     border: 2px solid #01111A;
 }
 
-form.contacto textarea.mensaje{
-    border: 2px solid #cccccc;  
-}
 
                     /* font-style */
 .encabezado-superior , .encabezado-inferior , .pie-de-pag{
@@ -235,8 +232,12 @@ ul.botonera, .contenedor-libros .libro, .libro .descripcion, .sesion form.contac
     justify-content: space-around;
 }
 
-div.pie-de-pag ul.redes-sociales, form.contacto div.cont-interno{
+div.pie-de-pag ul.redes-sociales{
     justify-content: flex-end;
+}
+
+form.contacto div.cont-interno{
+    justify-content: flex-start;
 }
 
 .libro .descripcion{
@@ -253,6 +254,10 @@ div.encabezado-inferior , div.pie-de-pag{
 
 .contenedor-libros .libro , .condiciones{
     align-items: flex-start;
+}
+
+form.contacto div.cont-interno{
+    align-items: baseline;
 }
 
                     /* aliniacion de texto */
@@ -373,14 +378,17 @@ div.imagen-principal{
     padding: 0px 10px;
 }
 
+.encabezado-superior input{
+    border-radius: 5px;
+    margin: 0px 2px;
+}
+
 .encabezado-superior input, .captcha input , textarea{
     height: 32px;
     width: 140px;
     max-height: 32px; /* para dejar la caja de mensaje fija*/
     max-width: 140px; /* para dejar la caja de mensaje fija*/
-    border-radius: 5px;
     padding: 0px 2px;
-    margin: 0px 2px;
     text-indent: 8px;
 }
 
@@ -602,9 +610,17 @@ form.contacto div.cont-interno{
     margin-bottom: 24px;
     width: 100%;
 }
+form.contacto div.cont-interno p{
+    margin-left: 10px;
+}
+
 
 form.contacto label{
     padding: 16px 15px 0px;
+}
+
+form.contacto .cont-interno label{
+    width: 73px;
 }
 
 form.contacto strong{
@@ -613,20 +629,19 @@ form.contacto strong{
 
 .contenedor-contacto input , form.contacto textarea.mensaje{
     padding: 15px 24px;
-    
     width: 345.5px;
     height: 20px;
 }
 
 form.contacto textarea.mensaje{
-    min-width: 797px;
+    min-width: 950px;
     min-height: 80px;
     padding: 6px 12px;
 }
 
 .condiciones {
     width: 100%;
-    margin-left: 300px;
+    margin-left: 100px;
     margin-top: 5x;
     margin-bottom: 10px;
 }
@@ -634,7 +649,6 @@ form.contacto textarea.mensaje{
 .captcha{
     padding: 10px 0px;
     border-radius: 5px;
-    margin-left: 40px;
     margin-top: 20px;
     width: 300px;
     height: 150px;
@@ -645,14 +659,15 @@ form.contacto textarea.mensaje{
 }
 
 .condiciones button{
-    margin: 30px 40px;
+    margin: 20px 0px;
     padding: 5px;
 }
 
-.mensaje-invalido , .mensaje-valido {
+.mensaje-invalido  {
     margin-top: 30px; 
     margin-left: 20px;
 }
+
 
 .texto-centrado p{
     padding: 8px 0px;
