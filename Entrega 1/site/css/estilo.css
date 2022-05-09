@@ -1,0 +1,700 @@
+@font-face {    /* importar el tipo de letra que se va usar en el sitio web*/
+    font-family: 'HKGrotesk-Medium';
+    src: url(font/HKGrotesk-Medium.otf);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+            /*font size*/
+h1{
+    font-size: 32px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+.parrafo-inicial::first-letter{
+    font-size: 25px;
+}
+
+.logo p.logo{
+    font-size: 22px;
+}
+
+h3{
+    font-size: 20px;    
+}
+
+h4{
+    font-size: 18px;
+}
+
+body, .contenedor-contacto input , form.contacto textarea.mensaje, p{
+    font-size: 16px;
+}
+
+.encabezado-superior input, .captcha input , textarea{
+    font-size: 15px;
+}
+
+label{
+    font-size: 14px;
+}
+
+.encabezado-superior button{
+    font-size: 13px;
+}
+
+
+                /* text-transform */
+h1 , h2 , h3 , h4 , .contenedor-tabla , .validacion button{
+    text-transform: capitalize;
+}
+
+p{
+    text-transform: initial;
+}
+
+.encabezado-superior li{
+    text-transform: lowercase;
+}
+
+.validacion {
+    text-transform: none;
+}
+
+                /* background-color */
+body{
+    background-color: #ffffff;
+    font-family: 'HKGrotesk-Medium', Arial, Helvetica, sans-serif;
+}
+
+.encabezado-superior , .encabezado-inferior , .pie-de-pag, .encabezado-superior button{
+    background-color: #1f3d4f;
+}
+
+.encabezado-superior button.sesion{
+    background-color: #2b424f;
+}
+
+div.encabezado-superior button:hover.sesion, img.redes:hover{
+    background-color: #01111A;   
+}
+
+.contenedor-tarjetas div.tarjeta:hover{
+    background-color: #f8ac18;
+}
+
+th, .libro .descripcion , .captcha, .tabla-contenido{
+    background-color: #04344E;
+}
+
+.validacion button{
+    background-color: #047ccc;
+}
+
+.contenedor-libros .libro{
+    background-color: #D8E1E4;
+}
+
+                    /* color de texto */
+
+.encabezado-superior , .encabezado-inferior, .validacion .captcha p, .pie-de-pag, .encabezado-superior button, .contenedor-para-centrado h3, .descripcion h4:hover, th, .descripcion p:hover , .descripcion h3 , div a:hover.politicas , .validacion button, .tabla-contenido ul a:hover{
+    color: #ffffff;
+}
+
+.encabezado-superior button:hover, ul.botonera a:hover, ul.botonera a.pag-actual,.sesion div.titulo-vistoso,
+.contenedor-tarjetas div.tarjeta:hover, .parrafo-inicial::first-letter, a, form.contacto strong{
+    color: #f8ac18;
+}
+
+.sesion div.titulo-sumiso, .titulo-secundario {
+    color: #2b424f;
+}
+
+.titulo-terciario, .sesion div.texto, tr , td{
+    color: #01111A;
+}
+
+ul.botonera a, .descripcion h4{
+    color: #ffffffcc;
+}
+
+div a.politicas, .contenedor-libros .libro{
+    color: #ffffffaa;
+}
+
+.tabla-contenido ul a{
+    color: #ffffff77;
+}
+
+input , textarea{
+    color: #69747f;
+}
+
+input::placeholder , textarea::placeholder { 
+    color: #76959Fcc;   
+}
+
+form.contacto label{
+    color: #333333;
+}
+
+.mensaje-invalido{
+    color: red;
+}
+
+.mensaje-valido{
+    color: green;
+}
+
+                    /* bordes */
+.encabezado-superior input, .captcha input , .contenedor-tarjetas div.tarjeta, 
+.contenedor-tarjetas div.tarjeta:hover{
+    border: 1px solid #d8e1e4;
+}
+
+.contenedor-contacto input , form.contacto textarea.mensaje{
+    border: 2px solid #d8e1e4;
+}
+
+tr , td , th {
+    border: 2px solid #f8ac18;
+}
+
+div.encabezado-inferior{ 
+    border-top: 2px solid #f8ac18;
+}
+
+.tabla-contenido{
+    border:  5px solid #f8ac18;
+}
+
+.contenedor-proyecto{
+    border: dashed 5px;
+    border-color: #01111A #f8ac18 #f8ac18 #01111A;
+}
+
+.contenedor-libros .libro,.libro .imagen,.libro .descripcion{
+    border: 3px solid #01111A;
+}
+
+.captcha{
+    border: 2px solid #01111A;
+}
+
+
+                    /* font-style */
+.encabezado-superior , .encabezado-inferior , .pie-de-pag{
+    font-style: normal;
+}
+
+.titulo-terciario, .descripcion p{
+    font-style: italic;
+}
+                    /*texto en negrita*/
+.encabezado-superior button, .logo p.logo, .tarjeta h3{
+    font-weight: bold; /*grosor de la letra*/
+}
+
+ul.botonera a{
+    font-weight: 700px; 
+}
+
+.titulo-terciario{
+    font-weight: 1000;
+}
+
+                    /* Atributos de flex */
+.encabezado-superior, div.encabezado-inferior, div.logo, ul.botonera, div.imagen-principal,
+.contenedor-tabla, .sesion div.contenedor-tarjetas, .contenedor-libros .libro, .libro .descripcion,
+div.pie-de-pag, .sesion form.contacto, form.contacto div.cont-interno, .validacion, div.pie-de-pag ul.redes-sociales, .contenedor-para-centrado, form.contacto div.contenedor-contacto, form.contacto .cont-interno label, .validacion, .captcha{
+    display: flex;
+}
+
+div.encabezado-inferior, .contenedor-tabla , 
+.sesion div.contenedor-tarjetas , div.pie-de-pag , .sesion form.contacto, form.contacto div.contenedor-contacto{ 
+    flex-wrap: wrap; /* a medida que se achica la pantalla los componentes se acomodan en a la parte inferior */
+}
+
+.encabezado-superior, div.encabezado-inferior, .sesion div.contenedor-tarjetas, div.pie-de-pag, form.contacto div.contenedor-contacto, .validacion{
+    justify-content: space-between;
+}
+
+div.imagen-principal, .contenedor-tabla, .contenedor-para-centrado{
+    justify-content: center;
+}
+
+ul.botonera, .contenedor-libros .libro, .libro .descripcion, .sesion form.contacto{
+    justify-content: space-around;
+}
+
+div.pie-de-pag ul.redes-sociales, form.contacto .cont-interno label{
+    justify-content: flex-end;
+}
+
+form.contacto div.cont-interno{
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.captcha{
+    justify-content: space-evenly;
+}
+
+.sesion form.contacto{
+    align-content: space-between;
+}
+
+.libro .descripcion, .validacion, .captcha{
+    flex-direction: column;
+}
+
+.encabezado-superior{ 
+    align-items: flex-end;
+}
+
+div.encabezado-inferior , div.pie-de-pag form.contacto div.cont-interno, form.contacto div.cont-interno, form.contacto .cont-interno label, .validacion, .captcha{
+    align-items: center;
+}
+
+.contenedor-libros .libro{
+    align-items: flex-start;
+}
+                    /* aliniacion de texto */
+
+.encabezado-superior, .captcha ,input::placeholder
+, .contenedor-tabla ,.sesion div.titulo-vistoso ,
+.sesion div.contenedor-tarjetas, p.fin, .validacion .captcha input:focus,
+.validacion .captcha input, .texto-centrado p {
+    text-align: center; /*alineamos el texto en el centro*/
+}
+
+.sesion .texto p ,.libro .descripcion ,.descripcion h3,.contenedor-proyecto p{
+    text-align: justify;
+}
+
+.sesion div.titulo-sumiso, .titulo-secundario , form.contacto input::placeholder{
+    text-align: left;
+}
+                            /* estilo de lista */
+
+.encabezado-superior li, ul.botonera, div.pie-de-pag ul.redes-sociales{
+    list-style: none;/*saca el puntito de cada li*/
+}
+
+.tabla-contenido ul, .contenedor-proyecto ul{
+    list-style-type: square;
+}
+
+                            /* estilo de subrayado */
+a{
+    text-decoration: none;
+}
+
+.descripcion h4{
+    text-decoration: underline;
+}
+
+
+                            /*atributo position*/
+div.header{
+    position: sticky;
+    top: -64px; /* esconde la cabecera superior*/
+    z-index: 100; /* necesario por el relative y absolute*/
+}
+
+.posicionado{
+    position: absolute;
+    top: -120px;
+}
+
+.titulo-linkeado{
+    position: relative;
+}
+
+
+
+                            /*placeholder*/
+
+/*representa el texto provisional*/
+input::placeholder , textarea::placeholder { 
+    letter-spacing: 1px; /*sepacion entre letras*/
+    text-indent: 0px;    /*cero identacion*/
+}
+
+                                /*focus*/
+
+/*representa un elemento cuando le haces click*/
+input:focus , textarea:focus {
+    outline: none; /*funciona para sacar borde interno de color negro cuando hacemos focus al input text*/
+}
+
+div.imagen-principal{
+    background-image: url(../images/fondo-azul4.png); /*imagen de fondo azul difuminada*/
+    background-size: auto 100%; /* ajuste de la imagen de fondo*/
+}
+
+
+/*///////////////ESTILO DE TAMAÑOS Y MEDIDAS///////////////////////////////////////////////////////////////*/
+
+
+                /*//comienza header////*/
+
+.encabezado-superior, tr , td , th{
+    height: 50px;
+}
+
+.encabezado-superior{
+    padding: 7px 100px;
+}
+
+.encabezado-superior i{
+    margin-right: 5px;
+}
+
+.encabezado-superior ul{
+    margin-left: 90px;
+}
+
+.encabezado-superior li{
+    padding: 1px;
+}
+
+.encabezado-superior img.correo, .encabezado-superior img.telefono{
+    width: 13px;
+    height: 13px;
+}
+
+.encabezado-superior form{
+    padding: 0px 10px;
+}
+
+.encabezado-superior input{
+    border-radius: 5px;
+    margin: 0px 2px;
+}
+
+.encabezado-superior input, .captcha input{
+    height: 32px;
+    width: 140px;
+    max-height: 32px; /* para dejar la caja de mensaje fija*/
+    max-width: 140px; /* para dejar la caja de mensaje fija*/
+    padding: 0px 2px;
+    text-indent: 8px;
+}
+
+
+input.checkbox{ /* boton para seleccionar */
+    height: auto;
+    width: auto;
+    padding: 0px 1px;
+    margin: 0px 1px;
+}
+
+.encabezado-superior button{
+    height: 35px;
+    width: auto;
+    padding: 0px 5px;
+    margin: 0px 5px;
+    border: 0px;
+}
+
+div.encabezado-inferior{ 
+    padding: 7px 80px;
+}
+
+/*//logo (icono - titulo)//*/
+
+div.logo{
+    padding-right: 39.15px;
+}
+
+.logo img.logo{
+    height: 75px;
+    padding-top: 2px;
+}
+
+.logo p.logo{
+    padding: 10px;
+    letter-spacing: 2px;
+}
+
+/*//botonera (nav)//*/
+
+div.botonera{
+    margin: 8px;
+    padding: 0px 10px;
+}
+
+ul.botonera{ 
+    margin: 1px;
+}
+
+ul.botonera li{
+    margin: 0 5px;   
+}
+
+ul.botonera a{
+    padding: 10px 0px;
+    margin: 0px 10px;
+}
+
+                /*//comienza main////*/
+
+div.imagen-principal img{
+    width: 85%; 
+}
+
+/*para cambiar*/
+.main .sesion{
+    margin: 0px 94px;
+}
+
+.sesion div.titulo-vistoso , .sesion div.titulo-sumiso{
+    width: 100%;
+    padding: 52px 0px 44px;
+}
+
+.titulo-secundario{
+    margin-bottom: 10px;
+}
+
+.titulo-terciario{
+    margin-top: 10px;
+}
+
+.sesion div.contenedor-tarjetas{
+    padding: 8px 0px;
+    width: 100%;
+}
+
+.contenedor-tarjetas div.tarjeta{
+    width: 32%;
+}
+
+.contenedor-tarjetas div.imagen{
+    width: 100%;
+    height: 120px;
+    /*overflow: hidden; /*el contenido que sobresale no se ve*/
+}
+
+div.imagen img.tarjeta{
+    width: 100%;
+    height: 100%;
+}
+
+.tarjeta h3{
+    padding: 20px 0px;
+}
+
+.sesion .texto p{
+    padding: 0px 15px 10px;
+}
+
+table{
+    width: 100%;
+    padding: 8px 0px;
+}
+
+tr , td , th {
+    width: 250px;
+    padding: 3px;
+}
+
+td img{
+    height: 100%;
+}
+
+.sesion .contenedor-libros{
+    padding: 8px 0px;
+    width: 100%;
+}
+
+.contenedor-libros .libro{
+    padding: 5px 0px;
+    margin: 4px 2px;
+}
+
+.libro .imagen{
+    margin: 0px 2.5px 0px 5px;
+    width: 205px;
+    height: 273px;
+}
+
+.libro img{
+    width: 205px;
+    height: 273px;
+}
+
+.libro .descripcion{
+    width: 80%;
+    margin: 0px 5px 0px 2.5px;
+    height: 263px;
+    padding: 5px;
+}
+
+.descripcion h3{
+    padding: 2px;
+    margin-bottom: 4px;
+}
+
+.descripcion h4{
+    padding: 2px;
+    margin: 4px 0px;
+}
+
+.descripcion p{
+    padding: 2px;
+    margin: 4px 0px;
+}
+
+a{
+    padding: 2px;
+    margin-top: 5px;
+}
+
+/* comienza servicios.html */
+
+.texto-centrado p{
+    padding: 8px 0px;
+}
+
+.tabla-contenido{
+    margin-top: 44px;
+    width: 50%;
+    padding: 10px 0px;
+}
+
+.contenedor-para-centrado h3 {
+    margin-bottom: 5px;
+}
+
+.tabla-contenido ul, .contenedor-proyecto ul{
+    margin-left: 20px;
+}
+
+.contenedor-proyecto{
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.contenedor-proyecto p{
+    padding-top: 10px;
+}
+
+.contenedor-proyecto h3{
+    padding-top: 10px;
+}
+
+/* termina main HTML servicios*/
+
+/* HTML contacto */
+
+.sesion form.contacto{
+    height: 600px;
+}
+
+form.contacto div.contenedor-contacto{
+    width: 100%;
+    height: 150px;
+}
+
+form.contacto .contenedor-contacto div.cont-interno{
+    width: 50%;
+}
+
+form.contacto div.cont-interno p{
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+form.contacto label{
+    padding: 16px 15px 0px;
+}
+
+
+form.contacto input{
+    width: 65%;
+    height: 50px;
+    padding: 0px 24px;
+}
+
+form.contacto .checkbox{
+    height: auto;
+    width: auto;
+}
+
+form.contacto .cont-interno label{
+    padding: 0px 15px;
+    height: 100%;
+    width: 75px;
+}
+
+form.contacto strong{
+    margin: 0px 0px 0px 3px;
+}
+
+form.contacto textarea.mensaje{
+    min-width: 84.5%;
+    min-height: 80px;
+    max-width: 84.5%;
+    max-height: 80px;
+    padding-top: 10px;
+    padding-left: 24px;
+}
+
+.validacion {
+    height: 250px;
+}
+
+.captcha{
+    border-radius: 5px;
+    width: 300px;
+    height: 150px;
+}
+
+.validacion button{
+    padding: 3px;
+}
+
+#oculta{
+    width: 1px;
+    height: 1px;
+}
+
+/* termina contacto.html */
+
+/*//comienza footer////*/
+
+div.pie-de-pag{ 
+    padding: 30px 80px;
+    margin-top: 50px;
+}
+
+div.pie-de-pag div.redes-sociales{
+    padding: 10px;  
+}
+
+div.pie-de-pag ul.redes-sociales{
+    padding: 8px 18px;
+}
+
+img.redes{
+    border-radius: 10px;
+    width: 20px;
+    padding: 7px;
+    margin: 2px;
+}
+
+p.fin{
+    width: 100%;
+    margin: 5px;
+}
+
+/*/////termina footer//////*/
+
