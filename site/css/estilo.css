@@ -261,7 +261,7 @@ div.encabezado-inferior , div.pie-de-pag form.contacto div.cont-interno, form.co
     align-items: center;
 }
 
-.contenedor-libros .libro , .validacion{
+.contenedor-libros .libro{
     align-items: flex-start;
 }
                     /* aliniacion de texto */

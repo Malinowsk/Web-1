@@ -1,3 +1,8 @@
+let resultado; // variable para guardar el valor valido del captcha
+generarCaptcha();
+document.querySelector("#validar").addEventListener("click",validarCaptcha);//pongo a escuchar el evento para validar el captcha
+
+
 //genera el captcha para validar que es un humano
 function generarCaptcha(){
     let primer_numero = generarNumero(); // genero numero aleatorio
@@ -17,27 +22,25 @@ function validarCaptcha(){
         let contenedor = document.querySelector("#captcha");
         contenedor.innerHTML="";
         contenedor.classList.remove("captcha");
-        informarResultado("Validación satisfactoria! ", true);
+        informarResultado(true);
     }
     else{
-        informarResultado("La validación se efectuó incorrectamente!", false);
+        informarResultado(false);
     }
 }
 
 //funcion que muestra por pantalla mensaje sobre la resolucion del captcha   
-function informarResultado(mensaje , valido){ 
+function informarResultado(valido){ 
     let parrafo = document.querySelector("#info-resolucion");
-    parrafo.innerHTML = mensaje;
     if (valido){
         parrafo.classList.add("mensaje-valido");
         parrafo.classList.remove("mensaje-invalido");
+        parrafo.innerHTML = "Validación satisfactoria!";
     }
     else
     {
         parrafo.classList.add("mensaje-invalido");
+        parrafo.innerHTML = "La validación se efectuó incorrectamente!";
     }
 }
 
-let resultado; // variable para guardar el valor valido del captcha
-generarCaptcha();
-document.querySelector("#validar").addEventListener("click",validarCaptcha);//pongo a escuchar el evento para validar el captcha
