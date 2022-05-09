@@ -662,6 +662,11 @@ form.contacto textarea.mensaje{
     padding: 3px;
 }
 
+#oculta{
+    width: 1px;
+    height: 1px;
+}
+
 /* termina contacto.html */
 
 /*//comienza footer////*/

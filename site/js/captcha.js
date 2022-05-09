@@ -22,6 +22,7 @@ function validarCaptcha(){
         let contenedor = document.querySelector("#captcha");
         contenedor.innerHTML="";
         contenedor.classList.remove("captcha");
+        document.querySelector("#oculta").checked = true; // confirma que el captcha fue validado para poder enviar el formulario
         informarResultado(true);
     }
     else{
