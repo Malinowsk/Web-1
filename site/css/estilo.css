@@ -257,7 +257,7 @@ form.contacto div.cont-interno{
     align-items: flex-end;
 }
 
-div.encabezado-inferior , div.pie-de-pag form.contacto div.cont-interno, form.contacto div.cont-interno, form.contacto .cont-interno label, .validacion, .captcha{
+div.encabezado-inferior , div.pie-de-pag, form.contacto div.cont-interno, form.contacto div.cont-interno, form.contacto .cont-interno label, .validacion, .captcha{
     align-items: center;
 }
 
@@ -269,7 +269,7 @@ div.encabezado-inferior , div.pie-de-pag form.contacto div.cont-interno, form.co
 .encabezado-superior, .captcha ,input::placeholder
 , .contenedor-tabla ,.sesion div.titulo-vistoso ,
 .sesion div.contenedor-tarjetas, p.fin, .validacion .captcha input:focus,
-.validacion .captcha input, .texto-centrado p {
+.validacion .captcha input, .texto-centrado p  {
     text-align: center; /*alineamos el texto en el centro*/
 }
 
