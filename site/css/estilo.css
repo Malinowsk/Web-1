@@ -261,9 +261,6 @@ div.encabezado-inferior , div.pie-de-pag, form.contacto div.cont-interno, form.c
     align-items: center;
 }
 
-.contenedor-libros .libro{
-    align-items: flex-start;
-}
                     /* aliniacion de texto */
 
 .encabezado-superior, .captcha ,input::placeholder
@@ -517,23 +514,21 @@ td img{
 .contenedor-libros .libro{
     padding: 5px 0px;
     margin: 4px 2px;
+    width: 100%;
 }
-
 .libro .imagen{
     margin: 0px 2.5px 0px 5px;
-    width: 205px;
-    height: 273px;
+    width: 25%;
 }
 
 .libro img{
-    width: 205px;
-    height: 273px;
+    width: 100%;
+    height: 100%;
 }
 
 .libro .descripcion{
     width: 80%;
     margin: 0px 5px 0px 2.5px;
-    height: 263px;
     padding: 5px;
 }
 
@@ -565,7 +560,7 @@ a{
 
 .tabla-contenido{
     margin-top: 44px;
-    width: 50%;
+    width: 70%;
     padding: 10px 0px;
 }
 
@@ -698,3 +693,39 @@ p.fin{
 
 /*/////termina footer//////*/
 
+
+        /*empieza responsive*/
+@media only screen and (max-width: 1115px){
+
+    div.encabezado-superior {
+        padding: 7px 30px 7px 0px;
+    }
+
+    .encabezado-superior ul{
+        margin-left: 50px;
+    }
+
+    div.pie-de-pag{
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 915px)  {
+    div.encabezado-superior {
+        display: none;
+    }
+    .main .sesion {
+        margin: 0px 15px;
+    }
+}
+
+
+          /*empieza mobile*/
+    /*
+@media only screen and (max-width: 768px)  {
+    
+    img{
+        width: 100%;
+    }
+
+}*/
