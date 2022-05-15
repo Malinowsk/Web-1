@@ -721,11 +721,37 @@ p.fin{
 
 
           /*empieza mobile*/
-    /*
+    
 @media only screen and (max-width: 768px)  {
     
-    img{
+    /*seccion tarjetas*/
+    .contenedor-tarjetas div.tarjeta {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    /*seccion libros*/
+    .libro .descripcion{
+        display: none;
+    }
+    .sesion .contenedor-libros {
+        display: flex;
+    }
+    .libro .imagen{
         width: 100%;
     }
 
-}*/
+    .contenedor-libros .libro, .libro .imagen{
+        border: none;
+    }
+    
+    .contenedor-libros .libro {
+        padding: 2.5px 0px;
+        background-color: #f8ac18;
+    }
+
+    .libro .imagen {
+        margin: 0px 2.5px;
+    }
+
+}
