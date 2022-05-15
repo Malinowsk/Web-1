@@ -224,7 +224,7 @@ div.encabezado-inferior, .contenedor-tabla ,
     justify-content: space-between;
 }
 
-div.imagen-principal, .contenedor-tabla, .contenedor-para-centrado{
+div.imagen-principal, .contenedor-para-centrado{
     justify-content: center;
 }
 
@@ -754,4 +754,7 @@ p.fin{
         margin: 0px 2.5px;
     }
 
+    .contenedor-tabla{
+        overflow-y: auto;
+    }
 }
