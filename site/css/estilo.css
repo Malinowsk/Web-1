@@ -8,10 +8,11 @@
     padding: 0px;
 }
 
+         /*font size*/
 html{
     font-size: 16px;
 }
-            /*font size*/
+
 h1{
     font-size: 2rem;
 }
@@ -44,7 +45,7 @@ body, .contenedor-contacto input , form.contacto textarea.mensaje, p{
     font-size: 0.938rem;
 }
 
-label{
+label, .validacion button{
     font-size: 0.875rem;
 }
 
@@ -92,12 +93,16 @@ div.encabezado-superior button:hover.sesion, img.redes:hover{
     background-color: #f8ac18;
 }
 
+.validacion button:hover{
+    background-color: #f8ac18dd;
+}
+
 th, .libro .descripcion , .captcha, .tabla-contenido{
     background-color: #04344E;
 }
 
 .validacion button{
-    background-color: #047ccc;
+    background-color: #286090;
 }
 
 .contenedor-libros .libro{
@@ -119,7 +124,7 @@ th, .libro .descripcion , .captcha, .tabla-contenido{
     color: #2b424f;
 }
 
-.titulo-terciario, .sesion div.texto, tr , td{
+.titulo-terciario, .sesion div.texto, tr , td , .validacion button:hover{
     color: #01111A;
 }
 
@@ -345,7 +350,7 @@ div.imagen-principal{
 
                 /*//comienza header////*/
 
-.encabezado-superior, tr , td , th{
+.encabezado-superior, tr , td , th , form.contacto input{
     height: 50px;
 }
 
@@ -370,7 +375,7 @@ div.imagen-principal{
     height: 13px;
 }
 
-.encabezado-superior form{
+.encabezado-superior form , div.botonera{
     padding: 0px 10px;
 }
 
@@ -388,17 +393,21 @@ div.imagen-principal{
     text-indent: 8px;
 }
 
+input.checkbox , form.contacto .checkbox{ /* boton para seleccionar */
+    height: auto;
+}
+
+input.checkbox , form.contacto .checkbox, .encabezado-superior button{ /* boton para seleccionar */
+    width: auto;
+}
 
 input.checkbox{ /* boton para seleccionar */
-    height: auto;
-    width: auto;
     padding: 0px 1px;
     margin: 0px 1px;
 }
 
 .encabezado-superior button{
     height: 35px;
-    width: auto;
     padding: 0px 5px;
     margin: 0px 5px;
     border: 0px;
@@ -419,8 +428,11 @@ div.logo{
     padding-top: 2px;
 }
 
+.logo p.logo , div.pie-de-pag div.redes-sociales{
+    padding: 10px;  
+}
+
 .logo p.logo{
-    padding: 10px;
     letter-spacing: 2px;
 }
 
@@ -428,7 +440,6 @@ div.logo{
 
 div.botonera{
     margin: 8px;
-    padding: 0px 10px;
 }
 
 ul.botonera{ 
@@ -619,14 +630,10 @@ form.contacto label{
 
 form.contacto input{
     width: 65%;
-    height: 50px;
     padding: 0px 24px;
 }
 
-form.contacto .checkbox{
-    height: auto;
-    width: auto;
-}
+
 
 form.contacto .cont-interno label{
     padding: 0px 15px;
@@ -658,7 +665,10 @@ form.contacto textarea.mensaje{
 }
 
 .validacion button{
-    padding: 3px;
+    padding: 6px 12px;
+    border: 0px;
+    font-weight: 700;
+    border-radius: 4px;
 }
 
 #oculta{
@@ -675,9 +685,7 @@ div.pie-de-pag{
     margin-top: 50px;
 }
 
-div.pie-de-pag div.redes-sociales{
-    padding: 10px;  
-}
+
 
 div.pie-de-pag ul.redes-sociales{
     padding: 8px 18px;
