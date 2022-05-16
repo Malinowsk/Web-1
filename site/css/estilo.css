@@ -220,16 +220,16 @@ ul.botonera a{
                     /* Atributos de flex */
 .encabezado-superior, div.encabezado-inferior, div.logo, ul.botonera, div.imagen-principal,
 .contenedor-tabla, .sesion div.contenedor-tarjetas, .contenedor-libros .libro, .libro .descripcion,
-div.pie-de-pag, .sesion form.contacto, form.contacto div.cont-interno, .validacion, div.pie-de-pag ul.redes-sociales, .contenedor-para-centrado, form.contacto div.contenedor-contacto, form.contacto .cont-interno label, .validacion, .captcha{
+footer.pie-de-pag, .sesion form.contacto, form.contacto div.cont-interno, .validacion, footer.pie-de-pag ul.redes-sociales, .contenedor-para-centrado, form.contacto div.contenedor-contacto, form.contacto .cont-interno label, .validacion, .captcha{
     display: flex;
 }
 
 div.encabezado-inferior, .contenedor-tabla , 
-.sesion div.contenedor-tarjetas , div.pie-de-pag , .sesion form.contacto, form.contacto div.contenedor-contacto{ 
+.sesion div.contenedor-tarjetas , footer.pie-de-pag , .sesion form.contacto, form.contacto div.contenedor-contacto{ 
     flex-wrap: wrap; /* a medida que se achica la pantalla los componentes se acomodan en a la parte inferior */
 }
 
-.encabezado-superior, div.encabezado-inferior, .sesion div.contenedor-tarjetas, div.pie-de-pag, form.contacto div.contenedor-contacto, .validacion{
+.encabezado-superior, div.encabezado-inferior, .sesion div.contenedor-tarjetas, footer.pie-de-pag, form.contacto div.contenedor-contacto, .validacion{
     justify-content: space-between;
 }
 
@@ -241,7 +241,7 @@ ul.botonera, .contenedor-libros .libro, .libro .descripcion, .sesion form.contac
     justify-content: space-around;
 }
 
-div.pie-de-pag ul.redes-sociales, form.contacto .cont-interno label{
+footer.pie-de-pag ul.redes-sociales, form.contacto .cont-interno label{
     justify-content: flex-end;
 }
 
@@ -266,7 +266,7 @@ form.contacto div.cont-interno{
     align-items: flex-end;
 }
 
-div.encabezado-inferior , div.pie-de-pag, form.contacto div.cont-interno, form.contacto div.cont-interno, form.contacto .cont-interno label, .validacion, .captcha{
+div.encabezado-inferior , footer.pie-de-pag, form.contacto div.cont-interno, form.contacto div.cont-interno, form.contacto .cont-interno label, .validacion, .captcha{
     align-items: center;
 }
 
@@ -288,7 +288,7 @@ div.encabezado-inferior , div.pie-de-pag, form.contacto div.cont-interno, form.c
 }
                             /* estilo de lista */
 
-.encabezado-superior li, ul.botonera, div.pie-de-pag ul.redes-sociales{
+.encabezado-superior li, ul.botonera, footer.pie-de-pag ul.redes-sociales{
     list-style: none;/*saca el puntito de cada li*/
 }
 
@@ -375,7 +375,7 @@ div.imagen-principal{
     height: 13px;
 }
 
-.encabezado-superior form , div.botonera{
+.encabezado-superior form , nav.botonera{
     padding: 0px 10px;
 }
 
@@ -428,7 +428,7 @@ div.logo{
     padding-top: 2px;
 }
 
-.logo p.logo , div.pie-de-pag div.redes-sociales{
+.logo p.logo , footer.pie-de-pag div.redes-sociales{
     padding: 10px;  
 }
 
@@ -438,7 +438,7 @@ div.logo{
 
 /*//botonera (nav)//*/
 
-div.botonera{
+nav.botonera{
     margin: 8px;
 }
 
@@ -680,14 +680,14 @@ form.contacto textarea.mensaje{
 
 /*//comienza footer////*/
 
-div.pie-de-pag{ 
+footer.pie-de-pag{ 
     padding: 30px 80px;
     margin-top: 50px;
 }
 
 
 
-div.pie-de-pag ul.redes-sociales{
+footer.pie-de-pag ul.redes-sociales{
     padding: 8px 18px;
 }
 
@@ -717,7 +717,7 @@ p.fin{
         margin-left: 50px;
     }
 
-    div.pie-de-pag{
+    footer.pie-de-pag{
         justify-content: center;
     }
 }
