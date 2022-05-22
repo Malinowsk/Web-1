@@ -77,7 +77,7 @@ body{
     font-family: 'HKGrotesk-Medium', Arial, Helvetica, sans-serif;
 }
 
-.encabezado-superior , .encabezado-inferior , .pie-de-pag, .encabezado-superior button{
+.encabezado-superior , .encabezado-inferior , footer, .encabezado-superior button{
     background-color: #1f3d4f;
 }
 
@@ -111,11 +111,11 @@ th, .libro .descripcion , .captcha, .tabla-contenido{
 
                     /* color de texto */
 
-.encabezado-superior , .encabezado-inferior, .validacion .captcha p, .pie-de-pag, .encabezado-superior button, .contenedor-para-centrado h3, .descripcion h4:hover, th, .descripcion p:hover , .descripcion h3 , div a:hover.politicas , .validacion button, .tabla-contenido ul a:hover{
+.encabezado-superior , .encabezado-inferior, .validacion .captcha p, footer, .encabezado-superior button, .contenedor-para-centrado h3, .descripcion h4:hover, th, .descripcion p:hover , .descripcion h3 , div a:hover.politicas , .validacion button, .tabla-contenido ul a:hover{
     color: #ffffff;
 }
 
-.encabezado-superior button:hover, ul.botonera a:hover, ul.botonera a.pag-actual,.sesion div.titulo-vistoso,
+.encabezado-superior button:hover, ul.menu a:hover, ul.menu a.pag-actual,.sesion div.titulo-vistoso,
 .contenedor-tarjetas div.tarjeta:hover, .parrafo-inicial::first-letter, a, form.contacto strong{
     color: #f8ac18;
 }
@@ -128,7 +128,7 @@ th, .libro .descripcion , .captcha, .tabla-contenido{
     color: #01111A;
 }
 
-ul.botonera a, .descripcion h4{
+ul.menu a, .descripcion h4{
     color: #ffffffcc;
 }
 
@@ -197,7 +197,7 @@ div.encabezado-inferior{
 
 
                     /* font-style */
-.encabezado-superior , .encabezado-inferior , .pie-de-pag{
+.encabezado-superior , .encabezado-inferior , footer{
     font-style: normal;
 }
 
@@ -209,7 +209,7 @@ div.encabezado-inferior{
     font-weight: bold; /*grosor de la letra*/
 }
 
-ul.botonera a{
+ul.menu a{
     font-weight: 700px; 
 }
 
@@ -218,18 +218,18 @@ ul.botonera a{
 }
 
                     /* Atributos de flex */
-.encabezado-superior, div.encabezado-inferior, div.logo, ul.botonera, div.imagen-principal,
+.encabezado-superior, div.encabezado-inferior, div.logo, ul.menu, div.imagen-principal,
 .contenedor-tabla, .sesion div.contenedor-tarjetas, .contenedor-libros .libro, .libro .descripcion,
-footer.pie-de-pag, .sesion form.contacto, form.contacto div.cont-interno, .validacion, footer.pie-de-pag ul.redes-sociales, .contenedor-para-centrado, form.contacto div.contenedor-contacto, form.contacto .cont-interno label, .validacion, .captcha{
+footer, .sesion form.contacto, form.contacto div.cont-interno, .validacion, footer ul.redes-sociales, .contenedor-para-centrado, form.contacto div.contenedor-contacto, form.contacto .cont-interno label, .validacion, .captcha{
     display: flex;
 }
 
 div.encabezado-inferior, .contenedor-tabla , 
-.sesion div.contenedor-tarjetas , footer.pie-de-pag , .sesion form.contacto, form.contacto div.contenedor-contacto{ 
+.sesion div.contenedor-tarjetas , footer , .sesion form.contacto, form.contacto div.contenedor-contacto{ 
     flex-wrap: wrap; /* a medida que se achica la pantalla los componentes se acomodan en a la parte inferior */
 }
 
-.encabezado-superior, div.encabezado-inferior, .sesion div.contenedor-tarjetas, footer.pie-de-pag, form.contacto div.contenedor-contacto, .validacion{
+.encabezado-superior, div.encabezado-inferior, .sesion div.contenedor-tarjetas, footer, form.contacto div.contenedor-contacto, .validacion{
     justify-content: space-between;
 }
 
@@ -237,11 +237,11 @@ div.imagen-principal, .contenedor-para-centrado{
     justify-content: center;
 }
 
-ul.botonera, .contenedor-libros .libro, .libro .descripcion, .sesion form.contacto{
+ul.menu, .contenedor-libros .libro, .libro .descripcion, .sesion form.contacto{
     justify-content: space-around;
 }
 
-footer.pie-de-pag ul.redes-sociales, form.contacto .cont-interno label{
+footer ul.redes-sociales, form.contacto .cont-interno label{
     justify-content: flex-end;
 }
 
@@ -266,7 +266,7 @@ form.contacto div.cont-interno{
     align-items: flex-end;
 }
 
-div.encabezado-inferior , footer.pie-de-pag, form.contacto div.cont-interno, form.contacto div.cont-interno, form.contacto .cont-interno label, .validacion, .captcha{
+div.encabezado-inferior , footer, form.contacto div.cont-interno, form.contacto div.cont-interno, form.contacto .cont-interno label, .validacion, .captcha{
     align-items: center;
 }
 
@@ -288,7 +288,7 @@ div.encabezado-inferior , footer.pie-de-pag, form.contacto div.cont-interno, for
 }
                             /* estilo de lista */
 
-.encabezado-superior li, ul.botonera, footer.pie-de-pag ul.redes-sociales{
+.encabezado-superior li, ul.menu, footer ul.redes-sociales{
     list-style: none;/*saca el puntito de cada li*/
 }
 
@@ -307,7 +307,7 @@ a{
 
 
                             /*atributo position*/
-div.header{
+header{
     position: sticky;
     top: -64px; /* esconde la cabecera superior*/
     z-index: 100; /* necesario por el relative y absolute*/
@@ -375,7 +375,7 @@ div.imagen-principal{
     height: 13px;
 }
 
-.encabezado-superior form , nav.botonera{
+.encabezado-superior form , nav.menu{
     padding: 0px 10px;
 }
 
@@ -428,7 +428,7 @@ div.logo{
     padding-top: 2px;
 }
 
-.logo p.logo , footer.pie-de-pag div.redes-sociales{
+.logo p.logo , footer div.redes-sociales{
     padding: 10px;  
 }
 
@@ -436,21 +436,21 @@ div.logo{
     letter-spacing: 2px;
 }
 
-/*//botonera (nav)//*/
+/*//menu (nav)//*/
 
-nav.botonera{
+nav.menu{
     margin: 8px;
 }
 
-ul.botonera{ 
+ul.menu{ 
     margin: 1px;
 }
 
-ul.botonera li{
+ul.menu li{
     margin: 0 5px;   
 }
 
-ul.botonera a{
+ul.menu a{
     padding: 10px 0px;
     margin: 0px 10px;
 }
@@ -680,14 +680,14 @@ form.contacto textarea.mensaje{
 
 /*//comienza footer////*/
 
-footer.pie-de-pag{ 
+footer{ 
     padding: 30px 80px;
     margin-top: 50px;
 }
 
 
 
-footer.pie-de-pag ul.redes-sociales{
+footer ul.redes-sociales{
     padding: 8px 18px;
 }
 
@@ -717,7 +717,7 @@ p.fin{
         margin-left: 50px;
     }
 
-    footer.pie-de-pag{
+    footer{
         justify-content: center;
     }
 }
@@ -778,4 +778,10 @@ p.fin{
         font-size: 12px;
     }
 
+}
+
+@media only screen and (max-width: 360px)  {
+    nav.menu{
+        display: none;
+    }
 }
