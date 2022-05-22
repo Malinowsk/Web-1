@@ -176,7 +176,8 @@ tr , td , th {
     border: 2px solid #f8ac18;
 }
 
-div.encabezado-inferior{ 
+div.encabezado-inferior{
+    position: relative;
     border-top: 2px solid #f8ac18;
 }
 
@@ -214,7 +215,7 @@ div.encabezado-inferior{
 }
 
 ul.menu a{
-    font-weight: 700px; 
+    font-weight: 700; 
 }
 
 .titulo-terciario{
@@ -244,11 +245,6 @@ div.imagen-principal, .contenedor-para-centrado, footer{
 ul.menu, .contenedor-libros .libro, .libro .descripcion, .sesion form.contacto{
     justify-content: space-around;
 }
-
-footer ul.redes-sociales, form.contacto .cont-interno label{
-    justify-content: flex-end;
-}
-
 
 form.contacto div.cont-interno{
     justify-content: flex-start;
@@ -314,7 +310,7 @@ a{
                             /*atributo position*/
 header{
     position: sticky;
-    top: -64px; /* esconde la cabecera superior*/
+    top: 0px; /* esconde la cabecera superior*/
     z-index: 100; /* necesario por el relative y absolute*/
 }
 
@@ -355,12 +351,12 @@ div.imagen-principal{
 
                 /*//comienza header////*/
 
-.encabezado-superior, tr , td , th , form.contacto input{
+.encabezado-superior, tr , td , th{
     height: 50px;
 }
 
-.encabezado-superior {
-    padding: 7px 30px 7px 0px;
+form.contacto input{
+    height: 40px;
 }
 
 .encabezado-superior i{
@@ -384,16 +380,11 @@ div.imagen-principal{
 
 .encabezado-superior input{
     border-radius: 5px;
-    margin: 0px 2px;
+    margin: 0px 5px;
 }
 
 .encabezado-superior input, .captcha input{
     height: 32px;
-    width: 140px;
-    max-height: 32px; /* para dejar la caja de mensaje fija*/
-    max-width: 140px; /* para dejar la caja de mensaje fija*/
-    padding: 0px 2px;
-    text-indent: 8px;
 }
 
 input.checkbox , form.contacto .checkbox{ /* boton para seleccionar */
@@ -411,9 +402,9 @@ input.checkbox{ /* boton para seleccionar */
 
 .encabezado-superior button{
     height: 35px;
-    padding: 0px 5px;
     margin: 0px 5px;
     border: 0px;
+    border-radius: 5px;
 }
 
 header div.encabezado-inferior button.menu{
@@ -452,22 +443,20 @@ footer div.redes-sociales{
 /*//menu (nav)//*/
 
 nav.menu{
+    position: absolute;
+    top: 52px;
     width: 100%;
 }
 
-ul.menu{ 
-    margin: 1px;
-}
-
 ul.menu li{
+    padding: 10px 0px;
     border: 1px solid;
     border-color: white white #333333 white;
 }
 
 
 ul.menu a{
-    padding: 10px 0px;
-    margin: 0px 10px;
+    margin-left: 10px;
 }
 
                 /*//comienza main////*/
@@ -629,13 +618,10 @@ a{
     height: 600px;
 }
 
-form.contacto div.contenedor-contacto{
-    width: 100%;
-    height: 150px;
-}
-
 form.contacto .contenedor-contacto div.cont-interno{
-    width: 50%;
+    width: 100%;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
 }
 
 form.contacto div.cont-interno p{
@@ -647,18 +633,14 @@ form.contacto label{
     padding: 16px 15px 0px;
 }
 
-
 form.contacto input{
-    width: 65%;
-    padding: 0px 24px;
+    width: 100%;
+    padding: 0px 5px;
 }
 
-
-
 form.contacto .cont-interno label{
-    padding: 0px 15px;
-    height: 100%;
-    width: 75px;
+    padding: 0px 0px 10px 7px;
+    width: 100%;
 }
 
 form.contacto strong{
@@ -722,10 +704,34 @@ p.fin{
     width: 100%;
     margin: 5px;
 }
-
+/*actual*/
 .encabezado-superior {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 54px;
+    background-color: #01111A;
     display: none;
 }
+
+.encabezado-superior ul{
+    display: none;
+}
+
+form.sesion{
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: space-around;
+}
+
+.input-recordame{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*fin actual*/
 
 .contenedor-tabla{
     overflow-y: auto;
@@ -747,7 +753,7 @@ nav.menu{
     
     /*empieza mobile*/
     
-    @media only screen and (min-width: 768px)  {
+@media only screen and (min-width: 768px)  {
 
 
     div.encabezado-inferior{ 
@@ -767,8 +773,16 @@ nav.menu{
         padding: 10px;  
     }
 
+    header{
+        top: -60px;
+    }
+
     header div.encabezado-inferior button.menu{
         display: none;
+    }
+
+    ul.menu{ 
+        margin: 1px;
     }
 
     div.imagen-principal img {
@@ -810,11 +824,15 @@ nav.menu{
     }
 
     nav.menu{
+        position: inherit;
+        top: auto;
         display: block;
         width: auto;
         background-color: #1f3d4f;
     }
     ul.menu a{
+        padding: 10px 0px;
+        margin: 0px 10px;
         color: #ffffffcc;
     }
     
@@ -836,8 +854,79 @@ nav.menu{
     }
 
     ul.menu li{
-        margin: 0 5px;   
+        margin: 0 5px;
+        padding: 0px;
     }
+
+    .encabezado-superior {
+        padding: 7px 30px 7px 0px;
+        width: auto;
+        height: auto;
+        position: inherit;
+        top: auto;
+        background-color: #1f3d4f;
+        display: none;
+    }
+
+    .encabezado-superior ul{
+        display: block;
+    }
+
+    form.sesion{
+        display: inherit;
+        flex-direction: row;
+        height: auto;
+    }
+
+    .encabezado-superior input, .captcha input{
+        max-height: 32px; /* para dejar la caja de mensaje fija*/
+        max-width: 140px; /* para dejar la caja de mensaje fija*/
+        padding: 0px 2px;
+        text-indent: 8px;
+    }
+
+    .input-recordame{
+        margin-left: 2px;
+        height: auto;
+        display: inherit;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .encabezado-superior button{
+        padding: 0px 5px;
+        border-radius: 0px;
+    }
+
+    form.contacto div.contenedor-contacto{
+        width: 100%;
+        height: 150px;
+    }
+    form.contacto .contenedor-contacto div.cont-interno{
+        width: 50%;
+        flex-wrap: nowrap;
+        padding-bottom: 0px;
+    }
+
+    form.contacto .cont-interno label{
+        padding: 0px 15px;
+        height: 100%;
+        width: 75px;
+    }
+
+    footer ul.redes-sociales, form.contacto .cont-interno label{
+        justify-content: flex-end;
+    }
+    
+    form.contacto input{
+        width: 65%;
+        padding: 0px 24px;
+    }
+
+    form.contacto input{
+        height: 50px;
+    }
+    
 }
 
 @media only screen and (min-width: 915px)  {
