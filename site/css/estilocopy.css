@@ -10,7 +10,7 @@
 
          /*font size*/
 html{
-    font-size: 16px;
+    font-size: 12px;
 }
 
 h1{
@@ -26,7 +26,7 @@ h2{
 }
 
 .logo p.logo{
-    font-size: 1.375rem;
+    font-size: 1.1rem;
 }
 
 h3{
@@ -72,7 +72,7 @@ p{
 }
 
                 /* background-color */
-body{
+body, nav.menu{
     background-color: #ffffff;
     font-family: 'HKGrotesk-Medium', Arial, Helvetica, sans-serif;
 }
@@ -106,12 +106,14 @@ th, .libro .descripcion , .captcha, .tabla-contenido{
 }
 
 .contenedor-libros .libro{
-    background-color: #D8E1E4;
+    background-color: #f8ac18;
 }
 
                     /* color de texto */
 
-.encabezado-superior , .encabezado-inferior, .validacion .captcha p, footer, .encabezado-superior button, .contenedor-para-centrado h3, .descripcion h4:hover, th, .descripcion p:hover , .descripcion h3 , div a:hover.politicas , .validacion button, .tabla-contenido ul a:hover{
+.encabezado-superior , .encabezado-inferior, .validacion .captcha p, footer, .encabezado-superior button, 
+.contenedor-para-centrado h3, .descripcion h4:hover, th, .descripcion p:hover , .descripcion h3 , div a:hover.politicas , 
+.validacion button, .tabla-contenido ul a:hover{
     color: #ffffff;
 }
 
@@ -124,11 +126,11 @@ th, .libro .descripcion , .captcha, .tabla-contenido{
     color: #2b424f;
 }
 
-.titulo-terciario, .sesion div.texto, tr , td , .validacion button:hover{
+.titulo-terciario, .sesion div.texto, tr , td , .validacion button:hover, ul.menu a{
     color: #01111A;
 }
 
-ul.menu a, .descripcion h4{
+.descripcion h4{
     color: #ffffffcc;
 }
 
@@ -187,14 +189,16 @@ div.encabezado-inferior{
     border-color: #01111A #f8ac18 #f8ac18 #01111A;
 }
 
-.contenedor-libros .libro,.libro .imagen,.libro .descripcion{
+.libro .descripcion{
     border: 3px solid #01111A;
 }
 
 .captcha{
     border: 2px solid #01111A;
 }
-
+.contenedor-libros .libro, .libro .imagen{
+    border: none;
+}
 
                     /* font-style */
 .encabezado-superior , .encabezado-inferior , footer{
@@ -218,8 +222,8 @@ ul.menu a{
 }
 
                     /* Atributos de flex */
-.encabezado-superior, div.encabezado-inferior, div.logo, ul.menu, div.imagen-principal,
-.contenedor-tabla, .sesion div.contenedor-tarjetas, .contenedor-libros .libro, .libro .descripcion,
+div.encabezado-inferior, div.logo, ul.menu, div.imagen-principal,
+.contenedor-tabla, .sesion div.contenedor-tarjetas, .contenedor-libros .libro,
 footer, .sesion form.contacto, form.contacto div.cont-interno, .validacion, footer ul.redes-sociales, .contenedor-para-centrado, form.contacto div.contenedor-contacto, form.contacto .cont-interno label, .validacion, .captcha{
     display: flex;
 }
@@ -229,11 +233,11 @@ div.encabezado-inferior, .contenedor-tabla ,
     flex-wrap: wrap; /* a medida que se achica la pantalla los componentes se acomodan en a la parte inferior */
 }
 
-.encabezado-superior, div.encabezado-inferior, .sesion div.contenedor-tarjetas, footer, form.contacto div.contenedor-contacto, .validacion{
+.encabezado-superior, div.encabezado-inferior, .sesion div.contenedor-tarjetas, form.contacto div.contenedor-contacto, .validacion{
     justify-content: space-between;
 }
 
-div.imagen-principal, .contenedor-para-centrado{
+div.imagen-principal, .contenedor-para-centrado, footer{
     justify-content: center;
 }
 
@@ -244,6 +248,7 @@ ul.menu, .contenedor-libros .libro, .libro .descripcion, .sesion form.contacto{
 footer ul.redes-sociales, form.contacto .cont-interno label{
     justify-content: flex-end;
 }
+
 
 form.contacto div.cont-interno{
     justify-content: flex-start;
@@ -258,7 +263,7 @@ form.contacto div.cont-interno{
     align-content: space-between;
 }
 
-.libro .descripcion, .validacion, .captcha{
+.libro .descripcion, .validacion, .captcha, ul.menu{
     flex-direction: column;
 }
 
@@ -266,7 +271,7 @@ form.contacto div.cont-interno{
     align-items: flex-end;
 }
 
-div.encabezado-inferior , footer, form.contacto div.cont-interno, form.contacto div.cont-interno, form.contacto .cont-interno label, .validacion, .captcha{
+div.encabezado-inferior ,  div.logo, footer, form.contacto div.cont-interno, form.contacto div.cont-interno, form.contacto .cont-interno label, .validacion, .captcha{
     align-items: center;
 }
 
@@ -354,8 +359,8 @@ div.imagen-principal{
     height: 50px;
 }
 
-.encabezado-superior{
-    padding: 7px 100px;
+.encabezado-superior {
+    padding: 7px 30px 7px 0px;
 }
 
 .encabezado-superior i{
@@ -363,8 +368,9 @@ div.imagen-principal{
 }
 
 .encabezado-superior ul{
-    margin-left: 90px;
+    margin-left: 50px;
 }
+
 
 .encabezado-superior li{
     padding: 1px;
@@ -375,9 +381,6 @@ div.imagen-principal{
     height: 13px;
 }
 
-.encabezado-superior form , nav.menu{
-    padding: 0px 10px;
-}
 
 .encabezado-superior input{
     border-radius: 5px;
@@ -413,22 +416,32 @@ input.checkbox{ /* boton para seleccionar */
     border: 0px;
 }
 
-div.encabezado-inferior{ 
-    padding: 7px 80px;
+header div.encabezado-inferior button.menu{
+    color: white;
+    background-color: #04344E;
+    border-radius: 80%;
+    padding: 8px 10px;
+    border: #04344E;
+    margin-right: 5px;
 }
 
 /*//logo (icono - titulo)//*/
 
 div.logo{
     padding-right: 39.15px;
+
 }
 
 .logo img.logo{
-    height: 75px;
+    height: 50px;
     padding-top: 2px;
 }
 
-.logo p.logo , footer div.redes-sociales{
+.logo p.logo{
+    padding: 5px;  
+}
+
+footer div.redes-sociales{
     padding: 10px;  
 }
 
@@ -439,7 +452,7 @@ div.logo{
 /*//menu (nav)//*/
 
 nav.menu{
-    margin: 8px;
+    width: 100%;
 }
 
 ul.menu{ 
@@ -447,8 +460,10 @@ ul.menu{
 }
 
 ul.menu li{
-    margin: 0 5px;   
+    border: 1px solid;
+    border-color: white white #333333 white;
 }
+
 
 ul.menu a{
     padding: 10px 0px;
@@ -458,12 +473,12 @@ ul.menu a{
                 /*//comienza main////*/
 
 div.imagen-principal img{
-    width: 85%; 
+    width: 100%; 
 }
 
 /*para cambiar*/
-.main .sesion{
-    margin: 0px 94px;
+.main .sesion {
+    margin: 0px 15px;
 }
 
 .sesion div.titulo-vistoso , .sesion div.titulo-sumiso{
@@ -485,7 +500,8 @@ div.imagen-principal img{
 }
 
 .contenedor-tarjetas div.tarjeta{
-    width: 32%;
+    width: 100%;
+    margin-top: 15px;
 }
 
 .contenedor-tarjetas div.imagen{
@@ -521,19 +537,23 @@ td img{
     height: 100%;
 }
 
+.sesion .contenedor-libros {
+    display: flex;
+}
+
 .sesion .contenedor-libros{
     padding: 8px 0px;
     width: 100%;
 }
 
 .contenedor-libros .libro{
-    padding: 5px 0px;
+    padding: 2.5px 0px;
     margin: 4px 2px;
     width: 100%;
 }
 .libro .imagen{
-    margin: 0px 2.5px 0px 5px;
-    width: 25%;
+    margin: 0px 2.5px;
+    width: 100%;
 }
 
 .libro img{
@@ -703,86 +723,155 @@ p.fin{
     margin: 5px;
 }
 
+.encabezado-superior {
+    display: none;
+}
+
+.contenedor-tabla{
+    overflow-y: auto;
+}
+
+nav.menu{
+    display: none;
+}
+
+.libro .descripcion{
+    display: none;
+}
+
 /*/////termina footer//////*/
 
 
-        /*empieza responsive*/
-@media only screen and (max-width: 1115px){
+    /*empieza responsive*/
+    
+    
+    /*empieza mobile*/
+    
+    @media only screen and (min-width: 768px)  {
 
-    div.encabezado-superior {
-        padding: 7px 30px 7px 0px;
+
+    div.encabezado-inferior{ 
+        padding: 7px 80px;
     }
 
-    .encabezado-superior ul{
-        margin-left: 50px;
+    .logo img.logo{
+        height: 75px;
+        padding-top: 0px;
     }
 
-    footer{
-        justify-content: center;
+    .logo p.logo{
+        font-size: 1.375rem;
     }
-}
 
-@media only screen and (max-width: 915px)  {
-    div.encabezado-superior {
+    .logo p.logo{
+        padding: 10px;  
+    }
+
+    header div.encabezado-inferior button.menu{
         display: none;
     }
-    .main .sesion {
-        margin: 0px 15px;
-    }
-}
-
-
-          /*empieza mobile*/
-    
-@media only screen and (max-width: 768px)  {
 
     div.imagen-principal img {
-        width: 100%;
+        width: 85%;
     }
     
     /*seccion tarjetas*/
     .contenedor-tarjetas div.tarjeta {
-        width: 100%;
-        margin-top: 15px;
+        width: 32%;
     }
 
-    /*seccion libros*/
     .libro .descripcion{
-        display: none;
+        display: flex;
+    }    
+
+    .sesion .contenedor-libros {
+        display: block;
     }
     
-    .sesion .contenedor-libros {
-        display: flex;
-    }
     .libro .imagen{
-        width: 100%;
+        width: 25%;
     }
-
-    .contenedor-libros .libro, .libro .imagen{
-        border: none;
+    
+    .contenedor-libros .libro,.libro .imagen{
+        border: 3px solid #01111A;
+    }
+    
+    .libro .imagen {
+        margin: 0px 2.5px 0px 5px;
     }
     
     .contenedor-libros .libro {
-        padding: 2.5px 0px;
-        background-color: #f8ac18;
-    }
-
-    .libro .imagen {
-        margin: 0px 2.5px;
-    }
-
-    .contenedor-tabla{
-        overflow-y: auto;
-    }
-
-    html{
-        font-size: 12px;
+        padding: 5px 0px;
+        background-color: #D8E1E4;
     }
     
+    html{
+        font-size: 14px;
+    }
+
     nav.menu{
-        display: none;
+        display: block;
+        width: auto;
+        background-color: #1f3d4f;
+    }
+    ul.menu a{
+        color: #ffffffcc;
+    }
+    
+    ul.menu li{
+        border-color: #1f3d4f;
+    }
+    
+    ul.menu{
+        
+        flex-direction: row;
+    }
+    
+    .encabezado-superior form , nav.menu{
+        padding: 0px 10px;
+    }
+
+    nav.menu{
+        margin: 8px;
+    }
+
+    ul.menu li{
+        margin: 0 5px;   
     }
 }
+
+@media only screen and (min-width: 915px)  {
+    
+    .encabezado-superior {
+        display: flex;
+    }
+
+
+    /*para cambiar*/
+    .main .sesion{
+        margin: 0px 94px;
+    }
+    html{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 1115px){
+    
+    .encabezado-superior{
+        padding: 7px 100px;
+    }
+
+    .encabezado-superior ul{
+        margin-left: 90px;
+    }
+
+    footer{
+        justify-content: space-between;
+    }
+}
+
+
 /*
 @media only screen and (max-width: 360px)  {
 }
