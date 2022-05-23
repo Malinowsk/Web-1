@@ -247,7 +247,7 @@ ul.menu, .contenedor-libros .libro, .libro .descripcion, .sesion form.contacto{
 }
 
 form.contacto div.cont-interno{
-    justify-content: flex-start;
+    flex-wrap: wrap;
     width: 100%;
 }
 
@@ -615,7 +615,7 @@ a{
 /* HTML contacto */
 
 .sesion form.contacto{
-    height: 600px;
+    height: 700px;
 }
 
 form.contacto .contenedor-contacto div.cont-interno{
@@ -626,11 +626,7 @@ form.contacto .contenedor-contacto div.cont-interno{
 
 form.contacto div.cont-interno p{
     margin-left: 10px;
-    font-size: 14px;
-}
-
-form.contacto label{
-    padding: 16px 15px 0px;
+    font-size: 0.9rem;
 }
 
 form.contacto input{
@@ -643,21 +639,35 @@ form.contacto .cont-interno label{
     width: 100%;
 }
 
+form.contacto .cont-externo{
+    width: 100%;
+    display: flex;
+    margin: 20px 0px;
+}
+
+form.contacto .cont-externo .checkbox{
+    margin: 0px 10px;
+}
+
+form.contacto .captcha input{
+    width: 65%;
+}
+
 form.contacto strong{
     margin: 0px 0px 0px 3px;
 }
 
 form.contacto textarea.mensaje{
-    min-width: 84.5%;
+    min-width: 100%;
+    max-width: 100%;
     min-height: 80px;
-    max-width: 84.5%;
     max-height: 80px;
     padding-top: 10px;
-    padding-left: 24px;
+    text-indent: 10px;
 }
 
 .validacion {
-    height: 250px;
+    height: 220px;
 }
 
 .captcha{
@@ -914,6 +924,27 @@ nav.menu{
         width: 75px;
     }
 
+    form.contacto .cont-externo{
+        display:flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        width: 100%;
+        align-items: center;
+    }
+    
+    form.contacto .cont-externo label{
+        padding: 0px 15px;
+        height: 100%;
+        width: 75px;
+        justify-content: flex-end;
+        display: flex;
+    }
+
+    form.contacto div.cont-externo p{
+        margin-left: 10px;
+        font-size: 0.9rem;
+    }
+
     footer ul.redes-sociales, form.contacto .cont-interno label{
         justify-content: flex-end;
     }
@@ -925,6 +956,30 @@ nav.menu{
 
     form.contacto input{
         height: 50px;
+    }
+
+    form.contacto div.cont-interno{
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    form.contacto textarea.mensaje{
+        min-width: 84.5%;
+        min-height: 80px;
+        max-width: 84.5%;
+        max-height: 80px;
+        padding-top: 10px;
+        text-indent: 0px;
+        padding-left: 24px;
+    }
+
+    .sesion form.contacto{
+        height: 600px;
+    }
+
+    .validacion {
+        height: 250px;
     }
     
 }
