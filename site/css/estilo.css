@@ -879,6 +879,7 @@ nav.menu{
         position: inherit;
         top: auto;
         background-color: #1f3d4f;
+        display: none;
     }
 
     .encabezado-superior ul{
@@ -987,10 +988,6 @@ nav.menu{
 
     .posicionado{
         top: -120px;
-    }
-    
-    .visibilidad{
-        display: block;
     }
 
 }
