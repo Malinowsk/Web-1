@@ -784,7 +784,7 @@ nav.menu{
     }
 
     header{
-        top: -60px;
+        top: 0px;
     }
 
     header div.encabezado-inferior button.menu{
@@ -989,6 +989,10 @@ nav.menu{
 }
 
 @media only screen and (min-width: 915px)  {
+
+    header{
+        top: -60px;
+    }
     
     .encabezado-superior {
         display: flex;
