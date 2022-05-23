@@ -1,3 +1,5 @@
+"use strict"
+
 let resultado; // variable para guardar el valor valido del captcha
 generarCaptcha();
 document.querySelector("#validar").addEventListener("click",validarCaptcha);//pongo a escuchar el evento para validar el captcha

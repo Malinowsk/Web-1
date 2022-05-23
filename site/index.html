@@ -17,7 +17,7 @@
 
 <body>
     <header>
-        <div class="encabezado-superior">
+        <div class="encabezado-superior invisibilidad" id="header-superior">
             <ul>
                 <li> <i class="fa fa-envelope"></i> info@bithumanoide.com</li>
                 <li> <i class="fas fa-phone"></i> +54 9 2284 77 42493</li>
@@ -42,11 +42,11 @@
             </div>
 
             <div>
-                <button class="menu" type="button"><i class="fa fa-bars"></i></button>
-                <button class="menu" type="button"><i class="fa fa-user"></i></button>
+                <button class="menu" type="button" id="btn-menu"><i class="fa fa-bars"></i></button>
+                <button class="menu" type="button" id="btn-sesion"><i class="fa fa-user"></i></button>
             </div>
     
-            <nav class="menu">
+            <nav class="menu invisibilidad" id="menu">
                 <ul class="menu">
                     <li><a class="pag-actual" href="index.html"><i class="fa fa-home"></i> Inicio</a></li>
                     <li><a href="servicios.html">Servicios</a></li>
@@ -253,6 +253,8 @@
         </div>
         <p class="fin">Copyright © 2022 Bit Humanoide - Bs.As Tandil</p>
     </footer>
+
+    <script src="js/menu.js"></script>
 </body>
 
 </html>
