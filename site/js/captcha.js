@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded",iniciarCaptcha);
 
-
 function iniciarCaptcha(){
     "use strict"
     let resultado; // variable para guardar el valor valido del captcha

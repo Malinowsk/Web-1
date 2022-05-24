@@ -168,6 +168,10 @@ form.contacto label{
     border: 1px solid #d8e1e4;
 }
 
+.contenedor-tarjetas div.tarjeta:hover{
+    box-shadow: 0 0 40px rgb(33 33 33 / 20%);
+}
+
 .contenedor-contacto input , form.contacto textarea.mensaje{
     border: 2px solid #d8e1e4;
 }
@@ -188,6 +192,10 @@ div.encabezado-inferior{
 .contenedor-proyecto{
     border: dashed 5px;
     border-color: #01111A #f8ac18 #f8ac18 #01111A;
+}
+
+.contenedor-proyecto{
+    box-shadow: 0 0 20px rgb(33 33 33 / 20%);
 }
 
 .libro .descripcion{
