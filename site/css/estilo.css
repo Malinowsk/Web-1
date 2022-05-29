@@ -55,7 +55,7 @@ label, .validacion button{
 
 
                 /* text-transform */
-h1 , h2 , h3 , h4 , .contenedor-tabla , .validacion button{
+h1 , h2 , h3 , h4 , .validacion button{
     text-transform: capitalize;
 }
 

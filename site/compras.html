@@ -11,12 +11,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- logo en pestaña -->
     <link rel="icon" href="images/2.png">
-
-    <title> Bit Humanoide - Contacto </title>
+    
+    <title> Bit Humanoide - Home </title>
 </head>
 
 <body>
-
     <header>
         <div class="encabezado-superior invisibilidad" id="header-superior">
             <ul>
@@ -51,84 +50,122 @@
                 <ul class="menu">
                     <li><a href="index.html"><i class="fa fa-home"></i> Inicio</a></li>
                     <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="compras.html">Compras</a></li>
-                    <li><a class="pag-actual" href="contacto.html">Contacto</a></li>
+                    <li><a class="pag-actual" href="compras.html">Compras</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <div class="main">
-
+      
         <div class="imagen-principal">
-            <img src="images/cabecera.jpeg" alt="adas" />
+            <img src="images/cabecera.jpeg" alt="adas"/>
         </div>
 
         <div class="sesion">
-            
-            <div class="titulo-sumiso">
-                <h1>Contacto</h1>
+            <div class="titulo-vistoso">
+                <h1>Compras packs de servicios</h1>
             </div>
+            <div class="contenedor-tabla">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Usuario</th>
+                            <th>Email</th>
+                            <th>Telefono</th>
+                            <th>Tiempo</th>
+                            <th>Pack</th>
+                        </tr>
+                    </thead>
 
-            <form class="contacto">
-                <div class="contenedor-contacto">
-                    <div class="cont-interno">
-                        <label>Nombre <strong>(*)</strong></label>
-                        <input type="text" placeholder="Nombre" required>
-                    </div>
-                    <div class="cont-interno">
-                        <label >Apellido <strong>(*)</strong></label>
-                        <input type="text" placeholder="Apellido" required>
-                    </div>
-                    <div class="cont-interno">
-                        <label>Email <strong>(*)</strong></label>
-                        <input type="email" placeholder="Email" required>
-                    </div>
-                    <div class="cont-interno">
-                        <label>Asunto <strong>(*)</strong></label>
-                        <input type="text" placeholder="Asunto" required>
-                    </div> 
-                </div>
-
-                <div class="cont-interno">
-                    <label>Mensaje</label>
-                    <textarea class="mensaje"></textarea>
-                </div>
+                    <tbody>
+                        <tr>
+                            <td>Malinowsk</td>
+                            <td>malinowski@gmail.com</td>
+                            <td>2494-542370</td>
+                            <td>1 Mes</td>
+                            <td>Premium</td>
+                        </tr>
+                        <tr>
+                            <td>Ulises</td>
+                            <td>ulises@gmail.com</td>
+                            <td>2494-542333</td>
+                            <td>1 Año</td>
+                            <td>Normal</td>
+                        </tr>
+                        <tr>
+                            <td>Cracken</td>
+                            <td>ck@gmail.com</td>
+                            <td>2494-543030</td>
+                            <td>1 Mes</td>
+                            <td>Premium</td>
+                        </tr>
+                        <tr>
+                            <td>Samuel</td>
+                            <td>samuel80@gmail.com</td>
+                            <td>2494-545099</td>
+                            <td>1 Año</td>
+                            <td>Bit Humanoide</td>
+                        </tr>
+                        <tr>
+                            <td>Samuel</td>
+                            <td>samuel80@gmail.com</td>
+                            <td>2494-545099</td>
+                            <td>1 Año</td>
+                            <td>Bit Humanoide</td>
+                        </tr>
+                    </tbody>
                 
-                    
-                <div class="cont-externo">
-                        <label> <strong>(*)</strong> </label>
-                        <input class="checkbox" type="checkbox" required>
-                        <p>Debes leer y aceptar las condiciones legales</p>
+                </table>
+
+                <div class="titulo-sumiso">
+                    <h3> Comprar Servicio </h3>
                 </div>
-                
-                <div class="validacion">
-                    <div class="captcha" id="captcha"> 
-                        <p>¿ Cuánto es <span id="prim_num">0</span> + <span id="seg_num">0</span> ?</p>
-                        <input id="valor-captcha" type="text">
-                        <button id="validar" type="button">validar</button>
+
+                <form class="contacto">
+                    <div class="contenedor-contacto">
+                        <div class="cont-interno">
+                            <label>Usuario <strong>(*)</strong></label>
+                            <input type="text" placeholder="Usuario" required>
+                        </div>
+                        <div class="cont-interno">
+                            <label >Email <strong>(*)</strong></label>
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="cont-interno">
+                            <label>Telefono <strong>(*)</strong></label>
+                            <input type="text" placeholder="Telefono" required>
+                        </div>
+                        <div class="cont-interno">
+                            <label>Tiempo <strong>(*)</strong></label>
+                            <input type="text" placeholder="Tiempo" required>
+                        </div> 
+                        
+                       
                     </div>
-                    <input id="oculta" type="checkbox" required>
-                    
-                    <p id="info-resolucion"></p>
-                    <button>enviar</button>
-                </div>
-
-            </form>
-
+                </form>
+            </div>
         </div>
+        
+        
+
+        
+
     </div>
+
 
     <footer>
         <div class="logo">
             <img class="logo" src="images/1.png" alt="robot">
             <p class="logo">Bit<br>Humanoide</p>
         </div>
+       
         <div class="politicas">
             <p><a class="politicas" href="index.html">Politicas de Privacidad</a> - <a class="politicas"
                     href="index.html">Politicas de Cookies</a></p>
         </div>
-
+        
         <div class="redes-sociales">
             <ul class="redes-sociales">
                 <li><a href="https://www.instagram.com/" target="_blanck"><img class="redes" src="images/instagram2.png" alt="instagram"></a></li>
@@ -138,9 +175,11 @@
                 <li><a href="https://www.linkedin.com/" target="_blanck"><img class="redes" src="images/linkedin2.png" alt="linkedin"></a></li>
             </ul>
         </div>
+        
+        
         <p class="fin">Copyright © 2022 Bit Humanoide - Bs.As Tandil</p>
     </footer>
-    <script type="text/javascript" src="js/captcha.js"></script>
+
     <script src="js/menu.js"></script>
 </body>
 
