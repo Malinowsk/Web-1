@@ -1,7 +1,7 @@
-document.addEventListener("DOMContentLoaded",iniciarCaptcha);
+document.addEventListener("DOMContentLoaded",despliegeMenu);
 
 
-function iniciarCaptcha(){
+function despliegeMenu(){
 
     "use strict"
 
