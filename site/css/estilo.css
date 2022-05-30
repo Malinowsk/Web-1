@@ -788,7 +788,9 @@ nav.menu{
     
     /*empieza mobile*/
 
-    
+table .resaltado{
+    background-color: #f8ac18;
+}
     
 @media only screen and (min-width: 768px)  {
 
