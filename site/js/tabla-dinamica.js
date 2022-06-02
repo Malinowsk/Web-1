@@ -1,7 +1,7 @@
-document.addEventListener("DOMContentLoaded",actualizarTabla);
+document.addEventListener("DOMContentLoaded",actualizarCompraDePacks);
 
 
-function actualizarTabla(){
+function actualizarCompraDePacks(){
     "use strict"
 
     let tabla_datos = [{"usuario":"Malinowsk","email":"malinowski@gmail.com","telefono": 2494542370,
@@ -14,12 +14,11 @@ function actualizarTabla(){
     mostrarTabla();
 
     let form =document.querySelector("#form");
-    form.addEventListener("submit",function(e){capturarPedido(e,1);});
-    document.querySelector("#btn2").addEventListener("click",function(e){capturarPedido(e,2)});
-    document.querySelector("#btn3").addEventListener("click",function(e){capturarPedido(e,3)});
+    form.addEventListener("submit",function(e){actualizarTabla(e,1);});
+    document.querySelector("#btn2").addEventListener("click",function(e){actualizarTabla(e,2)});
+    document.querySelector("#btn3").addEventListener("click",function(e){actualizarTabla(e,3)});
 
-
-    function capturarPedido(e,cantidad){
+    function actualizarTabla(e,cantidad){
         e.preventDefault();
         console.log(e);
         let formData = new FormData(form);
