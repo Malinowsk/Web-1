@@ -67,6 +67,9 @@
             <div class="titulo-vistoso">
                 <h1>servicios packs pedidos esta semana</h1>
             </div>
+            <div class="cont-compra">
+                <button>Restear tabla</button>
+            </div>
             <div class="contenedor-tabla">
                 <table>
                     <thead>
@@ -78,66 +81,55 @@
                             <th>Pack</th>
                         </tr>
                     </thead>
-
                     <tbody id="tabla-body">
                     </tbody>
-                
                 </table>
-
                 <div class="titulo-sumiso">
                     <h3> Hace tu pedido: </h3>
                 </div>
-
-                <form id="form" class="contacto">
-                    <div class="contenedor-contacto">
-                        <div class="cont-interno">
-                            <label>Usuario <strong>(*)</strong></label>
-                            <input type="text" name="usuario" placeholder="Usuario" required>
-                        </div>
-                        <div class="cont-interno">
-                            <label >Email <strong>(*)</strong></label>
-                            <input type="email" name="email" placeholder="Email" required>
-                        </div>
-                        <div class="cont-interno">
-                            <label>Telefono <strong>(*)</strong></label>
-                            <input type="text" name="telefono" placeholder="Telefono" required>
-                        </div>
-                        <div class="cont-interno">
-                            <label>Tiempo <strong>(*)</strong></label>
-                            <input type="text" name="tiempo" placeholder="Tiempo" required>
-                        </div>
-                        <div class="cont-interno">
-                            <label>Pack <strong>(*)</strong></label>
-                            <input type="text" name="pack" placeholder="Pack" required>
-                        </div> 
-                    </div>
-
-                    <div class="cont-compra">
-                        <div class="tarjeta">
-                            <h1>Normal</h1>
-                            <p>Solucion de problemas reutilizando soluciones que ya se han realizado exitosamente</p>
-                            <h1>640,06</h1>
-                            <p>ARS/mes</p>
-                            <button type="submit" id="btn1">Comprar Normal</button>
-                        </div>
-                        <div class="tarjeta">
-                            <h1>Premium</h1>
-                            <p>Solucion de problemas puntuales utilizando tecnologias actuales y garantizando una solucion optima o aproximacion en caso de no ser un problema soluble</p>
-                            <h1>640,06</h1>
-                            <p>ARS/mes</p>
-                            <button type="button" id="btn2">Comprar Premium</button>
-                        </div>
-                        <div class="tarjeta">
-                            <h1>Bit Humanoide</h1>
-                            <p>Compras 3 pack premium con 25% de descuento por mes</p>
-                            <h1>640,06</h1>
-                            <p>ARS/mes</p>
-                            <button type="button" id="btn3">Comprar Bit Humanoide</button>
-                        </div>
-                    </div>
-
-                </form>
             </div>
+        </div>
+        <div class="contenedor-form">
+            <form id="form" class="contacto">
+                <div class="contenedor-contacto">
+                    <div class="cont-interno">
+                        <label>Usuario <strong>(*)</strong></label>
+                        <input type="text" name="usuario" placeholder="Usuario" required>
+                    </div>
+                    <div class="cont-interno">
+                        <label>Pack <strong>(*)</strong></label>
+                        <select name="select">
+                            <option value="value1" selected>Normal</option>
+                            <option value="value2" >Premium</option>
+                            <option value="value3">Bit Humanoide</option>
+                          </select>
+                    </div> 
+                    <div class="cont-interno">
+                        <label >Email <strong>(*)</strong></label>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="cont-interno">
+                        <label>Tiempo <strong>(*)</strong></label>
+                        <select name="select">
+                            <option value="value1" selected>1 Mes</option>
+                            <option value="value2" >6 Meses</option>
+                            <option value="value3">1 Año</option>
+                          </select>
+                    </div>
+                    <div class="cont-interno">
+                        <label>Telefono <strong>(*)</strong></label>
+                        <input type="text" name="telefono" placeholder="Telefono" required>
+                    </div>
+    
+                </div>
+    
+                <div class="cont-compra">
+                    <button type="submit" id="btn1">Comprar Normal</button>
+                    <button type="button" id="btn2">Comprar Premium</button>
+                    <button type="button" id="btn3">Comprar Bit Humanoide</button>
+                </div>
+    
+            </form>
         </div>
         
         
