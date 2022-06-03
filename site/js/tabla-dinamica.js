@@ -11,16 +11,18 @@ function actualizarCompraDePacks(){
                        {"usuario":"Cracken","email":"ck@gmail.com","telefono": 2494543030,
                         "tiempo": "1 Mes", "pack":"Premium"}];
                
+    let id_botones = ["btn1","btn2","btn3"];
+
     mostrarTabla();
 
-    let form =document.querySelector("#form");
-    form.addEventListener("submit",function(e){actualizarTabla(e,1);});
-    document.querySelector("#btn2").addEventListener("click",function(e){actualizarTabla(e,2)});
-    document.querySelector("#btn3").addEventListener("click",function(e){actualizarTabla(e,3)});
+    let form = document.querySelector("#form");
 
+    form.addEventListener("submit",function(e){actualizarTabla(e);});
+
+    
     function actualizarTabla(e,cantidad){
         e.preventDefault();
-        console.log(e);
+        console.log(e.submitter.id);
         let formData = new FormData(form);
         let fila_para_agregar = {};
 
@@ -30,8 +32,16 @@ function actualizarCompraDePacks(){
         fila_para_agregar.tiempo=formData.get("tiempo");
         fila_para_agregar.pack=formData.get("pack");
         
-        for (let i =0;i<cantidad;i++){
-            tabla_datos.push(fila_para_agregar);
+        let noEncontrado=True;
+        let k=0;
+        while(noEncontrado){
+            if( id_botones[k] = e.submitter.id ){
+                for (let w = 0; w <= k ; w++) {
+                    tabla_datos.push(fila_para_agregar);
+                }
+                noEncontrado=false;
+            }
+            k++;
         }
 
         mostrarTabla();
