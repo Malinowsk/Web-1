@@ -798,7 +798,7 @@ table .resaltado{
 }
 
 .contenedor-form{
-    margin: 0px 94px;
+    margin: 0px 15px;
 }
 
 .contenedor-form .contacto{
@@ -1066,6 +1066,10 @@ table .resaltado{
 
     .contenedor-form .contacto{
         height: 300px;
+    }
+
+    .contenedor-form{
+        margin: 0px 94px;
     }
     
 }

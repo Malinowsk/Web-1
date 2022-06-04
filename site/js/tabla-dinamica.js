@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded",actualizarCompraDePacks);
 
-
 function actualizarCompraDePacks(){
     "use strict"
 
@@ -21,6 +20,10 @@ function actualizarCompraDePacks(){
 
     let form = document.querySelector("#form");
     form.addEventListener("submit",function(e){actualizarTabla(e);});
+    document.querySelector("#reset").addEventListener("click", ()=>{
+        document.querySelector("#tabla-body").innerHTML = "";
+        tabla_datos = [];
+    })
 
     //funcion que toma los datos cargados en el formulario los agrega al json y actualiza tabla para mostrar por web 
     function actualizarTabla(e){
