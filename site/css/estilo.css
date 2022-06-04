@@ -37,7 +37,7 @@ h4{
     font-size: 1.125rem;
 }
 
-body, .contenedor-contacto input , form.contacto textarea.mensaje, p{
+body, .contenedor-contacto input , form.contacto textarea.mensaje, p, .cont-interno select{
     font-size: 1rem;
 }
 
@@ -55,7 +55,7 @@ label, .validacion button{
 
 
                 /* text-transform */
-h1 , h2 , h3 , h4 , .validacion button{
+h1 , h2 , h3 , h4 , .validacion button, .cont-compra button{
     text-transform: capitalize;
 }
 
@@ -85,11 +85,11 @@ body, nav.menu{
     background-color: #2b424f;
 }
 
-div.encabezado-superior button:hover.sesion, img.redes:hover{
+div.encabezado-superior button:hover.sesion, img.redes:hover, .encabezado-superior {
     background-color: #01111A;
 }
 
-.contenedor-tarjetas div.tarjeta:hover{
+.contenedor-tarjetas div.tarjeta:hover, .contenedor-libros .libro, table .resaltado{
     background-color: #f8ac18;
 }
 
@@ -97,23 +97,18 @@ div.encabezado-superior button:hover.sesion, img.redes:hover{
     background-color: #f8ac18dd;
 }
 
-th, .libro .descripcion , .captcha, .tabla-contenido{
+th, .libro .descripcion , .captcha, .tabla-contenido, header div.encabezado-inferior button.menu{
     background-color: #04344E;
 }
 
-.validacion button{
+.validacion button, .cont-compra button{
     background-color: #286090;
-}
-
-.contenedor-libros .libro{
-    background-color: #f8ac18;
 }
 
                     /* color de texto */
 
 .encabezado-superior , .encabezado-inferior, .validacion .captcha p, footer, .encabezado-superior button, 
-.contenedor-para-centrado h3, .descripcion h4:hover, th, .descripcion p:hover , .descripcion h3 , div a:hover.politicas , 
-.validacion button, .tabla-contenido ul a:hover{
+.contenedor-para-centrado h3, .descripcion h4:hover, th, .descripcion p:hover , .descripcion h3 , div a:hover.politicas , .validacion button, .tabla-contenido ul a:hover, header div.encabezado-inferior button.menu, .cont-compra button{
     color: #ffffff;
 }
 
@@ -142,7 +137,7 @@ div a.politicas, .contenedor-libros .libro{
     color: #ffffff77;
 }
 
-input , textarea{
+input , textarea, .cont-interno select{
     color: #69747f;
 }
 
@@ -172,7 +167,7 @@ form.contacto label{
     box-shadow: 0 0 40px rgb(33 33 33 / 20%);
 }
 
-.contenedor-contacto input , form.contacto textarea.mensaje{
+.contenedor-contacto input , form.contacto textarea.mensaje, .cont-interno select{
     border: 2px solid #d8e1e4;
 }
 
@@ -231,13 +226,11 @@ ul.menu a{
 }
 
                     /* Atributos de flex */
-div.encabezado-inferior, div.logo, ul.menu, div.imagen-principal,
-.contenedor-tabla, .sesion div.contenedor-tarjetas, .contenedor-libros .libro, .sesion form.contacto, form.contacto div.cont-interno, .validacion, footer ul.redes-sociales, .contenedor-para-centrado, form.contacto div.contenedor-contacto, form.contacto .cont-interno label, .validacion, .captcha{
+div.encabezado-inferior, div.logo, ul.menu, div.imagen-principal, .contenedor-form .contacto, .input-recordame, form.sesion, form.contacto .cont-externo, .sesion .contenedor-libros, .contenedor-tabla, .sesion div.contenedor-tarjetas, .contenedor-libros .libro, .sesion form.contacto, form.contacto div.cont-interno, .validacion, footer ul.redes-sociales, .contenedor-para-centrado, form.contacto div.contenedor-contacto, form.contacto .cont-interno label, .validacion, .captcha, .cont-compra{
     display: flex;
 }
 
-div.encabezado-inferior, .contenedor-tabla , 
-.sesion div.contenedor-tarjetas  , .sesion form.contacto, form.contacto div.contenedor-contacto{ 
+div.encabezado-inferior, .contenedor-tabla , .sesion div.contenedor-tarjetas  , .sesion form.contacto, form.contacto div.contenedor-contacto, form.contacto div.cont-interno, form.contacto .contenedor-contacto div.cont-interno, .contenedor-form .contacto{ 
     flex-wrap: wrap; /* a medida que se achica la pantalla los componentes se acomodan en a la parte inferior */
 }
 
@@ -245,20 +238,19 @@ div.encabezado-inferior, .contenedor-tabla ,
     justify-content: space-between;
 }
 
-div.imagen-principal, .contenedor-para-centrado{
+div.imagen-principal, .contenedor-para-centrado, .input-recordame, .contenedor-form .contacto{
     justify-content: center;
 }
 
-ul.menu, .contenedor-libros .libro, .libro .descripcion, .sesion form.contacto{
+ul.menu, .contenedor-libros .libro, .libro .descripcion, .sesion form.contacto, form.sesion{
     justify-content: space-around;
 }
 
 form.contacto div.cont-interno{
-    flex-wrap: wrap;
     width: 100%;
 }
 
-.captcha{
+.captcha, .contenedor-form .cont-compra{
     justify-content: space-evenly;
 }
 
@@ -266,7 +258,7 @@ form.contacto div.cont-interno{
     align-content: space-between;
 }
 
-.libro .descripcion, .validacion, .captcha, ul.menu{
+.libro .descripcion, .validacion, .captcha, ul.menu, form.sesion{
     flex-direction: column;
 }
 
@@ -274,7 +266,7 @@ form.contacto div.cont-interno{
     align-items: flex-end;
 }
 
-div.encabezado-inferior ,  div.logo, form.contacto div.cont-interno, form.contacto div.cont-interno, form.contacto .cont-interno label, .validacion, .captcha{
+div.encabezado-inferior ,  div.logo, form.contacto div.cont-interno, form.contacto div.cont-interno, form.contacto .cont-interno label, .validacion, .captcha, .input-recordame, .contenedor-form .cont-compra{
     align-items: center;
 }
 
@@ -283,7 +275,7 @@ div.encabezado-inferior ,  div.logo, form.contacto div.cont-interno, form.contac
 .encabezado-superior, .captcha ,input::placeholder
 , .contenedor-tabla ,.sesion div.titulo-vistoso ,
 .sesion div.contenedor-tarjetas, p.fin, .validacion .captcha input:focus,
-.validacion .captcha input, .texto-centrado p  {
+.validacion .captcha input, .texto-centrado p, div.politicas{
     text-align: center; /*alineamos el texto en el centro*/
 }
 
@@ -415,8 +407,6 @@ input.checkbox{ /* boton para seleccionar */
 }
 
 header div.encabezado-inferior button.menu{
-    color: white;
-    background-color: #04344E;
     border-radius: 80%;
     padding: 8px 10px;
     border: #04344E;
@@ -450,7 +440,7 @@ nav.menu{
 ul.menu li{
     padding: 10px 0px;
     border: 1px solid;
-    border-color: white white #333333 white;
+    border-color: #ffffff #ffffff #333333 #ffffff;
 }
 
 
@@ -523,10 +513,6 @@ tr , td , th {
 
 td img{
     height: 100%;
-}
-
-.sesion .contenedor-libros {
-    display: flex;
 }
 
 .sesion .contenedor-libros{
@@ -619,7 +605,6 @@ a{
 
 form.contacto .contenedor-contacto div.cont-interno{
     width: 100%;
-    flex-wrap: wrap;
     padding-bottom: 10px;
 }
 
@@ -640,7 +625,6 @@ form.contacto .cont-interno label{
 
 form.contacto .cont-externo{
     width: 100%;
-    display: flex;
     margin: 20px 0px;
 }
 
@@ -715,7 +699,6 @@ footer{
 
 div.politicas{
     grid-area: politicas-priv;
-    text-align: center;
 }
 
 footer ul.redes-sociales{
@@ -741,7 +724,6 @@ p.fin{
     height: auto;
     position: absolute;
     top: 54px;
-    background-color: #01111A;
 }
 
 .encabezado-superior ul{
@@ -749,16 +731,7 @@ p.fin{
 }
 
 form.sesion{
-    display: flex;
-    flex-direction: column;
     height: 200px;
-    justify-content: space-around;
-}
-
-.input-recordame{
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 /*fin actual*/
@@ -782,20 +755,10 @@ nav.menu{
 
 /*/////termina footer//////*/
 
-
     /*empieza responsive*/
-    
-    
     /*empieza mobile*/
 
-table .resaltado{
-    background-color: #f8ac18;
-}
-
 /* COMPRAS */
-.cont-compra{
-    display: flex;
-}
 
 .contenedor-form{
     margin: 0px 15px;
@@ -803,23 +766,15 @@ table .resaltado{
 
 .contenedor-form .contacto{
     height: 420px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .contenedor-form .cont-compra{
     width: 100%;
-    justify-content: space-evenly;
-    align-items: center;
     margin-top: 10px;
 }
 
 .cont-compra button{
     padding: 10px;
-    background-color: #286090;
-    color: #ffffff;
-    text-transform: capitalize;
     border: 0px;
     border-radius: 4px;
 }
@@ -828,9 +783,6 @@ table .resaltado{
     width: 100%;
     padding: 0px 24px;
     height: 50px;
-    border: 2px solid #d8e1e4;
-    font-size: 1rem;
-    color: #69747f;
 }
 /* TERMINA COMPRAS*/
     
