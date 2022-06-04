@@ -791,6 +791,48 @@ nav.menu{
 table .resaltado{
     background-color: #f8ac18;
 }
+
+/* COMPRAS */
+.cont-compra{
+    display: flex;
+}
+
+.contenedor-form{
+    margin: 0px 94px;
+}
+
+.contenedor-form .contacto{
+    height: 420px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contenedor-form .cont-compra{
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.cont-compra button{
+    padding: 10px;
+    background-color: #286090;
+    color: #ffffff;
+    text-transform: capitalize;
+    border: 0px;
+    border-radius: 4px;
+}
+
+.cont-interno select{
+    width: 100%;
+    padding: 0px 24px;
+    height: 50px;
+    border: 2px solid #d8e1e4;
+    font-size: 1rem;
+    color: #69747f;
+}
+/* TERMINA COMPRAS*/
     
 @media only screen and (min-width: 768px)  {
 
@@ -949,7 +991,7 @@ table .resaltado{
     form.contacto .cont-interno label{
         padding: 0px 15px;
         height: 100%;
-        width: 75px;
+        width: 80px;
     }
 
     form.contacto .cont-externo{
@@ -1017,12 +1059,14 @@ table .resaltado{
     footer{ 
         padding: 30px 80px;
     }
-            
-    
-    
+
     footer div.redes-sociales{
         padding: 10px;  
-    }    
+    }
+
+    .contenedor-form .contacto{
+        height: 300px;
+    }
     
 }
 
@@ -1077,42 +1121,3 @@ table .resaltado{
 @media only screen and (max-width: 360px)  {
 }
 */
-
-.cont-compra{
-    display: flex;
-}
-
-.contenedor-form{
-    margin: 0px 94px;
-}
-
-.contenedor-form .contacto{
-    height: 300px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.contenedor-form .cont-compra{
-    width: 100%;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.cont-compra button{
-    padding: 10px;
-    background-color: #286090;
-    color: #ffffff;
-    text-transform: capitalize;
-    border: 0px;
-    border-radius: 4px;
-}
-
-.cont-interno select{
-    width: 100%;
-    padding: 0px 24px;
-    height: 50px;
-    border: 2px solid #d8e1e4;
-    font-size: 1rem;
-    color: #69747f;
-}
