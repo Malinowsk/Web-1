@@ -20,9 +20,11 @@ function actualizarCompraDePacks(){
 
     let form = document.querySelector("#form");
     form.addEventListener("submit",function(e){actualizarTabla(e);});
-    document.querySelector("#reset").addEventListener("click", ()=>{
-        document.querySelector("#tabla-body").innerHTML = "";
+    
+    let reset = document.querySelector("#reset");
+    reset.addEventListener("click", ()=>{
         tabla_datos = [];
+        mostrarTabla();
     })
 
     //funcion que toma los datos cargados en el formulario los agrega al json y actualiza tabla para mostrar por web 
@@ -44,7 +46,6 @@ function actualizarCompraDePacks(){
         let k=0;
         while(noEncontrado){
             if( id_botones[k] == e.submitter.id ){
-                console.log(e.submitter.id);
                 for (let w = 0; w <= k ; w++) {
                     tabla_datos.push(fila_para_agregar);
                 }
