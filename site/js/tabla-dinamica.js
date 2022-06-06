@@ -44,6 +44,7 @@ function actualizarCompraDePacks(){
         fila_para_agregar.tiempo=formData.get("tiempo");
         fila_para_agregar.pack=formData.get("pack");
         
+
         let noEncontrado=true;
         let k=0; // indice que recorre el arreglo botones submits
         while(noEncontrado){
@@ -57,6 +58,7 @@ function actualizarCompraDePacks(){
         }
 
         mostrarTabla(); // se muestra por pantalla la tabla de datos
+        vaciarFormulario(); // resetea formulario
     }
 
     //funcion que muestra en web la tabla almacenada en variable
@@ -72,5 +74,9 @@ function actualizarCompraDePacks(){
                 tr.setAttribute("class","resaltado"); // agregamos atributo resaltado
             tabla_view.appendChild(tr); // agregamos fila al elem html (tabla)
         }
+    }
+
+    function vaciarFormulario(){
+        form.reset();
     }
 }
