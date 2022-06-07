@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/estilo.css">
+    <!-- font iconos -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- logo en pestaña -->
+    <link rel="icon" href="images/2.png">
+
+    <title> Bit Humanoide - Contacto </title>
+</head>
+
+<body>
+
+    <header>
+        <div class="encabezado-superior invisibilidad" id="header-superior">
+            <ul>
+                <li> <i class="fa fa-envelope"></i> info@bithumanoide.com</li>
+                <li> <i class="fas fa-phone"></i> +54 9 2284 77 42493</li>
+            </ul>
+    
+            <form class="sesion">
+                <input type="text" placeholder="Nombre Usuario">
+                <input type="password" placeholder="Contraseña">
+                <div class="input-recordame">
+                    <label>Recordarme: </label>
+                    <input class="checkbox" type="checkbox">        
+                </div>
+                <button class="sesion">Iniciar sesión</button>
+                <button>Registrar</button>
+            </form>
+        </div>
+    
+        <div class="encabezado-inferior">
+            <div class="logo">
+                <img class="logo" src="images/1.png" alt="robot">
+                <p class="logo">Bit<br>Humanoide</p>
+            </div>
+
+            <div>
+                <button class="menu" type="button" id="btn-menu"><i class="fa fa-bars"></i></button>
+                <button class="menu" type="button" id="btn-sesion"><i class="fa fa-user"></i></button>
+            </div>
+    
+            <nav class="menu invisibilidad" id="menu">
+                <ul class="menu">
+                    <li><a href="index.html"><i class="fa fa-home"></i> Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="compras.html">Compras</a></li>
+                    <li><a class="pag-actual" href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main">
+
+        <div class="imagen-principal">
+            <img src="images/cabecera.jpeg" alt="adas" />
+        </div>
+
+        <div class="sesion">
+            
+            <div class="titulo-sumiso">
+                <h1>Contacto</h1>
+            </div>
+
+            <form class="contacto">
+                <div class="contenedor-contacto">
+                    <div class="cont-interno">
+                        <label>Nombre <strong>(*)</strong></label>
+                        <input type="text" placeholder="Nombre" required>
+                    </div>
+                    <div class="cont-interno">
+                        <label >Apellido <strong>(*)</strong></label>
+                        <input type="text" placeholder="Apellido" required>
+                    </div>
+                    <div class="cont-interno">
+                        <label>Email <strong>(*)</strong></label>
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="cont-interno">
+                        <label>Asunto <strong>(*)</strong></label>
+                        <input type="text" placeholder="Asunto" required>
+                    </div> 
+                </div>
+
+                <div class="cont-interno">
+                    <label>Mensaje</label>
+                    <textarea class="mensaje"></textarea>
+                </div>
+                
+                    
+                <div class="cont-externo">
+                        <label> <strong>(*)</strong> </label>
+                        <input class="checkbox" type="checkbox" required>
+                        <p>Debes leer y aceptar las condiciones legales</p>
+                </div>
+                
+                <div class="validacion">
+                    <div class="captcha" id="captcha"> 
+                        <p>¿ Cuánto es <span id="prim_num">0</span> + <span id="seg_num">0</span> ?</p>
+                        <input id="valor-captcha" type="text">
+                        <button id="validar" type="button">validar</button>
+                    </div>
+                    <input id="oculta" type="checkbox" required>
+                    
+                    <p id="info-resolucion"></p>
+                    <button>enviar</button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="logo">
+            <img class="logo" src="images/1.png" alt="robot">
+            <p class="logo">Bit<br>Humanoide</p>
+        </div>
+        <div class="politicas">
+            <p><a class="politicas" href="index.html">Politicas de Privacidad</a> - <a class="politicas"
+                    href="index.html">Politicas de Cookies</a></p>
+        </div>
+
+        <div class="redes-sociales">
+            <ul class="redes-sociales">
+                <li><a href="https://www.instagram.com/" target="_blanck"><img class="redes" src="images/instagram2.png" alt="instagram"></a></li>
+                <li><a href="https://www.youtube.com/" target="_blanck"><img class="redes" src="images/youtube4.png" alt="youtube"></a></li>
+                <li><a href="https://www.facebook.com/" target="_blanck"><img class="redes" src="images/facebook3.png" alt="facebook"></a></li>
+                <li><a href="https://www.twitter.com/" target="_blanck"><img class="redes" src="images/twitter3.png" alt="twitter"></a></li>
+                <li><a href="https://www.linkedin.com/" target="_blanck"><img class="redes" src="images/linkedin2.png" alt="linkedin"></a></li>
+            </ul>
+        </div>
+        <p class="fin">Copyright © 2022 Bit Humanoide - Bs.As Tandil</p>
+    </footer>
+    <script type="text/javascript" src="js/captcha.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+
+</html>

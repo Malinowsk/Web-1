@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/estilo.css">
+    <!-- font iconos -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- logo en pestaña -->
+    <link rel="icon" href="images/2.png">
+    
+    <title> Bit Humanoide - Servicios</title>
+</head>
+
+<body>
+    <header>
+        <div class="encabezado-superior invisibilidad" id="header-superior">
+            <ul>
+                <li> <i class="fa fa-envelope"></i> info@bithumanoide.com</li>
+                <li> <i class="fas fa-phone"></i> +54 9 2284 77 42493</li>
+            </ul>
+    
+            <form class="sesion">
+                <input type="text" placeholder="Nombre Usuario">
+                <input type="password" placeholder="Contraseña">
+                <div class="input-recordame">
+                    <label>Recordarme: </label>
+                    <input class="checkbox" type="checkbox">        
+                </div>
+                <button class="sesion">Iniciar sesión</button>
+                <button>Registrar</button>
+            </form>
+        </div>
+    
+        <div class="encabezado-inferior">
+            <div class="logo">
+                <img class="logo" src="images/1.png" alt="robot">
+                <p class="logo">Bit<br>Humanoide</p>
+            </div>
+
+            <div>
+                <button class="menu" type="button" id="btn-menu"><i class="fa fa-bars"></i></button>
+                <button class="menu" type="button" id="btn-sesion"><i class="fa fa-user"></i></button>
+            </div>
+    
+            <nav class="menu invisibilidad" id="menu">
+                <ul class="menu">
+                    <li><a href="index.html"><i class="fa fa-home"></i> Inicio</a></li>
+                    <li><a class="pag-actual" href="servicios.html">Servicios</a></li>
+                    <li><a href="compras.html">Compras</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="main">
+
+        <div class="imagen-principal">
+            <img src="images/cabecera.jpeg" alt="adas" />
+        </div>
+        <div class="sesion">
+
+            <div class="titulo-vistoso">
+                <h1>
+                    nuestros servicios
+                </h1>
+            </div>
+            <div class="texto-centrado"> 
+                <p> <strong> Dentro de nuestros servicios de Desarrollo en Inteligencia Artificial mostramos al público distintos
+                    proyectos en relación con el área especializada en el que trabajaremos. En esta sección se pueden
+                    observar proyectos ya implementados por nuestros desarrolladores y categorizados según el área del
+                    servicio especializado.</strong>
+                </p>
+            </div>
+        </div>
+        <div class="sesion">
+            <div class="contenedor-para-centrado">
+
+                <div class="tabla-contenido">
+
+                    <div class="contenedor-para-centrado">
+                        <div>
+                            <h3> tabla de contenidos </h3>
+                        </div>
+                    </div>
+                    <div class="contenedor-para-centrado">
+                        <ul>
+                            <li>
+                                <a href="#new-net">Neural Networks</a>
+                                <ul>
+                                    <li><a href="#clas-can">Clasificacion de cancer de mama</a></li>
+                                    <li><a href="#det-som">Detección de somnolencia del conductor</a></li>
+                                    <li><a href="#det-gen">Detección de género y predicción de edad</a></li>
+                                    <li><a href="#rec-img">Reconocimieto de imagenes</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#nat-leng">Natural Languaje Processing</a>
+                                <ul>
+                                    <li><a href="#cns-chat">Construyendo Chatbots con Python</a></li>
+                                    <li><a href="#des-chat">Desarrollo de Chatbots utilizando Rasa Open Source</a></li>
+                                    <li><a href="#rec-em">Reconocer las emociones en el habla</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#dat-sci">Data Science</a>
+                                <ul>
+                                    <li><a href="#det-frau">Detección de fraude con tarjetas de crédito</a></li>
+                                    <li><a href="#det-not">Detección de noticias falsas</a></li>
+                                    <li><a href="#sis-rec">Sistemas de recomendación</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div> <!-- fin tabla de contenidos -->
+                </div>
+            </div>
+        </div>
+
+        <div class="sesion">
+            <div class="titulo-sumiso">
+                <h2 class="titulo-linkeado"><span id="new-net" class="posicionado" ></span> Neural Networks</h2>
+            </div>
+            <div class="contenedor-proyecto">
+                <div class="titulo-secundario">
+                    <h3 class="titulo-linkeado"><span id="clas-can" class="posicionado" ></span>Clasificación del cáncer de mama</h3>
+                </div>
+                <p><strong>Lenguaje:</strong> Python</p>
+                <p><strong>Conjunto de datos:</strong> IDC (Carcinoma ductal invasivo)</p>
+                <p><strong>Código fuente:</strong> <a target="_blanck"
+                        href="https://data-flair.training/blogs/project-in-python-breast-cancer-classification/">Clasificación
+                        del cáncer de mama con aprendizaje profundo</a></p>
+                <p class="parrafo-inicial">En caso de que quieras añadir un proyecto relacionado con la industria de la salud a tu portafolio,
+                    puedes intentar construir un sistema de detección de cáncer de mama utilizando Python. Los casos de
+                    cáncer de mama han aumentado últimamente, y la mejor manera de luchar contra el cáncer de mama es
+                    identificarlo en una etapa temprana y tomar las medidas preventivas adecuadas.</p>
+                <p>Para construir tal sistema con Python, puedes usar el conjunto de datos IDC (Invasive Ductal
+                    Carcinoma), que contiene imágenes histológicas de células malignas que inducen al cáncer, y puedes
+                    entrenar tu modelo en este conjunto de datos. Para este proyecto, encontrará las redes neuronales
+                    convolucionales más adecuadas para la tarea, y en cuanto a las bibliotecas de Python, puede usar
+                    NumPy, OpenCV, TensorFlow, Keras, scikit-learn, y Matplotlib.</p>
+            </div>
+            <div class="contenedor-proyecto">
+                <div class="titulo-secundario">
+                    <h3 class="titulo-linkeado"><span id="det-som" class="posicionado" ></span>Detección de somnolencia del conductor</h3>
+                </div>
+                <p><strong>Lenguaje:</strong> Python</p>
+                <p><strong>Código fuente:</strong> <a target="_blanck"
+                        href="https://data-flair.training/blogs/python-project-driver-drowsiness-detection-system/">Código
+                        fuente: Sistema de detección de somnolencia del conductor con OpenCV y Keras</a></p>
+                <p class="parrafo-inicial">Los accidentes de tráfico cobran muchas vidas cada año, y una de las causas de los accidentes de
+                    tráfico son los conductores somnolientos. Siendo una causa potencial de peligro en la carretera, una
+                    de las mejores maneras de prevenirlo es implementar un sistema de detección de somnolencia.</p>
+                <p>Un sistema de detección de la somnolencia de los conductores como éste es otro proyecto que tiene el
+                    potencial de salvar muchas vidas al evaluar constantemente los ojos del conductor y alertarlo con
+                    alarmas en caso de que el sistema detecte el cierre frecuente de los ojos.</p>
+                <p>Para este proyecto es imprescindible una cámara web que permita al sistema vigilar periódicamente los
+                    ojos del conductor. Para que esto suceda, este proyecto Python requerirá un modelo de aprendizaje
+                    profundo y bibliotecas como OpenCV, TensorFlow, Pygame y Keras.</p>
+            </div>
+            <div class="contenedor-proyecto">
+                <div class="titulo-secundario">
+                    <h3 class="titulo-linkeado"><span id="det-gen" class="posicionado" ></span>Detección de género y predicción de edad</h3>
+                </div>
+                <p><strong>Lenguaje:</strong>  Python</p>
+                <p><strong>Conjunto de datos:</strong>  Adience</p>
+                <p><strong>Paquetes:</strong>  OpenCV</p>
+                <p><strong>Código fuente:</strong>  <a target="_blanck"
+                        href="https://pyimagesearch.com/2020/04/13/opencv-age-detection-with-deep-learning/">OpenCV
+                        Detección de Edad con Aprendizaje Profundo</a> </p>
+                <p class="parrafo-inicial">Identificado como un problema de clasificación, este proyecto de detección de género y predicción de
+                    edad pondrá a prueba tanto su aprendizaje de máquina como sus habilidades de visión por computador.
+                    El objetivo aquí es construir un sistema que tome la imagen de una persona e intente identificar su
+                    edad y género.</p>
+                <p>Para este divertido proyecto, puedes implementar Redes Neuronales Convolucionales y usar Python con
+                    el paquete OpenCV. Puedes tomar el conjunto de datos de Adience para este proyecto. Factores como el
+                    maquillaje, la iluminación, las expresiones faciales harán esto un desafío e intentarán despistar a
+                    tu modelo, así que tenlo en cuenta.</p>
+            </div>
+            <div class="contenedor-proyecto">
+                <div class="titulo-secundario">
+                    <h3 class="titulo-linkeado"><span id="rec-img" class="posicionado" ></span>reconocimiento de imágenes utilizando redes neuronales artificiales</h3>
+                </div>
+                <div class="titulo-terciario">
+                    <h4>Resumen</h4>
+                </div>
+
+                <p class="parrafo-inicial">Este trabajo describe el proceso de extracción de patrones característicos de imágenes, mediante la
+                    ayuda de Redes Neuronales Artificiales. La información de la Red Neuronal junto con datos
+                    adicionales de las imágenes, serán almacenados en una base de datos y consumidos por un servicio
+                    web. Un teléfono móvil con sistema operativo Android consumirá la información almacenada en el
+                    servicio web. Posteriormente al realizar una captura de imagen con la cámara del teléfono, este
+                    procesará la imagen y junto con los datos consumidos por el servicio web será capaz identificar de
+                    qué imagen se trata. Para el tratamiento de las imágenes se utilizarán librerías OpenCV, tanto en el
+                    servidor como en el teléfono móvil.</p>
+
+                <div class="titulo-terciario">
+                    <h4>Objetivos</h4>
+                </div>
+                <p>Los objetivos planteados en este trabajo de investigación son los siguientes:</p>
+                <ul>
+                    <li>
+                        <p>Desarrollar un sistema de reconocimiento de imágenes para dispositivos móviles, el cual debe
+                            ser capaz de funcionar en modo local, sin una conexión permanente con el servidor, además
+                            debería poder adaptarse a cualquier tipo de imagen que se quiera identificar. El sistema
+                            debe ser robusto y versátil.</p>
+                    </li>
+                    <li>
+                        <p>Crear una infraestructura adecuada para la creación de un sistema de identificación de
+                            imágenes para teléfonos móviles que sea genérico, de forma que se pueda utilizar para el
+                            reconocimiento de cualquier tipo de imagen.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="sesion">
+            <div class="titulo-sumiso">
+                <h2 class="titulo-linkeado"><span id="nat-leng" class="posicionado" ></span>Natural Languaje Processing</h2>
+            </div>
+            <div class="contenedor-proyecto">
+                <div class="titulo-secundario">
+                    <h3 class="titulo-linkeado"><span id="cns-chat" class="posicionado" ></span>Construyendo Chatbots con python</h3>
+                </div>
+                <p><strong>Lenguaje:</strong>  Python</p>
+                <p><strong>Conjunto de datos:</strong>  Intents archivo JSON</p>
+                <p><strong>Código fuente:</strong>  <a target="_blanck"
+                        href="https://dzone.com/articles/python-chatbot-project-build-your-first-python-pro">Construye
+                        tu primer proyecto de Chatbot en Python</a></p>
+                <p class="parrafo-inicial">Los chatbots juegan un papel fundamental para las empresas, ya que pueden manejar sin esfuerzo un
+                    aluvión de consultas y mensajes de los clientes sin ningún tipo de ralentización. Han reducido por
+                    sí mismos la carga de trabajo del servicio de atención al cliente para nosotros, automatizando la
+                    mayor parte del proceso. Lo hacen utilizando técnicas respaldadas por la Inteligencia Artificial, el
+                    Aprendizaje Automático y la Ciencia de los Datos.</p>
+                <p>Los chatbots trabajan analizando la información del cliente y respondiendo con una respuesta mapeada
+                    apropiada. Para entrenar al chatbot, se pueden usar Redes Neuronales Recurrentes con el conjunto de
+                    datos JSON intencionados mientras que la implementación puede ser manejada usando Python. Si quieres
+                    que tu chatbot sea de dominio específico o de dominio abierto depende de su propósito. A medida que
+                    estos chatbots procesan más interacciones, su inteligencia y precisión también aumentan.</p>
+            </div>
+            <div class="contenedor-proyecto">
+                <div class="titulo-secundario">
+                    <h3 class="titulo-linkeado"><span id="des-chat" class="posicionado" ></span>Desarrollo de Chatbots utilizando Rasa Open Source</h3>
+                </div>
+                <p><strong>Lenguaje:</strong> Python</p>
+                <p class="parrafo-inicial">Los asistentes de IA tienen que cumplir dos tareas: comprender al usuario y dar
+                    las respuestas
+                    correctas. Rasa Stack aborda estas tareas con el componente de comprensión del lenguaje natural Rasa
+                    NLU y el componente de gestión de diálogos Rasa Core. Con base en nuestro trabajo con la comunidad
+                    de Rasa y clientes de todo el mundo, ahora compartimos nuestras mejores prácticas y recomendaciones
+                    sobre cómo personalizar Rasa NLU para su asistente de IA contextual individual. </p>
+                <div class="titulo-terciario">
+                    <h4>Resumen</h4>
+                </div>
+                <p>Este artículo de blog refleja nuestras mejores prácticas y recomendaciones basadas en nuestro trabajo
+                    diario con Rasa para adaptar perfectamente el reconocimiento de intención de NLU a sus requisitos
+                    individuales. Ya sea que acaba de comenzar su proyecto de asistente de IA contextual, necesita
+                    tiempos de capacitación ultrarrápidos o desea entrenar incrustaciones de palabras desde cero: Rasa
+                    NLU le brinda la personalización completa para hacerlo.</p>
+                <div class="titulo-terciario">
+                    <h4>Incrustaciones supervisadas: clasificador de intenciones Incrustación de TensorFlow</h4>
+                </div>
+                <p>El clasificador de intenciones intent_classifier_tensorflow_embedding fue desarrollado por Rasa y
+                    está inspirado en el documento starspace de Facebook . En lugar de usar incrustaciones preentrenadas
+                    y entrenar un clasificador además de eso, entrena las incrustaciones de palabras desde cero. Por lo
+                    general, se usa con el componente intent_featurizer_count_vectors , que cuenta la frecuencia con la
+                    que aparecen distintas palabras de los datos de entrenamiento en un mensaje y lo proporciona como
+                    entrada para el clasificador de intenciones. En la siguiente ilustración, puede ver cómo difieren
+                    los vectores de conteo para las oraciones Mi bot es el mejor bot y Mi bot es excelente , por
+                    ejemplo, bot aparece dos veces en Mi bot es el mejor bot. En lugar de utilizar recuentos de tokens
+                    de palabras, también puede utilizar recuentos de ngramas cambiando la propiedad del analizador del
+                    componente intent_feurizer_count_vectors a char. Esto hace que la clasificación de intenciones sea
+                    más robusta contra los errores tipográficos, pero también aumenta el tiempo de entrenamiento.</p>
+
+            </div>
+            <div class="contenedor-proyecto">
+                <div class="titulo-secundario">
+                    <h3 class="titulo-linkeado"><span id="rec-em" class="posicionado" ></span>Reconocer las emociones en el habla</h3>
+                </div>
+                <p><strong>Lenguaje:</strong> Python</p>
+                <p><strong>Conjunto de datos:</strong> RAVDESS</p>
+                <p><strong>Paquetes:</strong> Librosa, Soundfile, NumPy, Sklearn, Pyaudio</p>
+                <p><strong>Código fuente:</strong> <a target="_blanck"
+                        href="https://data-flair.training/blogs/python-mini-project-speech-emotion-recognition/">Reconocimiento
+                        de la emoción del habla con librosa</a></p>
+                <p class="parrafo-inicial">El habla es una de las formas más fundamentales de expresarse, y esconde en su interior varias
+                    emociones, como la calma, la ira, la alegría y la excitación, por nombrar algunas. Analizando las
+                    emociones que hay detrás del habla, es posible utilizar esta información para reestructurar nuestras
+                    acciones y servicios, e incluso productos, para ofrecer un servicio más personalizado a individuos
+                    específicos.</p>
+                <p>Este proyecto de Reconocimiento de Emociones del Habla trata de identificar y extraer emociones de
+                    múltiples archivos de sonido que contienen el habla humana. Para hacer algo así en Python, se pueden
+                    utilizar los paquetes Librosa, SoundFile, NumPy, Scikit-learn y PyAaudio. Para el conjunto de datos,
+                    puedes usar la Base de Datos Audiovisual Ryerson de Discurso y Canción Emocional (RAVDESS), que
+                    tiene más de 7300 archivos para que los uses.</p>
+            </div>
+        </div>
+
+        <div class="sesion">
+            <div class="titulo-sumiso">
+                <h2 class="titulo-linkeado"><span id="dat-sci" class="posicionado" ></span>Data Science</h2>
+            </div>
+            <h3></h3>
+            <div class="contenedor-proyecto">
+                <div class="titulo-secundario">
+                    <h3 class="titulo-linkeado"><span id="det-frau" class="posicionado" ></span>Detección de fraude con tarjetas de crédito</h3>
+                </div>
+                <p><strong>Lenguaje:</strong>  R o Python</p>
+                <p><strong>Conjunto de datos:</strong>  Los datos sobre la transacción de las tarjetas de crédito se utilizan aquí como un
+                    conjunto de datos.</p>
+                <p><strong>Código fuente:</strong>  <a target="_blanck"
+                        href="https://www.kaggle.com/code/renjithmadhavan/credit-card-fraud-detection-using-python/notebook">Detección
+                        de fraude de tarjetas de crédito usando Python</a></p>
+                <p class="parrafo-inicial">Los fraudes con tarjetas de crédito son más comunes de lo que crees, y
+                    últimamente, han estado en el
+                    punto más alto. Hablando en sentido figurado, estamos en camino de cruzarnos con mil millones de
+                    usuarios de tarjetas de crédito para finales de 2022. Pero gracias a las innovaciones en tecnologías
+                    como la Inteligencia Artificial, el Aprendizaje Automático y la Ciencia de Datos, las compañías de
+                    tarjetas de crédito han sido capaces de identificar e interceptar con éxito estos fraudes con
+                    suficiente precisión.</p>
+                <p>En pocas palabras, la idea detrás de esto es analizar el comportamiento de gasto habitual del
+                    cliente, incluyendo el mapeo de la ubicación de esos gastos para identificar las transacciones
+                    fraudulentas de las no fraudulentas. Para este proyecto, se puede usar R o Python con el historial
+                    de transacciones del cliente como conjunto de datos e ingerirlo en árboles de decisión, redes
+                    neuronales artificiales y regresión logística. A medida que alimentas más datos a tu sistema,
+                    deberías ser capaz de aumentar su precisión general.v</p>
+            </div>
+            <div class="contenedor-proyecto">
+                <div class="titulo-secundario">
+                    <h3 class="titulo-linkeado"><span id="det-not" class="posicionado" ></span>Detección de noticias falsas</h3>
+                </div>
+                <p><strong>Lenguaje:</strong>  Python</p>
+                <p><strong>Conjunto de datos/paquetes:</strong>  news.csv</p>
+                <p><strong>Código fuente:</strong>  <a
+                        href="https://data-flair.training/blogs/advanced-python-project-detecting-fake-news/">Detección
+                        de noticias falsas</a></p>
+                <p class="parrafo-inicial">Estamos seguros de que las noticias falsas no necesitan presentación. En el
+                    mundo conectado de hoy en
+                    día, se ha vuelto ridículamente fácil compartir noticias falsas por Internet. De vez en cuando, se
+                    puede ver cómo se difunde información falsa en línea desde fuentes no autorizadas que no sólo causan
+                    problemas a las personas a las que se dirigen, sino que también tienen el potencial de causar pánico
+                    generalizado e incluso violencia.</p>
+                <p>Para frenar la propagación de noticias falsas, es crucial identificar la autenticidad de la
+                    información, lo que puede hacerse utilizando este proyecto de Ciencia de Datos. Para ello, se puede
+                    utilizar Python y construir un modelo con TfidfVectorizer y PassiveAggressiveClassifier para separar
+                    las noticias reales de las falsas. Algunas de las librerías de Python adecuadas para este proyecto
+                    son pandas,NumPy, y scikit-learn, y para el conjunto de datos, puedes usar News.csv.</p>
+
+            </div>
+            <div class="contenedor-proyecto">
+                <div class="titulo-secundario">
+                    <h3 class="titulo-linkeado"><span id="sis-rec" class="posicionado" ></span>Sistemas de recomendación (Recomendación de película/espectáculo)</h3>
+                </div>
+                <p><strong>Lenguaje:</strong>  R</p>
+                <p><strong>Conjunto de datos:</strong> MovieLens </p>
+                <p><strong>Paquetes:</strong>  recommenderlab, ggplot2, data.table, reshape2</p>
+                <p><strong>Código fuente:</strong>  <a target="_blanck"
+                        href="https://data-flair.training/blogs/data-science-r-movie-recommendation/">Proyecto de
+                        Sistema de Recomendación de Películas en R</a> </p>
+                <p class="parrafo-inicial">Las plataformas de medios como YouTube, NetFlix y otras te
+                    recomiendan qué ver a continuación, para hacerlo, usan una herramienta llamada sistema de
+                    recomendación. Toma en consideración varias métricas, como la edad, los programas vistos
+                    anteriormente, el género más visto, la frecuencia de los programas, y los introduce en un modelo de
+                    aprendizaje automático que genera lo que el usuario podría querer ver a continuación.</p>
+                <p>Basándose en sus preferencias y datos de entrada, puede intentar construir un sistema de
+                    recomendación basado en el contenido o un sistema de recomendación de filtrado colaborativo. Para
+                    este proyecto, puede elegir R con el conjunto de datos de MovieLens que cubre las clasificaciones de
+                    más de 58.000 películas, y en cuanto a los paquetes, puede usar recommenderlab, ggplot2, reshap2 y
+                    data.table.</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <footer>
+        <div class="logo">
+            <img class="logo" src="images/1.png" alt="robot">
+            <p class="logo">Bit<br>Humanoide</p>
+        </div>
+
+        <div class="politicas">
+            <p class="politicas"><a class="politicas" href="index.html">Politicas de Privacidad</a> - <a class="politicas"
+                    href="index.html">Politicas de Cookies</a></p>
+        </div>
+
+        <div class="redes-sociales">
+            <ul class="redes-sociales">
+                <li><a href="https://www.instagram.com/" target="_blanck"><img class="redes" src="images/instagram2.png"
+                            alt="instagram"></a></li>
+                <li><a href="https://www.youtube.com/" target="_blanck"><img class="redes" src="images/youtube4.png"
+                            alt="youtube"></a></li>
+                <li><a href="https://www.facebook.com/" target="_blanck"><img class="redes" src="images/facebook3.png"
+                            alt="facebook"></a></li>
+                <li><a href="https://www.twitter.com/" target="_blanck"><img class="redes" src="images/twitter3.png"
+                            alt="twitter"></a></li>
+                <li><a href="https://www.linkedin.com/" target="_blanck"><img class="redes" src="images/linkedin2.png"
+                            alt="linkedin"></a></li>
+            </ul>
+        </div>
+
+        <p class="fin">Copyright © 2022 Bit Humanoide - Bs.As Tandil</p>
+
+    </footer>
+
+    <script src="js/menu.js"></script>
+</body>
+
+</html>
