@@ -785,7 +785,17 @@ nav.menu{
     height: 50px;
 }
 /* TERMINA COMPRAS*/
-    
+ 
+div.contenedor-tabla table td button {
+    margin: 3px;
+    padding: 3px;
+}
+div.contenedor-tabla table td input {
+    width: 130px;
+    text-align: center;
+}
+
+
 @media only screen and (min-width: 768px)  {
 
     div.encabezado-inferior{ 
