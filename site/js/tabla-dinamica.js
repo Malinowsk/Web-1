@@ -45,7 +45,7 @@ function actualizarCompraDePacks(){
             k++; // sumo indice en 1
         }
 
-      //  vaciarFormulario(); // resetea formulario
+        vaciarFormulario(); // resetea formulario
     }
 
     async function enviarFila(fila,cant){
@@ -94,7 +94,7 @@ function actualizarCompraDePacks(){
                 else
                     id=fila[elem];
             }
-            tr.innerHTML += `<td><button id="borrar-${id}">Borrar</button><button id="editar-${id}">Editar</button><button id="confirmar-${id}">Confirmar</button></td>`;
+            tr.innerHTML += `<td><button id="borrar-${id}"><i class="fa fa-trash-alt"></i></button><button id="editar-${id}"><i class="fa fa-pencil-alt"></i></button><button id="confirmar-${id}">Confirmar</button></td>`;
             if(fila.pack=="Premium" && fila.tiempo=="1 Año") // preguntamos si culple la condicion
                 tr.setAttribute("class","resaltado"); // agregamos atributo resaltado
             tabla_view.appendChild(tr); // agregamos fila al elem html (tabla)

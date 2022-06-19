@@ -785,10 +785,15 @@ nav.menu{
     height: 50px;
 }
 /* TERMINA COMPRAS*/
- 
+
+
 div.contenedor-tabla table td button {
-    margin: 3px;
-    padding: 3px;
+    margin: 5px;
+    padding: 8px;
+    border: 0px;
+    background-color: #04344E;
+    color: white;
+    border-radius: 4px;
 }
 div.contenedor-tabla table td input {
     width: 130px;
