@@ -1,0 +1,1094 @@
+@font-face {    /* importar el tipo de letra que se va usar en el sitio web*/
+    font-family: 'HKGrotesk-Medium';
+    src: url(font/HKGrotesk-Medium.otf);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+         /*font size*/
+html{
+    font-size: 12px;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+h2{
+    font-size: 1.875rem;
+}
+
+.parrafo-inicial::first-letter{
+    font-size: 1.563rem;
+}
+
+.logo p.logo{
+    font-size: 1.1rem;
+}
+
+h3{
+    font-size: 1.25rem;    
+}
+
+h4{
+    font-size: 1.125rem;
+}
+
+body, .contenedor-contacto input , form.contacto textarea.mensaje, p, .cont-interno select{
+    font-size: 1rem;
+}
+
+.encabezado-superior input, .captcha input , textarea{
+    font-size: 0.938rem;
+}
+
+label, .validacion button{
+    font-size: 0.875rem;
+}
+
+.encabezado-superior button{
+    font-size: 0.813rem;
+}
+
+
+                /* text-transform */
+h1 , h2 , h3 , h4 , .validacion button, .cont-compra button{
+    text-transform: capitalize;
+}
+
+p{
+    text-transform: initial;
+}
+
+.encabezado-superior li{
+    text-transform: lowercase;
+}
+
+.validacion {
+    text-transform: none;
+}
+
+                /* background-color */
+body, nav.menu{
+    background-color: #ffffff;
+    font-family: 'HKGrotesk-Medium', Arial, Helvetica, sans-serif;
+}
+
+.encabezado-superior , .encabezado-inferior , footer, .encabezado-superior button{
+    background-color: #1f3d4f;
+}
+
+.encabezado-superior button.sesion{
+    background-color: #2b424f;
+}
+
+div.encabezado-superior button:hover.sesion, img.redes:hover, .encabezado-superior {
+    background-color: #01111A;
+}
+
+.contenedor-tarjetas div.tarjeta:hover, .contenedor-libros .libro, table .resaltado{
+    background-color: #f8ac18;
+}
+
+.validacion button:hover{
+    background-color: #f8ac18dd;
+}
+
+th, .libro .descripcion , .captcha, .tabla-contenido, header div.encabezado-inferior button.menu{
+    background-color: #04344E;
+}
+
+.validacion button, .cont-compra button{
+    background-color: #286090;
+}
+
+                    /* color de texto */
+
+.encabezado-superior , .encabezado-inferior, .validacion .captcha p, footer, .encabezado-superior button, 
+.contenedor-para-centrado h3, .descripcion h4:hover, th, .descripcion p:hover , .descripcion h3 , div a:hover.politicas , .validacion button, .tabla-contenido ul a:hover, header div.encabezado-inferior button.menu, .cont-compra button{
+    color: #ffffff;
+}
+
+.encabezado-superior button:hover, ul.menu a:hover, ul.menu a.pag-actual,.sesion div.titulo-vistoso,
+.contenedor-tarjetas div.tarjeta:hover, .parrafo-inicial::first-letter, a, form.contacto strong{
+    color: #f8ac18;
+}
+
+.sesion div.titulo-sumiso, .titulo-secundario {
+    color: #2b424f;
+}
+
+.titulo-terciario, .sesion div.texto, tr , td , .validacion button:hover, ul.menu a{
+    color: #01111A;
+}
+
+.descripcion h4{
+    color: #ffffffcc;
+}
+
+div a.politicas, .contenedor-libros .libro{
+    color: #ffffffaa;
+}
+
+.tabla-contenido ul a{
+    color: #ffffff77;
+}
+
+input , textarea, .cont-interno select{
+    color: #69747f;
+}
+
+input::placeholder , textarea::placeholder { 
+    color: #76959Fcc;   
+}
+
+form.contacto label{
+    color: #333333;
+}
+
+.mensaje-invalido{
+    color: red;
+}
+
+.mensaje-valido{
+    color: green;
+}
+
+                    /* bordes */
+.encabezado-superior input, .captcha input , .contenedor-tarjetas div.tarjeta, 
+.contenedor-tarjetas div.tarjeta:hover{
+    border: 1px solid #d8e1e4;
+}
+
+.contenedor-tarjetas div.tarjeta:hover{
+    box-shadow: 0 0 40px rgb(33 33 33 / 20%);
+}
+
+.contenedor-contacto input , form.contacto textarea.mensaje, .cont-interno select{
+    border: 2px solid #d8e1e4;
+}
+
+tr , td , th {
+    border: 2px solid #f8ac18;
+}
+
+div.encabezado-inferior{
+    position: relative;
+    border-top: 2px solid #f8ac18;
+}
+
+.tabla-contenido{
+    border:  5px solid #f8ac18;
+}
+
+.contenedor-proyecto{
+    border: dashed 5px;
+    border-color: #01111A #f8ac18 #f8ac18 #01111A;
+}
+
+.contenedor-proyecto{
+    box-shadow: 0 0 20px rgb(33 33 33 / 20%);
+}
+
+.libro .descripcion{
+    border: 3px solid #01111A;
+}
+
+.captcha{
+    border: 2px solid #01111A;
+}
+.contenedor-libros .libro, .libro .imagen{
+    border: none;
+}
+
+                    /* font-style */
+.encabezado-superior , .encabezado-inferior , footer{
+    font-style: normal;
+}
+
+.titulo-terciario, .descripcion p{
+    font-style: italic;
+}
+                    /*texto en negrita*/
+.encabezado-superior button, .logo p.logo, .tarjeta h3{
+    font-weight: bold; /*grosor de la letra*/
+}
+
+ul.menu a{
+    font-weight: 700; 
+}
+
+.titulo-terciario{
+    font-weight: 1000;
+}
+
+                    /* Atributos de flex */
+div.encabezado-inferior, div.logo, ul.menu, div.imagen-principal, .contenedor-form .contacto, .input-recordame, form.sesion, form.contacto .cont-externo, .sesion .contenedor-libros, .contenedor-tabla, .sesion div.contenedor-tarjetas, .contenedor-libros .libro, .sesion form.contacto, form.contacto div.cont-interno, .validacion, footer ul.redes-sociales, .contenedor-para-centrado, form.contacto div.contenedor-contacto, form.contacto .cont-interno label, .validacion, .captcha, .cont-compra{
+    display: flex;
+}
+
+div.encabezado-inferior, .contenedor-tabla , .sesion div.contenedor-tarjetas  , .sesion form.contacto, form.contacto div.contenedor-contacto, form.contacto div.cont-interno, form.contacto .contenedor-contacto div.cont-interno, .contenedor-form .contacto{ 
+    flex-wrap: wrap; /* a medida que se achica la pantalla los componentes se acomodan en a la parte inferior */
+}
+
+.encabezado-superior, div.encabezado-inferior, .sesion div.contenedor-tarjetas, form.contacto div.contenedor-contacto, .validacion{
+    justify-content: space-between;
+}
+
+div.imagen-principal, .contenedor-para-centrado, .input-recordame, .contenedor-form .contacto{
+    justify-content: center;
+}
+
+ul.menu, .contenedor-libros .libro, .libro .descripcion, .sesion form.contacto, form.sesion{
+    justify-content: space-around;
+}
+
+form.contacto div.cont-interno{
+    width: 100%;
+}
+
+.captcha, .contenedor-form .cont-compra{
+    justify-content: space-evenly;
+}
+
+.sesion form.contacto{
+    align-content: space-between;
+}
+
+.libro .descripcion, .validacion, .captcha, ul.menu, form.sesion{
+    flex-direction: column;
+}
+
+.encabezado-superior{ 
+    align-items: flex-end;
+}
+
+div.encabezado-inferior ,  div.logo, form.contacto div.cont-interno, form.contacto div.cont-interno, form.contacto .cont-interno label, .validacion, .captcha, .input-recordame, .contenedor-form .cont-compra{
+    align-items: center;
+}
+
+                    /* aliniacion de texto */
+
+.encabezado-superior, .captcha ,input::placeholder
+, .contenedor-tabla ,.sesion div.titulo-vistoso ,
+.sesion div.contenedor-tarjetas, p.fin, .validacion .captcha input:focus,
+.validacion .captcha input, .texto-centrado p, div.politicas{
+    text-align: center; /*alineamos el texto en el centro*/
+}
+
+.sesion .texto p ,.libro .descripcion ,.descripcion h3,.contenedor-proyecto p{
+    text-align: justify;
+}
+
+.sesion div.titulo-sumiso, .titulo-secundario , form.contacto input::placeholder{
+    text-align: left;
+}
+                            /* estilo de lista */
+
+.encabezado-superior li, ul.menu, footer ul.redes-sociales{
+    list-style: none;/*saca el puntito de cada li*/
+}
+
+.tabla-contenido ul, .contenedor-proyecto ul{
+    list-style-type: square;
+}
+
+                            /* estilo de subrayado */
+a{
+    text-decoration: none;
+}
+
+.descripcion h4{
+    text-decoration: underline;
+}
+
+
+                            /*atributo position*/
+header{
+    position: sticky;
+    top: 0px; /* esconde la cabecera superior*/
+    z-index: 100; /* necesario por el relative y absolute*/
+}
+
+.posicionado{
+    position: absolute;
+    top: -80px;
+}
+
+.titulo-linkeado{
+    position: relative;
+}
+
+
+
+                            /*placeholder*/
+
+/*representa el texto provisional*/
+input::placeholder , textarea::placeholder { 
+    letter-spacing: 1px; /*sepacion entre letras*/
+    text-indent: 0px;    /*cero identacion*/
+}
+
+                                /*focus*/
+
+/*representa un elemento cuando le haces click*/
+input:focus , textarea:focus {
+    outline: none; /*funciona para sacar borde interno de color negro cuando hacemos focus al input text*/
+}
+
+div.imagen-principal{
+    background-image: url(../images/fondo-azul4.png); /*imagen de fondo azul difuminada*/
+    background-size: auto 100%; /* ajuste de la imagen de fondo*/
+}
+
+
+/*///////////////ESTILO DE TAMAÑOS Y MEDIDAS///////////////////////////////////////////////////////////////*/
+
+
+                /*//comienza header////*/
+
+.encabezado-superior, tr , td , th{
+    height: 50px;
+}
+
+form.contacto input{
+    height: 40px;
+}
+
+.encabezado-superior i{
+    margin-right: 5px;
+}
+
+.encabezado-superior ul{
+    margin-left: 50px;
+}
+
+
+.encabezado-superior li{
+    padding: 1px;
+}
+
+.encabezado-superior img.correo, .encabezado-superior img.telefono{
+    width: 13px;
+    height: 13px;
+}
+
+
+.encabezado-superior input{
+    border-radius: 5px;
+    margin: 0px 5px;
+}
+
+.encabezado-superior input, .captcha input{
+    height: 32px;
+}
+
+input.checkbox , form.contacto .checkbox{ /* boton para seleccionar */
+    height: auto;
+}
+
+input.checkbox , form.contacto .checkbox, .encabezado-superior button{ /* boton para seleccionar */
+    width: auto;
+}
+
+input.checkbox{ /* boton para seleccionar */
+    padding: 0px 1px;
+    margin: 0px 1px;
+}
+
+.encabezado-superior button{
+    height: 35px;
+    margin: 0px 5px;
+    border: 0px;
+    border-radius: 5px;
+}
+
+header div.encabezado-inferior button.menu{
+    border-radius: 80%;
+    padding: 8px 10px;
+    border: #04344E;
+    margin-right: 5px;
+}
+
+/*//logo (icono - titulo)//*/
+
+
+.logo img.logo{
+    height: 50px;
+    padding-top: 2px;
+}
+
+.logo p.logo{
+    padding: 5px;  
+}
+
+.logo p.logo{
+    letter-spacing: 2px;
+}
+
+/*//menu (nav)//*/
+
+nav.menu{
+    position: absolute;
+    top: 52px;
+    width: 100%;
+}
+
+ul.menu li{
+    padding: 10px 0px;
+    border: 1px solid;
+    border-color: #ffffff #ffffff #333333 #ffffff;
+}
+
+
+ul.menu a{
+    margin-left: 10px;
+}
+
+                /*//comienza main////*/
+
+div.imagen-principal img{
+    width: 100%; 
+}
+
+/*para cambiar*/
+.main .sesion {
+    margin: 0px 15px;
+}
+
+.sesion div.titulo-vistoso , .sesion div.titulo-sumiso{
+    width: 100%;
+    padding: 52px 0px 44px;
+}
+
+.titulo-secundario{
+    margin-bottom: 10px;
+}
+
+.titulo-terciario{
+    margin-top: 10px;
+}
+
+.sesion div.contenedor-tarjetas{
+    padding: 8px 0px;
+    width: 100%;
+}
+
+.contenedor-tarjetas div.tarjeta{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.contenedor-tarjetas div.imagen{
+    width: 100%;
+    height: 120px;
+    /*overflow: hidden; /*el contenido que sobresale no se ve*/
+}
+
+div.imagen img.tarjeta{
+    width: 100%;
+    height: 100%;
+}
+
+.tarjeta h3{
+    padding: 20px 0px;
+}
+
+.sesion .texto p{
+    padding: 0px 15px 10px;
+}
+
+table{
+    width: 100%;
+    padding: 8px 0px;
+}
+
+tr , td , th {
+    width: 250px;
+    padding: 3px;
+}
+
+td img{
+    height: 100%;
+}
+
+.sesion .contenedor-libros{
+    padding: 8px 0px;
+    width: 100%;
+}
+
+.contenedor-libros .libro{
+    padding: 2.5px 0px;
+    margin: 4px 2px;
+    width: 100%;
+}
+.libro .imagen{
+    margin: 0px 2.5px;
+    width: 100%;
+}
+
+.libro img{
+    width: 100%;
+    height: 100%;
+}
+
+.libro .descripcion{
+    width: 80%;
+    margin: 0px 5px 0px 2.5px;
+    padding: 5px;
+}
+
+.descripcion h3{
+    padding: 2px;
+    margin-bottom: 4px;
+}
+
+.descripcion h4{
+    padding: 2px;
+    margin: 4px 0px;
+}
+
+.descripcion p{
+    padding: 2px;
+    margin: 4px 0px;
+}
+
+a{
+    padding: 2px;
+    margin-top: 5px;
+}
+
+/* comienza servicios.html */
+
+.texto-centrado p{
+    padding: 8px 0px;
+}
+
+.tabla-contenido{
+    margin-top: 44px;
+    width: 70%;
+    padding: 10px 0px;
+}
+
+.contenedor-para-centrado h3 {
+    margin-bottom: 5px;
+}
+
+.tabla-contenido ul, .contenedor-proyecto ul{
+    margin-left: 20px;
+}
+
+.contenedor-proyecto{
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.contenedor-proyecto p{
+    padding-top: 10px;
+}
+
+.contenedor-proyecto h3{
+    padding-top: 10px;
+}
+
+/* termina main HTML servicios*/
+
+/* HTML contacto */
+
+.sesion form.contacto{
+    height: 700px;
+}
+
+form.contacto .contenedor-contacto div.cont-interno{
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+form.contacto div.cont-interno p{
+    margin-left: 10px;
+    font-size: 0.9rem;
+}
+
+form.contacto input{
+    width: 100%;
+    padding: 0px 5px;
+}
+
+form.contacto .cont-interno label{
+    padding: 0px 0px 10px 7px;
+    width: 100%;
+}
+
+form.contacto .cont-externo{
+    width: 100%;
+    margin: 20px 0px;
+}
+
+form.contacto .cont-externo .checkbox{
+    margin: 0px 10px;
+}
+
+form.contacto .captcha input{
+    width: 65%;
+}
+
+form.contacto strong{
+    margin: 0px 0px 0px 3px;
+}
+
+form.contacto textarea.mensaje{
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 80px;
+    max-height: 80px;
+    padding-top: 10px;
+    text-indent: 10px;
+}
+
+.validacion {
+    height: 220px;
+}
+
+.captcha{
+    border-radius: 5px;
+    width: 300px;
+    height: 150px;
+}
+
+.validacion button{
+    padding: 6px 12px;
+    border: 0px;
+    font-weight: 700;
+    border-radius: 4px;
+}
+
+#oculta{
+    width: 1px;
+    height: 1px;
+}
+
+/* termina contacto.html */
+
+div.logo{
+    grid-area: logo;
+}
+
+/*//comienza footer////*/
+
+footer{ 
+    padding: 30px 65px;
+    margin-top: 50px;
+}
+
+footer{
+    
+    justify-items: center;
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:        "logo"   
+                            "redes-sociales"
+                            "politicas-priv" 
+                               "fin-pie";
+    grid-row-gap: 10px;
+}
+
+div.politicas{
+    grid-area: politicas-priv;
+}
+
+footer ul.redes-sociales{
+    grid-area: redes-sociales;
+    padding: 8px 18px;
+}
+
+img.redes{
+    border-radius: 10px;
+    width: 20px;
+    padding: 7px;
+    margin: 2px;
+}
+
+p.fin{
+    grid-area: fin-pie;
+    width: 100%;
+    margin: 5px;
+}
+/*actual*/
+.encabezado-superior {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 54px;
+}
+
+.encabezado-superior ul{
+    display: none;
+}
+
+form.sesion{
+    height: 200px;
+}
+
+/*fin actual*/
+
+.contenedor-tabla{
+    overflow-y: auto;
+}
+/*
+nav.menu{
+    display: none;
+}
+*/
+
+.invisibilidad{
+    display: none;
+}
+
+.libro .descripcion{
+    display: none;
+}
+
+/*/////termina footer//////*/
+
+    /*empieza responsive*/
+    /*empieza mobile*/
+
+/* COMPRAS */
+
+.contenedor-form{
+    margin: 0px 15px;
+}
+
+.contenedor-form .contacto{
+    height: 420px;
+}
+
+.contenedor-form .cont-compra{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.cont-compra button{
+    padding: 10px;
+    border: 0px;
+    border-radius: 4px;
+}
+
+.cont-interno select{
+    width: 100%;
+    padding: 0px 24px;
+    height: 50px;
+}
+/* TERMINA COMPRAS*/
+
+
+div.contenedor-tabla table td button {
+    margin: 5px;
+    padding: 8px;
+    border: 0px;
+    background-color: #04344E;
+    color: white;
+    border-radius: 4px;
+}
+div.contenedor-tabla table td input {
+    width: 130px;
+    text-align: center;
+}
+
+
+@media only screen and (min-width: 768px)  {
+
+    div.encabezado-inferior{ 
+        padding: 7px 80px;
+    }
+
+    .logo img.logo{
+        height: 75px;
+        padding-top: 0px;
+    }
+
+    .logo p.logo{
+        font-size: 1.375rem;
+    }
+
+    .logo p.logo{
+        padding: 10px;  
+    }
+
+    header{
+        top: 0px;
+    }
+
+    header div.encabezado-inferior button.menu{
+        display: none;
+    }
+
+    ul.menu{ 
+        margin: 1px;
+    }
+
+    div.imagen-principal img {
+        width: 85%;
+    }
+    
+    /*seccion tarjetas*/
+    .contenedor-tarjetas div.tarjeta {
+        width: 32%;
+    }
+
+    .libro .descripcion{
+        display: flex;
+    }    
+
+    .sesion .contenedor-libros {
+        display: block;
+    }
+    
+    .libro .imagen{
+        width: 25%;
+    }
+    
+    .contenedor-libros .libro,.libro .imagen{
+        border: 3px solid #01111A;
+    }
+    
+    .libro .imagen {
+        margin: 0px 2.5px 0px 5px;
+    }
+    
+    .contenedor-libros .libro {
+        padding: 5px 0px;
+        background-color: #D8E1E4;
+    }
+    
+    html{
+        font-size: 14px;
+    }
+
+    nav.menu{
+        position: inherit;
+        top: auto;
+        display: block;
+        width: auto;
+        background-color: #1f3d4f;
+    }
+    ul.menu a{
+        padding: 10px 0px;
+        margin: 0px 10px;
+        color: #ffffffcc;
+    }
+    
+    ul.menu li{
+        border-color: #1f3d4f;
+    }
+    
+    ul.menu{
+        
+        flex-direction: row;
+    }
+    
+    .encabezado-superior form , nav.menu{
+        padding: 0px 10px;
+    }
+
+    nav.menu{
+        margin: 8px;
+    }
+
+    ul.menu li{
+        margin: 0 5px;
+        padding: 0px;
+    }
+
+    .encabezado-superior {
+        padding: 7px 30px 7px 0px;
+        width: auto;
+        height: auto;
+        position: inherit;
+        top: auto;
+        background-color: #1f3d4f;
+        display: none;
+    }
+
+    .encabezado-superior ul{
+        display: block;
+    }
+
+    form.sesion{
+        display: inherit;
+        flex-direction: row;
+        height: auto;
+    }
+
+    .encabezado-superior input, .captcha input{
+        max-height: 32px; /* para dejar la caja de mensaje fija*/
+        max-width: 140px; /* para dejar la caja de mensaje fija*/
+        padding: 0px 2px;
+        text-indent: 8px;
+    }
+
+    .input-recordame{
+        margin-left: 2px;
+        height: auto;
+        display: inherit;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .encabezado-superior button{
+        padding: 0px 5px;
+        border-radius: 0px;
+    }
+
+    form.contacto div.contenedor-contacto{
+        width: 100%;
+        height: 150px;
+    }
+    form.contacto .contenedor-contacto div.cont-interno{
+        width: 50%;
+        flex-wrap: nowrap;
+        padding-bottom: 0px;
+    }
+
+    form.contacto .cont-interno label{
+        padding: 0px 15px;
+        height: 100%;
+        width: 80px;
+    }
+
+    form.contacto .cont-externo{
+        display:flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        width: 100%;
+        align-items: center;
+    }
+    
+    form.contacto .cont-externo label{
+        padding: 0px 15px;
+        height: 100%;
+        width: 75px;
+        justify-content: flex-end;
+        display: flex;
+    }
+
+    form.contacto div.cont-externo p{
+        margin-left: 10px;
+        font-size: 0.9rem;
+    }
+
+    footer ul.redes-sociales, form.contacto .cont-interno label{
+        justify-content: flex-end;
+    }
+    
+    form.contacto input{
+        width: 65%;
+        padding: 0px 24px;
+    }
+
+    form.contacto input{
+        height: 50px;
+    }
+
+    form.contacto div.cont-interno{
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    form.contacto textarea.mensaje{
+        min-width: 84.5%;
+        min-height: 80px;
+        max-width: 84.5%;
+        max-height: 80px;
+        padding-top: 10px;
+        text-indent: 0px;
+        padding-left: 24px;
+    }
+
+    .sesion form.contacto{
+        height: 600px;
+    }
+
+    .validacion {
+        height: 250px;
+    }
+
+    .posicionado{
+        top: -120px;
+    }
+
+    footer{ 
+        padding: 30px 80px;
+    }
+
+    footer div.redes-sociales{
+        padding: 10px;  
+    }
+
+    .contenedor-form .contacto{
+        height: 300px;
+    }
+
+    .contenedor-form{
+        margin: 0px 94px;
+    }
+    
+}
+
+@media only screen and (min-width: 1024px)  {
+    div.logo{
+        padding-right: 39.15px;
+    }
+    
+    header{
+        top: -60px;
+    }
+    
+    .encabezado-superior {
+        display: flex;
+    }
+
+
+    /*para cambiar*/
+    .main .sesion{
+        margin: 0px 94px;
+    }
+    html{
+        font-size: 16px;
+    }
+
+    footer{
+        align-items: center;
+        justify-items: stretch;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: "  logo      politicas-priv    politicas-priv    redes-sociales" 
+                             " fin-pie        fin-pie          fin-pie        fin-pie";
+    
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    
+    .encabezado-superior{
+        padding: 7px 100px;
+    }
+
+    .encabezado-superior ul{
+        margin-left: 90px;
+    }
+
+}
+
+
+/*1115px
+@media only screen and (max-width: 360px)  {
+}
+*/

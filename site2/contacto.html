@@ -1,0 +1,54 @@
+<div class="sesion">
+    
+    <div class="titulo-sumiso">
+        <h1>Contacto</h1>
+    </div>
+
+    <form class="contacto">
+        <div class="contenedor-contacto">
+            <div class="cont-interno">
+                <label>Nombre <strong>(*)</strong></label>
+                <input type="text" placeholder="Nombre" required>
+            </div>
+            <div class="cont-interno">
+                <label >Apellido <strong>(*)</strong></label>
+                <input type="text" placeholder="Apellido" required>
+            </div>
+            <div class="cont-interno">
+                <label>Email <strong>(*)</strong></label>
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="cont-interno">
+                <label>Asunto <strong>(*)</strong></label>
+                <input type="text" placeholder="Asunto" required>
+            </div> 
+        </div>
+
+        <div class="cont-interno">
+            <label>Mensaje</label>
+            <textarea class="mensaje"></textarea>
+        </div>
+        
+            
+        <div class="cont-externo">
+                <label> <strong>(*)</strong> </label>
+                <input class="checkbox" type="checkbox" required>
+                <p>Debes leer y aceptar las condiciones legales</p>
+        </div>
+        
+        <div class="validacion">
+            <div class="captcha" id="captcha"> 
+                <p>¿ Cuánto es <span id="prim_num">0</span> + <span id="seg_num">0</span> ?</p>
+                <input id="valor-captcha" type="text">
+                <button id="validar" type="button">validar</button>
+            </div>
+            <input id="oculta" type="checkbox" required>
+            
+            <p id="info-resolucion"></p>
+            <button>enviar</button>
+        </div>
+
+    </form>
+
+</div>
+
