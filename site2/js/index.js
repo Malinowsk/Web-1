@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded",partialRender);
 function partialRender(){
     "use strict"
     
+
     
     window["inicio"].addEventListener("click",(event)=>{ push(event);});
     window["servicios"].addEventListener("click",(event)=>{ push(event)});
@@ -17,12 +18,14 @@ function partialRender(){
     });
 
     cargarInicio();
+
+
     
     function cargarInicio(){
         let id = "inicio";
         seleccionarTab(id); //colorea boton de navegacion selecionado
         
-        document.title = "Bit Humanoide - " + id;
+        document.title = "Bit Humanoide - " + capitalizarPrimeraLetra(id);
         cargarContenido(id);
         window.history.pushState({ id },`${id}`,`/${id}`);
 
@@ -32,7 +35,7 @@ function partialRender(){
         let id = event.target.id;
         seleccionarTab(id); //colorea boton de navegacion selecionado
         
-        document.title = "Bit Humanoide - " + id;
+        document.title = "Bit Humanoide - " + capitalizarPrimeraLetra(id);
         cargarContenido(id);
         window.history.pushState({ id },`${id}`,`/${id}`);
 
@@ -67,10 +70,10 @@ function partialRender(){
             contenedor.innerHTML = "error";
         }
 
-        function capitalizarPrimeraLetra(str) {
-            return str.charAt(0).toUpperCase() + str.slice(1);
-          }
     }
+    function capitalizarPrimeraLetra(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+      }
 
     // funcion utilizada para compras.html
     function actualizarCompraDePacks(){
@@ -79,6 +82,7 @@ function partialRender(){
         
         obtenerTabla();
         
+
         let form = document.querySelector("#form"); //formulario
         form.addEventListener("submit",function(e){  //pongo a escuchar el evento submit del formulario
             actualizarTabla(e);
@@ -164,7 +168,11 @@ function partialRender(){
                     else
                         id=fila[elem];
                 }
-                tr.innerHTML += `<td><button id="borrar-${id}"><i class="fa fa-trash-alt"></i></button><button id="editar-${id}"><i class="fa fa-pencil-alt"></i></button><button id="confirmar-${id}">Confirmar</button></td>`;
+                tr.innerHTML += `<td>
+                                     <button id="borrar-${id}"><i class="fa fa-trash-alt"></i></button>
+                                     <button id="editar-${id}"><i class="fa fa-pencil-alt"></i></button>
+                                     <button id="confirmar-${id}"><i class="fa fa-check"></i></button>
+                                </td>`;
                 if(fila.pack=="Premium" && fila.tiempo=="1 Año") // preguntamos si culple la condicion
                     tr.setAttribute("class","resaltado"); // agregamos atributo resaltado
                 tabla_view.appendChild(tr); // agregamos fila al elem html (tabla)
