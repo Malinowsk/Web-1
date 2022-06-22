@@ -72,8 +72,9 @@ function partialRender(){
     function actualizarCompraDePacks(){
         
         const url = "https://62a95d68ec36bf40bdb68e4e.mockapi.io/api/pedidoss"; 
-        
-        obtenerTabla();
+        let pag_actual = 1;
+
+        obtenerTabla(pag_actual);
         
 
         let form = document.querySelector("#form"); //formulario
@@ -81,12 +82,27 @@ function partialRender(){
             actualizarTabla(e);
         });
     
-        let reset = document.querySelector("#reset"); //boton reset
-        reset.addEventListener("click", function(){  // pongo a escuchar el evento click del boton reset
-            tabla_datos = [];   //vacio tabla
-            obtenerTabla(); // mostrar tabla por web
+        //let reset = document.querySelector("#reset"); //boton reset
+        //reset.addEventListener("click", function(){  // pongo a escuchar el evento click del boton reset
+        //    tabla_datos = [];   //vacio tabla
+        //    obtenerTabla(pag_actual); // mostrar tabla por web
+        //});
+
+        let atras = document.querySelector("#atras");
+        atras.addEventListener("click", function(){ 
+            if (pag_actual=!1){
+                pag_actual--;
+                obtenerTabla(pag_actual);
+            } 
+        });
+
+        let siguiente = document.querySelector("#siguiente");
+        siguiente.addEventListener("click", function(){ 
+            pag_actual++;
+            obtenerTabla(pag_actual);
         });
      
+
         function actualizarTabla(e){
     
             e.preventDefault(); // captura el evento del envio de formulario para que no se refresque la web
@@ -123,7 +139,7 @@ function partialRender(){
     
                 if(respuesta.status === 201){
                     if(cant==1)
-                        obtenerTabla();
+                        obtenerTabla(pag_actual);
                     else
                     {
                         enviarFila(fila,cant-1);
@@ -135,13 +151,20 @@ function partialRender(){
             catch(errorConexion){console.log("error")};
         }
     
-        async function obtenerTabla(){
+        async function obtenerTabla(nro_pag){
             
             try{
-                let respuesta= await fetch(url);
+                let respuesta= await fetch(`${url}?p=${nro_pag}&l=10`); ///?p=1&l=10
                 if(respuesta.ok){                               
                     let tabla = await respuesta.json(); 
-                    mostrarTabla(tabla);} 
+                    if(tabla.length==0){
+                        pag_actual--;
+                        obtenerTabla(pag_actual);
+                    }
+                    else{
+                        mostrarTabla(tabla);
+                    }
+                } 
                 else
                     console.log("no 202")
             }
@@ -181,8 +204,7 @@ function partialRender(){
             try{
                 let respuesta= await fetch(`${url}/${id}`, { "method":"DELETE"});
                 if(respuesta.status === 200){
-                    console.log(respuesta.status);
-                    obtenerTabla();
+                    obtenerTabla(pag_actual);
                 } 
                 else
                     console.log("no 202");
@@ -228,7 +250,7 @@ function partialRender(){
                                                     "body": JSON.stringify(fila) });
     
                 if(respuesta.status === 200)
-                    obtenerTabla();
+                    obtenerTabla(pag_actual);
                 else
                     console.log("no 201");
             }
