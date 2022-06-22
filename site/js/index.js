@@ -24,7 +24,6 @@ function partialRender(){
         document.title = "Bit Humanoide - " + capitalizarPrimeraLetra(id);
         cargarContenido(id);
         window.history.pushState({ id },`${id}`,`/${id}`);
-
     }
 
     function push(event){
@@ -76,7 +75,6 @@ function partialRender(){
 
         obtenerTabla(pag_actual);
         
-
         let form = document.querySelector("#form"); //formulario
         form.addEventListener("submit",function(e){  //pongo a escuchar el evento submit del formulario
             actualizarTabla(e);
@@ -89,11 +87,11 @@ function partialRender(){
         //});
 
         let atras = document.querySelector("#atras");
-        atras.addEventListener("click", function(){ 
-            if (pag_actual=!1){
-                pag_actual--;
+        atras.addEventListener("click", function(){
+            if (pag_actual !== 1){
+                pag_actual= pag_actual - 1;
                 obtenerTabla(pag_actual);
-            } 
+            }
         });
 
         let siguiente = document.querySelector("#siguiente");
@@ -101,7 +99,6 @@ function partialRender(){
             pag_actual++;
             obtenerTabla(pag_actual);
         });
-     
 
         function actualizarTabla(e){
     
@@ -197,6 +194,10 @@ function partialRender(){
                 document.querySelector(`#editar-${id}`).addEventListener("click",function(){editarFila(this)});
                 document.querySelector(`#confirmar-${id}`).addEventListener("click",function(){confirmarFila(this,id)});
                 document.querySelector(`#confirmar-${id}`).classList.add("invisibilidad");
+
+                document.querySelector("#prim-fila").innerHTML= `${((pag_actual-1)*10) + 1}`;
+                document.querySelector("#ult-fila").innerHTML = `${((pag_actual-1)*10) + tabla_datos.length}`;
+
             }
         }
     
