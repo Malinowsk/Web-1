@@ -794,12 +794,10 @@ nav.menu{
     padding: 10px;
     border: 0px;
     border-radius: 4px;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .btn:hover{
-    box-shadow: 4px 4px #3785c9;
-    transition: 0.5s;
+    background-color: #f8ac18;
 }
 
 .paginado-tabla{
