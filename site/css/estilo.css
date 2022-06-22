@@ -506,9 +506,9 @@ table{
     padding: 8px 0px;
 }
 
-tr , td , th {
+td , th{
     width: 250px;
-    padding: 3px;
+    padding: 3px 10px;
 }
 
 td img{
@@ -809,6 +809,11 @@ nav.menu{
     margin-top: 20px;
 }
 
+.paginado-tabla p{
+    text-align: center;
+    width: 50px;
+}
+
 .paginado-tabla .btn{
     width: 80px;
 }
@@ -1078,6 +1083,16 @@ div.contenedor-tabla table td input {
 
     .contenedor-form{
         margin: 0px 94px;
+    }
+
+    .tabla-compras{
+        table-layout: fixed;
+    }
+
+    .tabla-compras td, .tabla-compras th{
+        width: 16.666%;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
     
 }
