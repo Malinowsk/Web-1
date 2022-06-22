@@ -55,7 +55,7 @@ label, .validacion button{
 
 
                 /* text-transform */
-h1 , h2 , h3 , h4 , .validacion button, .cont-compra button{
+h1 , h2 , h3 , h4 , .validacion button, .btn{
     text-transform: capitalize;
 }
 
@@ -101,14 +101,14 @@ th, .libro .descripcion , .captcha, .tabla-contenido, header div.encabezado-infe
     background-color: #04344E;
 }
 
-.validacion button, .cont-compra button{
+.validacion button, .btn{
     background-color: #286090;
 }
 
                     /* color de texto */
 
 .encabezado-superior , .encabezado-inferior, .validacion .captcha p, footer, .encabezado-superior button, 
-.contenedor-para-centrado h3, .descripcion h4:hover, th, .descripcion p:hover , .descripcion h3 , div a:hover.politicas , .validacion button, .tabla-contenido ul a:hover, header div.encabezado-inferior button.menu, .cont-compra button{
+.contenedor-para-centrado h3, .descripcion h4:hover, th, .descripcion p:hover , .descripcion h3 , div a:hover.politicas , .validacion button, .tabla-contenido ul a:hover, header div.encabezado-inferior button.menu, .btn{
     color: #ffffff;
 }
 
@@ -774,10 +774,50 @@ nav.menu{
     margin-top: 10px;
 }
 
-.cont-compra button{
+.filtro{
+    display: flex;
+    justify-content: space-between;
+}
+
+.filtro select{
+    width: 150px;
+    padding: 8px;
+    border-color: #d8e1e4;
+}
+
+.filtro input{
+    padding: 8px;
+    border-color: #d8e1e4;
+}
+
+.btn{
     padding: 10px;
     border: 0px;
     border-radius: 4px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover{
+    box-shadow: 4px 4px #3785c9;
+    transition: 0.5s;
+}
+
+.paginado-tabla{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.paginado-tabla .btn{
+    width: 80px;
+}
+
+.paginado-tabla div{
+    border: 2px solid #d8e1e4;
+    border-radius: 4px;
+    padding: 7px 20px;
+    margin: 0px 20px;
 }
 
 .cont-interno select{
