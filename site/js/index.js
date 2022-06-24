@@ -76,10 +76,10 @@ function partialRender(){
     // funcion utilizada para compras.html
     function actualizarCompraDePacks(){
         
-        const url = "https://62a95d68ec36bf40bdb68e4e.mockapi.io/api/pedidoss"; 
+        const url_base = "https://62a95d68ec36bf40bdb68e4e.mockapi.io/api/pedidoss"; 
         let pag_actual = 1;
 
-        obtenerTabla(pag_actual);
+        obtenerTabla(`${url_base}?p=${pag_actual}&l=10`);
         
         let form = document.querySelector("#form"); //formulario
         form.addEventListener("submit",function(e){  //pongo a escuchar el evento submit del formulario
@@ -96,15 +96,27 @@ function partialRender(){
         atras.addEventListener("click", function(){
             if (pag_actual !== 1){
                 pag_actual= pag_actual - 1;
-                obtenerTabla(pag_actual);
+                obtenerTabla(`${url_base}?p=${pag_actual}&l=10`);
             }
         });
 
         let siguiente = document.querySelector("#siguiente");
         siguiente.addEventListener("click", function(){ 
             pag_actual++;
-            obtenerTabla(pag_actual);
+            obtenerTabla(`${url_base}?p=${pag_actual}&l=10`);
         });
+
+        let form_filtro = document.querySelector("#filtrado");
+        form_filtro.addEventListener("submit", function(e){
+            e.preventDefault();
+            let filtro = getFilter();
+            obtenerTabla(`${url_base}?${filtro}&p=${pag_actual}&l=10`);
+        });
+
+        function getFilter(){
+            let form = new FormData(form_filtro);
+            return form.get("filtro2").toLowerCase() + "=" + form.get("valor-filtro");
+        }
 
         function actualizarTabla(e){
     
@@ -136,12 +148,12 @@ function partialRender(){
     
         async function enviarFila(fila,cant){
             try{
-                let respuesta= await fetch(url, {"method":"POST", 
-                                                 "headers": {"Content-type": "application/json"}, 
-                                                 "body": JSON.stringify(fila) });
+                let respuesta= await fetch(url_base, {"method":"POST", 
+                                                      "headers": {"Content-type": "application/json"}, 
+                                                      "body": JSON.stringify(fila) });
                 if(respuesta.status === 201){
                     if(cant==1)
-                        obtenerTabla(pag_actual);
+                        obtenerTabla(`${url_base}?p=${pag_actual}&l=10`);
                     else{
                         enviarFila(fila,cant-1);
                     }
@@ -152,15 +164,18 @@ function partialRender(){
             catch(error){console.log("error de conexión")};
         }
     
-        async function obtenerTabla(nro_pag){
-            
+        async function obtenerTabla(url_completa){
+            console.log(url_completa);
             try{
-                let respuesta= await fetch(`${url}?p=${nro_pag}&l=10`); ///?p=1&l=10
+                let respuesta= await fetch(url_completa); ///?p=1&l=10
                 if(respuesta.ok){                               
-                    let tabla = await respuesta.json(); 
+                    let tabla = await respuesta.json();
+                    console.log(url_completa); 
                     if(tabla.length==0){
+                        console.log(url_completa);
                         pag_actual--;
-                        obtenerTabla(pag_actual);
+                        url_completa=`${url_base}?p=${pag_actual}&l=10`;
+                        obtenerTabla(url_completa);
                     }
                     else{
                         mostrarTabla(tabla);
@@ -207,9 +222,9 @@ function partialRender(){
     
         async function borrarFila(id){
             try{
-                let respuesta= await fetch(`${url}/${id}`, { "method":"DELETE"});
+                let respuesta= await fetch(`${url_base}/${id}`, { "method":"DELETE"});
                 if(respuesta.status === 200){
-                    obtenerTabla(pag_actual);
+                    obtenerTabla(`${url_base}?p=${pag_actual}&l=10`);
                 } 
                 else
                     console.log(`La peticion DELETE fallo, error: ${respuesta.status}`);
@@ -250,12 +265,12 @@ function partialRender(){
     
         async function guardarCambiosFila(fila,id){
             try{
-                let respuesta= await fetch(`${url}/${id}`, {   "method":"PUT", 
-                                                    "headers": {"Content-type": "application/json"}, 
-                                                    "body": JSON.stringify(fila) });
+                let respuesta= await fetch(`${url_base}/${id}`, {"method":"PUT", 
+                                                                 "headers": {"Content-type": "application/json"}, 
+                                                                 "body": JSON.stringify(fila) });
     
                 if(respuesta.status === 200)
-                    obtenerTabla(pag_actual);
+                    obtenerTabla(`${url_base}?p=${pag_actual}&l=10`);
                 else
                     console.log(`La peticion PUT no fue exitosa error: ${respuesta.status}`);
             }
