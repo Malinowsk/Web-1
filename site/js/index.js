@@ -56,11 +56,17 @@ function partialRender(){
                 }
             }
             else{
-                contenedor.innerHTML = "error 202";
+                contenedor.innerHTML = `<h1>Error</h1>
+                                        <p>El error es: ${respuesta.status} - ${respuesta.statusText}</p>
+                                        <p>La url: "${respuesta.url}" esta mal especificada</p>
+                                        <ul>Solucion: cambiar la carpeta raiz del servidor local
+                                            <li> - Mal: ~/site/inicio.html</li>
+                                            <li> + Bien: ~/inicio.html</li>
+                                        </ul>`;
             }
         }
         catch(error){
-            contenedor.innerHTML = "error";
+            contenedor.innerHTML = "error de conexión";
         }
     }
     function capitalizarPrimeraLetra(str) {
@@ -130,22 +136,20 @@ function partialRender(){
     
         async function enviarFila(fila,cant){
             try{
-                let respuesta= await fetch(url, {   "method":"POST", 
-                                                    "headers": {"Content-type": "application/json"}, 
-                                                    "body": JSON.stringify(fila) });
-    
+                let respuesta= await fetch(url, {"method":"POST", 
+                                                 "headers": {"Content-type": "application/json"}, 
+                                                 "body": JSON.stringify(fila) });
                 if(respuesta.status === 201){
                     if(cant==1)
                         obtenerTabla(pag_actual);
-                    else
-                    {
+                    else{
                         enviarFila(fila,cant-1);
                     }
                 } 
                 else
-                    console.log("no 201");
+                    console.log(`La peticion POST no fue exitosa error: ${respuesta.status}`);
             }
-            catch(errorConexion){console.log("error")};
+            catch(error){console.log("error de conexión")};
         }
     
         async function obtenerTabla(nro_pag){
@@ -163,9 +167,9 @@ function partialRender(){
                     }
                 } 
                 else
-                    console.log("no 202")
+                    console.log(`La url: "${respuesta.url}" esta mal especificada`);
             }
-            catch(errorConexion){console.log(errorConexion)};
+            catch(error){console.log("error de conexión")};
         }
     
         //funcion que muestra en web la tabla almacenada en variable
@@ -208,9 +212,9 @@ function partialRender(){
                     obtenerTabla(pag_actual);
                 } 
                 else
-                    console.log("no 202");
+                    console.log(`La peticion DELETE fallo, error: ${respuesta.status}`);
             }
-            catch(errorConexion){console.log("error")};
+            catch(error){console.log("error de conexión")};
         }
     
         function editarFila(boton){
@@ -253,9 +257,9 @@ function partialRender(){
                 if(respuesta.status === 200)
                     obtenerTabla(pag_actual);
                 else
-                    console.log("no 201");
+                    console.log(`La peticion PUT no fue exitosa error: ${respuesta.status}`);
             }
-            catch(errorConexion){console.log("error")};
+            catch(error){console.log("error de conexión")};
         }
     
     
