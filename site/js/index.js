@@ -76,11 +76,13 @@ function partialRender(){
     // funcion utilizada para compras.html
     function actualizarCompraDePacks(){
         
-        const url_base = "https://62a95d68ec36bf40bdb68e4e.mockapi.io/api/pedidoss"; 
-        let pag_actual = 1;
-
-        obtenerTabla(`${url_base}?p=${pag_actual}&l=10`);
+        const url_base = "https://62a95d68ec36bf40bdb68e4e.mockapi.io/api/pedidoss";
+        //let pag_actual = 1;
+        //let url_actual=`${url_base}?p=${pag_actual}&l=10`; //https://62a95d68ec36bf40bdb68e4e.mockapi.io/api/pedidoss?p=1&l=10
+        let url_actual=[url_base,"?","p=",1,"&l=10"]
         
+        obtenerTabla();
+       
         let form = document.querySelector("#form"); //formulario
         form.addEventListener("submit",function(e){  //pongo a escuchar el evento submit del formulario
             actualizarTabla(e);
@@ -94,29 +96,34 @@ function partialRender(){
 
         let atras = document.querySelector("#atras");
         atras.addEventListener("click", function(){
-            if (pag_actual !== 1){
-                pag_actual= pag_actual - 1;
-                obtenerTabla(`${url_base}?p=${pag_actual}&l=10`);
+            if (url_actual[3] !== 1){
+                url_actual[3]--;
+                obtenerTabla();
             }
         });
 
         let siguiente = document.querySelector("#siguiente");
         siguiente.addEventListener("click", function(){ 
-            pag_actual++;
-            obtenerTabla(`${url_base}?p=${pag_actual}&l=10`);
+            url_actual[3]++;
+            obtenerTabla();
         });
 
         let form_filtro = document.querySelector("#filtrado");
         form_filtro.addEventListener("submit", function(e){
             e.preventDefault();
             let filtro = getFilter();
-            obtenerTabla(`${url_base}?${filtro}&p=${pag_actual}&l=10`);
+            url_actual[1] = filtro;
+            obtenerTabla();
         });
 
         function getFilter(){
             let form = new FormData(form_filtro);
-            return form.get("filtro2").toLowerCase() + "=" + form.get("valor-filtro");
+            if(form.get("valor-filtro")=="")
+                return "?";
+            else
+                return "?" + form.get("filtro").toLowerCase() + "=" + form.get("valor-filtro") + "&";
         }
+
 
         function actualizarTabla(e){
     
@@ -153,7 +160,7 @@ function partialRender(){
                                                       "body": JSON.stringify(fila) });
                 if(respuesta.status === 201){
                     if(cant==1)
-                        obtenerTabla(`${url_base}?p=${pag_actual}&l=10`);
+                        obtenerTabla();
                     else{
                         enviarFila(fila,cant-1);
                     }
@@ -163,19 +170,24 @@ function partialRender(){
             }
             catch(error){console.log("error de conexión")};
         }
+
+        function obtenerUrl(arr_url){
+            let retorno = "";
+            for(let parte of arr_url){
+                retorno+= parte;
+            }
+            return retorno;
+        }
+
     
-        async function obtenerTabla(url_completa){
-            console.log(url_completa);
+        async function obtenerTabla(){
             try{
-                let respuesta= await fetch(url_completa); ///?p=1&l=10
+                let respuesta= await fetch( obtenerUrl(url_actual) ); ///?p=1&l=10
                 if(respuesta.ok){                               
                     let tabla = await respuesta.json();
-                    console.log(url_completa); 
-                    if(tabla.length==0){
-                        console.log(url_completa);
-                        pag_actual--;
-                        url_completa=`${url_base}?p=${pag_actual}&l=10`;
-                        obtenerTabla(url_completa);
+                    if( (tabla.length==0) && (url_actual[3]>1) ){
+                        url_actual[3]--;
+                        obtenerTabla();
                     }
                     else{
                         mostrarTabla(tabla);
@@ -214,8 +226,8 @@ function partialRender(){
                 document.querySelector(`#confirmar-${id}`).addEventListener("click",function(){confirmarFila(this,id)});
                 document.querySelector(`#confirmar-${id}`).classList.add("invisibilidad");
 
-                document.querySelector("#prim-fila").innerHTML= `${((pag_actual-1)*10) + 1}`;
-                document.querySelector("#ult-fila").innerHTML = `${((pag_actual-1)*10) + tabla_datos.length}`;
+                document.querySelector("#prim-fila").innerHTML= `${((url_actual[3]-1)*10) + 1}`;
+                document.querySelector("#ult-fila").innerHTML = `${((url_actual[3]-1)*10) + tabla_datos.length}`;
 
             }
         }
@@ -224,7 +236,7 @@ function partialRender(){
             try{
                 let respuesta= await fetch(`${url_base}/${id}`, { "method":"DELETE"});
                 if(respuesta.status === 200){
-                    obtenerTabla(`${url_base}?p=${pag_actual}&l=10`);
+                    obtenerTabla();
                 } 
                 else
                     console.log(`La peticion DELETE fallo, error: ${respuesta.status}`);
@@ -270,7 +282,7 @@ function partialRender(){
                                                                  "body": JSON.stringify(fila) });
     
                 if(respuesta.status === 200)
-                    obtenerTabla(`${url_base}?p=${pag_actual}&l=10`);
+                    obtenerTabla();
                 else
                     console.log(`La peticion PUT no fue exitosa error: ${respuesta.status}`);
             }
