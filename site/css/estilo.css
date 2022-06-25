@@ -775,19 +775,39 @@ nav.menu{
 }
 
 .filtro{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "btn-reset"
+                         "form"
+                         "paginado-tabla";
 }
 
 .filtro select{
-    width: 150px;
     padding: 8px;
     border-color: #d8e1e4;
+    width: 80%;
 }
 
 .filtro input{
+    width: 100%;
     padding: 8px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
     border-color: #d8e1e4;
+}
+
+.filtro form{
+    grid-area: form;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cont-btn{
+    grid-area: btn-reset;
+    display: flex;
+    align-items: center;
 }
 
 .btn{
@@ -804,7 +824,7 @@ nav.menu{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    grid-area: paginado-tabla;
 }
 
 .paginado-tabla p{
@@ -1092,6 +1112,26 @@ div.contenedor-tabla table td input {
         text-overflow: ellipsis;
         overflow: hidden;
     }
+
+    .filtro{
+        grid-template-columns: auto 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "form form"
+                             "btn-reset paginado-tabla";
+    }
+
+    .filtro form{
+        margin-bottom: 10px;
+    }
+
+    .filtro input{
+        width: 50%;
+        margin-bottom: 0px;
+    }
+
+    .filtro select{
+        width: 40%;
+    }
     
 }
 
@@ -1107,6 +1147,22 @@ div.contenedor-tabla table td input {
     .encabezado-superior {
         display: flex;
     }
+
+    .filtro{
+        grid-template-columns: 1fr 1fr auto;
+        grid-template-rows: 1fr;
+        grid-template-areas: "btn-reset paginado-tabla form";
+    }
+
+    .filtro select{
+        width: auto;
+    }
+
+    .filtro form{
+        margin-bottom: 0px;
+        margin-left: 10px;
+    }
+
 
 
     /*para cambiar*/

@@ -3,7 +3,14 @@
         <h1>servicios packs pedidos esta semana</h1>
     </div>
     <div class="filtro">
-        <button class="btn" type="button" id="reset">Resetear tabla</button>
+        <div class="cont-btn" >
+            <button class="btn" type="button" id="reset">Resetear</button>
+        </div>
+        <div class="paginado-tabla">
+            <button class="btn" id="atras"> <i class="fa fa-arrow-left"></i> </button>
+            <div><p><span id="prim-fila"></span>-<span id="ult-fila"></span></p></div>
+            <button class="btn" id="siguiente"> <i class="fa fa-arrow-right"></i> </button>
+        </div>
         <form id="filtrado">
             <input name="valor-filtro" type="text" placeholder="Valor a filtrar...">
             <select name="filtro">
@@ -15,11 +22,6 @@
             </select>
             <button class="btn" id="filtro">aplicar</button>
         </form>
-    </div>
-    <div class="paginado-tabla">
-        <button class="btn" id="atras"> <i class="fa fa-arrow-left"></i> </button>
-        <div><p><span id="prim-fila"></span>-<span id="ult-fila"></span></p></div>
-        <button class="btn" id="siguiente"> <i class="fa fa-arrow-right"></i> </button>
     </div>
     <div class="contenedor-tabla">
         <table class="tabla-compras">
