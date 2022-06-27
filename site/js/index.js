@@ -15,8 +15,8 @@ function partialRender(){
         cargarContenido(id);
     });
 
-    cargarInicio();
     despliegeMenu();
+    cargarInicio();
     
     function cargarInicio(){
         let id = "inicio";
