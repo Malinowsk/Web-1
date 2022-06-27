@@ -818,6 +818,7 @@ nav.menu{
 
 .btn:hover{
     background-color: #f8ac18;
+    transition: 0.3s;
 }
 
 .paginado-tabla{

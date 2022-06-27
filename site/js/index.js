@@ -114,6 +114,21 @@ function partialRender(){
         //    obtenerTabla(pag_actual); // mostrar tabla por web
         //});
 
+        let reset = document.querySelector("#reset")
+        reset.addEventListener("click", async ()=>{
+            console.log(json);
+
+        });
+
+      async function traerJson(){
+            try{
+
+            }
+            let datos = await fetch(url_base);  
+            let json = await datos.json();
+      }
+
+
         let atras = document.querySelector("#atras");
         atras.addEventListener("click", function(){
             if (url_actual[3] !== 1){
