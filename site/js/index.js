@@ -7,10 +7,17 @@ function partialRender(){
     window["servicios"].addEventListener("click",(event)=>{ push(event)});
     window["compras"].addEventListener("click",(event)=>{ push(event)});
     window["contacto"].addEventListener("click",(event)=>{ push(event);});
-    
-    window.addEventListener("popstate", event => { 
+
+
+    window.addEventListener("popstate", (event) => { 
         // Tome la identificación del estado del historial
-        let id = event.state.id; 
+        let id;
+        if(event.state != null)
+            id = event.state.id;
+        else{
+            let direccion = event.currentTarget.location.pathname;
+            id = direccion.slice(1);
+        } 
         seleccionarTab(id); 
         cargarContenido(id);
     });
@@ -108,24 +115,56 @@ function partialRender(){
             actualizarTabla(e);
         });
     
-        //let reset = document.querySelector("#reset"); //boton reset
-        //reset.addEventListener("click", function(){  // pongo a escuchar el evento click del boton reset
-        //    tabla_datos = [];   //vacio tabla
-        //    obtenerTabla(pag_actual); // mostrar tabla por web
-        //});
-
-        let reset = document.querySelector("#reset")
-        reset.addEventListener("click", async ()=>{
-            console.log(json);
-
+        let reset = document.querySelector("#reset"); //boton reset
+        reset.addEventListener("click", function(){  // pongo a escuchar el evento click del boton reset
+            this.innerHTML="Espere";
+            let tabla = document.querySelector("#tabla-body");
+            tabla.innerHTML=" Borrando, espere unos segundos... ";
+            borrarTablaCompleta();
         });
 
-      async function traerJson(){
-            try{
-
+      async function borrarTablaCompleta(){
+        try{
+            let respuesta= await fetch(url_base); 
+            if(respuesta.ok){                               
+                let tabla = await respuesta.json();
+                borrarTodasLasFilas(tabla);
+            } 
+            else{
+                console.log(`La url: "${respuesta.url}" esta mal especificada`);
+                reset.innerHTML="Resetear";
             }
-            let datos = await fetch(url_base);  
-            let json = await datos.json();
+        }
+        catch(error){
+                console.log("error de conexión");
+                reset.innerHTML="Resetear";
+        }
+      }
+
+      async function borrarTodasLasFilas(tabla){
+        try{
+            let respuesta= await fetch(`${url_base}/${tabla[tabla.length-1].id}`, { "method":"DELETE"});
+            if(respuesta.status === 200){
+                if(tabla.length===1){
+                    obtenerTabla();
+                    document.querySelector("#prim-fila").innerHTML= 0;
+                    document.querySelector("#ult-fila").innerHTML = 0;
+                    reset.innerHTML="Resetear";
+                }
+                else{
+                    tabla.pop();
+                    borrarTodasLasFilas(tabla);
+                }
+            } 
+            else{
+                console.log(`La peticion DELETE fallo, error: ${respuesta.status}`);
+                reset.innerHTML="Resetear";
+            };
+        }
+        catch(error){
+            console.log("error de conexión"+ tabla[tabla.length-1]);
+            reset.innerHTML="Resetear";
+        };
       }
 
 
