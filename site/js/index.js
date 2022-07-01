@@ -1,46 +1,47 @@
 document.addEventListener("DOMContentLoaded",partialRender);
 
-function partialRender(){
+function partialRender(e){
     "use strict"
     
     window["inicio"].addEventListener("click",(event)=>{ push(event);});
     window["servicios"].addEventListener("click",(event)=>{ push(event)});
     window["compras"].addEventListener("click",(event)=>{ push(event)});
     window["contacto"].addEventListener("click",(event)=>{ push(event);});
-
-
+    
+    
     window.addEventListener("popstate", (event) => { 
         // Tome la identificación del estado del historial
         let id;
         if(event.state != null)
             id = event.state.id;
-        else{
-            let direccion = event.currentTarget.location.pathname;
-            id = direccion.slice(1);
-        } 
-        seleccionarTab(id); 
-        cargarContenido(id);
+            else{
+                let direccion = event.currentTarget.location.pathname;
+                id = direccion.slice(1,-5);
+            } 
+            seleccionarTab(id); 
+            cargarContenido(id);
     });
-
-    despliegeMenu();
-    cargarInicio();
-    
-    function cargarInicio(){
-        let id = "inicio";
-        seleccionarTab(id); //colorea boton de navegacion selecionado
         
-        document.title = "Bit Humanoide - " + capitalizarPrimeraLetra(id);
-        cargarContenido(id);
-        window.history.pushState({ id },`${id}`,`/${id}`);
-    }
+    despliegeMenu();
+    push(e);
+
 
     function push(event){
-        let id = event.target.id;
+        let id;
+        if(window.location.pathname == "/index.html" || window.location.pathname == "/"){ //window.location.pathname
+            id="inicio";
+        }
+        else{
+            if(event.target.id!==undefined)
+                id = event.target.id;
+            else
+                id = window.location.pathname.slice(1,-5);
+        }
         seleccionarTab(id); //colorea boton de navegacion selecionado
         
         document.title = "Bit Humanoide - " + capitalizarPrimeraLetra(id);
+        window.history.pushState({ id },`${id}`,`/${id}.html`);
         cargarContenido(id);
-        window.history.pushState({ id },`${id}`,`/${id}`);
 
     }
     
@@ -52,7 +53,7 @@ function partialRender(){
     async function cargarContenido(id){
         let contenedor = document.querySelector("#main");
         try{
-            let respuesta = await fetch(`${window.location.origin}/${id}.html`);
+            let respuesta = await fetch(`${window.location.origin}/templates/${id}.html`);
             if(respuesta.ok){
                 let contenido = await respuesta.text();
                 contenedor.innerHTML = contenido;

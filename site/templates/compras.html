@@ -1,0 +1,85 @@
+<div class="sesion">
+    <div class="titulo-vistoso">
+        <h1>servicios packs pedidos esta semana</h1>
+    </div>
+    <div class="filtro">
+        <div class="cont-btn" >
+            <button class="btn" type="button" id="reset">Resetear</button>
+        </div>
+        <div class="paginado-tabla">
+            <button class="btn" id="atras"> <i class="fa fa-arrow-left"></i> </button>
+            <div><p><span id="prim-fila"></span>-<span id="ult-fila"></span></p></div>
+            <button class="btn" id="siguiente"> <i class="fa fa-arrow-right"></i> </button>
+        </div>
+        <form id="filtrado">
+            <input name="valor-filtro" type="text" placeholder="Valor a filtrar...">
+            <select name="filtro">
+                <option value="Usuario">Usuario</option>
+                <option value="Email" >Email</option>
+                <option value="Telefono">Telefono</option>
+                <option value="Tiempo">Tiempo</option>
+                <option value="Pack">Pack</option>
+            </select>
+            <button class="btn" id="filtro">aplicar</button>
+        </form>
+    </div>
+    <div class="contenedor-tabla">
+        <table class="tabla-compras">
+            <thead>
+                <tr>
+                    <th>Usuario</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                    <th>Tiempo</th>
+                    <th>Pack</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-body">
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="titulo-sumiso">
+        <h3> Hace tu pedido: </h3>
+    </div>
+</div>
+<div class="contenedor-form">
+    <form id="form" class="contacto">
+        <div class="contenedor-contacto">
+            <div class="cont-interno">
+                <label>Usuario <strong>(*)</strong></label>
+                <input type="text" name="usuario" placeholder="Usuario" required>
+            </div>
+            <div class="cont-interno">
+                <label>Pack <strong>(*)</strong></label>
+                <select name="pack">
+                    <option value="Normal">Normal</option>
+                    <option value="Premium" >Premium</option>
+                    <option value="Bit Humanoide">Bit Humanoide</option>
+                </select>
+            </div> 
+            <div class="cont-interno">
+                <label >Email <strong>(*)</strong></label>
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="cont-interno">
+                <label>Tiempo <strong>(*)</strong></label>
+                <select name="tiempo">
+                    <option value="1 Mes">1 Mes</option>
+                    <option value="6 Meses" >6 Meses</option>
+                    <option value="1 Año">1 Año</option>
+                </select>
+            </div>
+            <div class="cont-interno">
+                <label>Telefono <strong>(*)</strong></label>
+                <input type="tel" name="telefono" placeholder="Telefono" pattern="[0-9]{6,}" required>
+            </div>
+        </div>
+        <div class="cont-compra">
+            <button class="btn" type="submit" id="btn1">Comprar x 1</button>
+            <button class="btn" type="submit" id="btn2">Comprar x 2</button>
+            <button class="btn" type="submit" id="btn3">Comprar x 3</button>
+        </div>
+    </form>
+</div>
