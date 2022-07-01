@@ -1,14 +1,18 @@
-document.addEventListener("DOMContentLoaded",partialRender);
+document.addEventListener("DOMContentLoaded",principal);
 
-function partialRender(e){
+function principal(e){
     "use strict"
     
-    window["inicio"].addEventListener("click",(event)=>{ push(event);});
+    push(e);
+    despliegeMenu();
+    
+    // funcionalidad de navegacion 
+    window["inicio"].addEventListener("click",(event)=>{ push(event);});  
     window["servicios"].addEventListener("click",(event)=>{ push(event)});
     window["compras"].addEventListener("click",(event)=>{ push(event)});
     window["contacto"].addEventListener("click",(event)=>{ push(event);});
     
-    
+
     window.addEventListener("popstate", (event) => { 
         // Tome la identificación del estado del historial
         let id;
@@ -22,8 +26,6 @@ function partialRender(e){
             cargarContenido(id);
     });
         
-    despliegeMenu();
-    push(e);
 
 
     function push(event){
