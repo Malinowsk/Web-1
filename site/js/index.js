@@ -3,32 +3,32 @@ document.addEventListener("DOMContentLoaded",principal);
 function principal(e){
     "use strict"
     
-    push(e);
-    despliegeMenu();
-    
+    push(e); // se carga el contenido de la pagina por primera vez
+    despliegeMenu(); // agrega funcionalidad a los botones mobile del menu
+
     // funcionalidad de navegacion 
-    window["inicio"].addEventListener("click",(event)=>{ push(event);});  
+    window["inicio"].addEventListener("click",(event)=>{ push(event);});   
     window["servicios"].addEventListener("click",(event)=>{ push(event)});
     window["compras"].addEventListener("click",(event)=>{ push(event)});
     window["contacto"].addEventListener("click",(event)=>{ push(event);});
     
-
+    // funcionalidad de retroceder y avanzar en el navegador 
     window.addEventListener("popstate", (event) => { 
-        // Tome la identificación del estado del historial
         let id;
-        if(event.state != null)
+        if(event.state != null) // entra cuando vas a la direccion anterior o siguiente
             id = event.state.id;
-            else{
-                let direccion = event.currentTarget.location.pathname;
-                id = direccion.slice(1,-5);
-            } 
-            seleccionarTab(id); 
-            cargarContenido(id);
+        else{                    // entra cuando tocas los anchor de la tabla de indice en pag servicio
+            let direccion = event.currentTarget.location.pathname; 
+            id = direccion.slice(1,-5); // retorna el pathname sin la / y el .html
+        } 
+        seleccionarTab(id); //colorea boton de navegacion selecionado
+        cargarContenido(id); 
     });
         
 
-
+    // actualiza el contenido de la pagina correspondiente a la url actual
     function push(event){
+        // seleccionar el id correspondiente
         let id;
         if(window.location.pathname == "/index.html" || window.location.pathname == "/"){ //window.location.pathname
             id="inicio";
@@ -39,19 +39,21 @@ function principal(e){
             else
                 id = window.location.pathname.slice(1,-5);
         }
+
         seleccionarTab(id); //colorea boton de navegacion selecionado
         
-        document.title = "Bit Humanoide - " + capitalizarPrimeraLetra(id);
-        window.history.pushState({ id },`${id}`,`/${id}.html`);
-        cargarContenido(id);
-
+        document.title = "Bit Humanoide - " + capitalizarPrimeraLetra(id); // ponemos un titulo en la pestaña
+        window.history.pushState({ id },`${id}`,`/${id}.html`); // cambia url
+        cargarContenido(id); // carga contenido html con partial render
     }
     
+    //colorea el boton de navegacion 
     function seleccionarTab(id){
         document.querySelectorAll(".navegacion").forEach((item)=> item.classList.remove("pag-actual")); 
         document.querySelector(`#${id}`).classList.add("pag-actual");
     }
     
+    // carga el contenido de la pagina con partial render
     async function cargarContenido(id){
         let contenedor = document.querySelector("#main");
         try{
@@ -60,10 +62,10 @@ function principal(e){
                 let contenido = await respuesta.text();
                 contenedor.innerHTML = contenido;
                 if(id==="contacto"){
-                    iniciarCaptcha();
+                    iniciarCaptcha(); //damos funcionalidad al captcha en el caso que estemos en la pag contacto
                 }
                 if(id==="compras"){
-                    actualizarCompraDePacks();
+                    actualizarCompraDePacks(); //damos funcionalidad al tabla dinamica en el caso que estemos en la pag compras
                 }
             }
             else{
@@ -77,13 +79,16 @@ function principal(e){
             }
         }
         catch(error){
-            contenedor.innerHTML = "error de conexión";
+            contenedor.innerHTML = "error de conexión"; 
         }
     }
 
+    // pasa a mayuscula la primera letra del string pasado como parametro
     function capitalizarPrimeraLetra(str) {
         return str.charAt(0).toUpperCase() + str.slice(1);
     }
+
+    ///////////////////////////////TERMINA PARTIAL RENDER - COMIENZA DESPLIEGE MENU///////////////////////////////////////
 
     function despliegeMenu(){
     
@@ -102,6 +107,8 @@ function principal(e){
         }
     
     }
+
+    ///////////////////////////////TERMINA DESPLIEGE MENU - COMIENZA FUNCIONALIDAD PARA LA TABLA DINAMICA///////////////////////////////////////
 
     // funcion utilizada para compras.html
     function actualizarCompraDePacks(){
@@ -371,6 +378,9 @@ function principal(e){
             form.reset();
         }
     }
+
+     ///////////////////////////////TERMINA FUNCIONALIDAD PARA LA TABLA DINAMICA - COMIENZA FUNCIONALIDAD PARA EL CAPTCHA///////////////////////////////////////
+
 
     function iniciarCaptcha(){
 
